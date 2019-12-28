@@ -23,8 +23,6 @@ With these requirements, I set about to create a key‐map I could use. I'd star
 
 I started out by identifying characters in Tamil and Sanskrit (the 2 Indian languages I write in) based on phonetics and history; this identification process is important for pan‐linguistic consistency.
 
-#### Vowels and Dependents
-
 |Sanskrit (Devanagari)|ISO‐15919|Tamil|Key‐map|
 |--- |---|---|---|
 |अ|a|அ||
@@ -51,7 +49,7 @@ I started out by identifying characters in Tamil and Sanskrit (the 2 Indian lang
 ||ḵ|ஃ||
 |ऽ|'|||
 
-#### Consonants
+Table caption: Vowels and Dependents
 
 |Sanskrit (Devanagari)|ISO‐15919 [^1]|Tamil|Key‐map|
 |--- |--- |--- |--- |
@@ -93,6 +91,8 @@ I started out by identifying characters in Tamil and Sanskrit (the 2 Indian lang
 |ष्|ṣ|||
 |स्|s|||
 |ह्|h|||
+
+Table caption: Consonants
 
 [^1]: Unfortunately, ISO‐15919 does not distinguish between alveolar and dental liquids; Tamil has only the former, while Sanskrit only the latter. As such, I've had to make a few minor modifications to ISO‐15919, where `ற` and `ல` are concerned. Thanks to Greg for pointing this out through a blog comment.
 
@@ -174,8 +174,6 @@ Six categories of phonemes remain: Dravidian alveolar consonants, the Dravidian 
 
 Looks like the consonants are done! Here they are:
 
-#### Consonants
-
 |Sanskrit (Devanagari)|ISO‐15919|Tamil|Key‐map|
 |--- |--- |--- |--- |
 |क्|k|க்|k|
@@ -217,12 +215,12 @@ Looks like the consonants are done! Here they are:
 |स्|s||s|
 |ह्|h||h|
 
+Table caption: Consonants
+
 * Sanskrit syllabic vowels: The Sanskrit syllabic vowels (`ऋ`, `ॠ`, `ऌ`, `ॡ` – the last one not actually used) present a problem. The mid‐central vowel inherent in these is absent in European languages and thus lacks a symbol; it can however be described as mid‐way between `y` and `w`. `y` is already used up in our scheme, but `w` is free! Using `w` also ensures people don't mispronounce it as a front‐vowel. We thus get `rw`, `Rw`, `lw` and `Lw` respectively.
 * Misc. dependent letters: There are a few different dependent letters that can only exist if attached to a vowel — the *anusvāra*, the *anunāsika*, the *visarga* and its two other forms the *jihvāmulīya* and the *upadhmānīya*, and the *āythayeṛuttu*. The anusvāra is traditionally represented by an `M`, and the anunāsika by `MM`; we can stick with those. The visarga, likewise is an `H`. The *upadhmānīya* is closest to the Latin `f`, and we can use that. The *jihvāmūlīya* and the *āythayeṛuttu* are both velar/glottal and as such `K` is the most suitable.
 
 We finally have a complete key‐map for vowels and dependents! Here it is:
-
-#### Vowels and Dependents
 
 |Sanskrit (Devanagari)|ISO‐15919|Tamil|Key‐map|
 |--- |--- |--- |--- |
@@ -250,6 +248,8 @@ We finally have a complete key‐map for vowels and dependents! Here it is:
 ||ḵ|ஃ|K|
 |ऽ|'||'|
 
+Table caption: Vowels and Dependents
+
 You can download the Tamil and Sanskrit keymap for use in Google's IME from [https://github.com/deepestblue/GoogleIME_keymap](https://github.com/deepestblue/GoogleIME_keymap).
 
-#### Footnotes:
+#### Footnotes
