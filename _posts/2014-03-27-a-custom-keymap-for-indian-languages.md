@@ -12,7 +12,7 @@ blogger_orig_url: https://blog.ambari.sh/2014/03/a-custom-keymap-for-indian-lang
 description: The final part of a three-part series on Indic computing. The focus of this part is a custom keymap for inputting Sanskrit and Tamil.
 ---
 
-As we saw in [the last couple](/2014/01/04/keying-in-indian-languages) [of posts](/2014/03/02/representing-indian-languages-using-the-Latin-script), keying in Indian languages using a QWERTY keyboard requires a keyboard/IME software as well as a standardised way to map the Latin alphabet to the characters in the Indian language du jour. To recap, I use Google's [Input Tools](https://www.google.com/inputtools/windows/) on Windows and [Lipika](https://github.com/ratreya/Lipika_IME) on OS X. Unlike a representation format (which can use diacritic or other accent marks), a key‐map can only employ the characters inputtable through the QWERTY keyboard. So while I use ISO‐15919 as the representation format, I needed a key‐map as well. As in the previous post, here were my requirements:
+As we saw in [the last couple](/2014/01/04/keying-in-indian-languages) [of posts](/2014/03/02/representing-indian-languages-using-the-Latin-script), keying in Indian languages using a QWERTY keyboard requires a keyboard/IME software as well as a standardised way to map the Latin alphabet to the characters in the Indian language du jour. To recap, I use Googleʼs [Input Tools](https://www.google.com/inputtools/windows/) on Windows and [Lipika](https://github.com/ratreya/Lipika_IME) on OS X. Unlike a representation format (which can use diacritic or other accent marks), a key‐map can only employ the characters inputtable through the QWERTY keyboard. So while I use ISO‐15919 as the representation format, I needed a key‐map as well. As in the previous post, here were my requirements:
 
 * Meaningfulness
 * Trans‐linguistic consistency
@@ -20,7 +20,7 @@ As we saw in [the last couple](/2014/01/04/keying-in-indian-languages) [of posts
 * Modularity and symmetry
 * Alphabet restrictions: the scheme must use only Latin characters to represent phonemes; the scheme may use punctuation marks to represent non‐phonemic punctuation‐like characters in the target language.
 
-With these requirements, I set about to create a key‐map I could use. I'd start with my requirements, and in the end, if the key‐map ended up resembling an existing “standard”, I'd just stick with that instead.
+With these requirements, I set about to create a key‐map I could use. Iʼd start with my requirements, and in the end, if the key‐map ended up resembling an existing “standard”, Iʼd just stick with that instead.
 
 I started out by identifying characters in Tamil and Sanskrit (the 2 Indian languages I write in) based on phonetics and history; this identification process is important for pan‐linguistic consistency.
 
@@ -95,7 +95,7 @@ Table caption: Vowels and Dependents
 
 Table caption: Consonants
 
-[^1]: Unfortunately, ISO‐15919 does not distinguish between alveolar and dental liquids; Tamil has only the former, while Sanskrit only the latter. As such, I've had to make a few minor modifications to ISO‐15919, where `ற` and `ல` are concerned. Thanks to Greg for pointing this out through a blog comment.
+[^1]: Unfortunately, ISO‐15919 does not distinguish between alveolar and dental liquids; Tamil has only the former, while Sanskrit only the latter. As such, Iʼve had to make a few minor modifications to ISO‐15919, where `ற` and `ல` are concerned. Thanks to Greg for pointing this out through a blog comment.
 
 The next step was filling in the key‐combinations that were “natural” and “obvious”.
 
@@ -218,7 +218,7 @@ Looks like the consonants are done! Here they are:
 
 Table caption: Consonants
 
-* Sanskrit syllabic vowels: The Sanskrit syllabic vowels (`ऋ`, `ॠ`, `ऌ`, `ॡ` – the last one not actually used) present a problem. The mid‐central vowel inherent in these is absent in European languages and thus lacks a symbol; it can however be described as mid‐way between `y` and `w`. `y` is already used up in our scheme, but `w` is free! Using `w` also ensures people don't mispronounce it as a front‐vowel. We thus get `rw`, `Rw`, `lw` and `Lw` respectively.
+* Sanskrit syllabic vowels: The Sanskrit syllabic vowels (`ऋ`, `ॠ`, `ऌ`, `ॡ` – the last one not actually used) present a problem. The mid‐central vowel inherent in these is absent in European languages and thus lacks a symbol; it can however be described as mid‐way between `y` and `w`. `y` is already used up in our scheme, but `w` is free! Using `w` also ensures people donʼt mispronounce it as a front‐vowel. We thus get `rw`, `Rw`, `lw` and `Lw` respectively.
 * Misc. dependent letters: There are a few different dependent letters that can only exist if attached to a vowel — the *anusvāra*, the *anunāsika*, the *visarga* and its two other forms the *jihvāmulīya* and the *upadhmānīya*, and the *āythayeṛuttu*. The anusvāra is traditionally represented by an `M`, and the anunāsika by `MM`; we can stick with those. The visarga, likewise is an `H`. The *upadhmānīya* is closest to the Latin `f`, and we can use that. The *jihvāmūlīya* and the *āythayeṛuttu* are both velar/glottal and as such `K` is the most suitable.
 
 We finally have a complete key‐map for vowels and dependents! Here it is:
@@ -251,6 +251,6 @@ We finally have a complete key‐map for vowels and dependents! Here it is:
 
 Table caption: Vowels and Dependents
 
-You can download the Tamil and Sanskrit keymap for use in Google's IME from [https://github.com/deepestblue/GoogleIME_keymap](https://github.com/deepestblue/GoogleIME_keymap).
+You can download the Tamil and Sanskrit keymap for use in Googleʼs IME from [https://github.com/deepestblue/GoogleIME_keymap](https://github.com/deepestblue/GoogleIME_keymap).
 
 #### Footnotes

@@ -46,7 +46,7 @@ For instance,
 
 ### Usage
 
-In pedagogy and in musicology, a *rāga* is introduced as a child of a *mēḷakartā* and then in terms of its *ārōhaṇa* and *avarōhaṇa*. An excerpt from a song's [lyric page](http://www.karnatik.com/c2577.shtml) follows:
+In pedagogy and in musicology, a *rāga* is introduced as a child of a *mēḷakartā* and then in terms of its *ārōhaṇa* and *avarōhaṇa*. An excerpt from a songʼs [lyric page](http://www.karnatik.com/c2577.shtml) follows:
 
     raagam: bEgaDa
     29 dheera shankaraabharaNam janya
@@ -65,7 +65,7 @@ The result is a disconnect between *rāgalakṣaṇa* and their notation, leadin
 
 To quote musicologist Dr. N Ramanathan,
 
-> People exclaim (the song) *Gajavadana*, set in *Todi*, has so many different kinds of `Ga`s; that's not the case. How remarkable that various different phrases are all termed `Ga`! We use a single symbol `Ga` to identify many of the phrases. That, I feel, is a very sophisticated scheme which in the 1800s or 1700s we (Carnatic music practitioners) have developed. The word *svara* itself has been redefined. *Svara* is no longer associated with a pitch – *svara* is a phrase. We say that *Sankarabharanam* has 4 kinds of `Ma`s; *Begada* has 3 kinds of `Ma`s. No, we term all those phrases `Ma`.
+> People exclaim (the song) *Gajavadana*, set in *Todi*, has so many different kinds of `Ga`s; thatʼs not the case. How remarkable that various different phrases are all termed `Ga`! We use a single symbol `Ga` to identify many of the phrases. That, I feel, is a very sophisticated scheme which in the 1800s or 1700s we (Carnatic music practitioners) have developed. The word *svara* itself has been redefined. *Svara* is no longer associated with a pitch – *svara* is a phrase. We say that *Sankarabharanam* has 4 kinds of `Ma`s; *Begada* has 3 kinds of `Ma`s. No, we term all those phrases `Ma`.
 
 Any system that emphasises notational conveniences at the expense of the *lakṣaṇa* of the *rāga* is missing the point.
 
@@ -76,7 +76,7 @@ Any system that emphasises notational conveniences at the expense of the *lakṣ
 The *janyarāga* examples above – *Arabhi*, *Purvikalyani*, *Bhairavi* – happen to contain all the *saptasvara*s. What if the *rāga* does not? There would be multiple *mēḷakartā* super‐sets of this *rāga*, so which one do you pick as parent? There are 2 systems in usage:
 
 * Pick the earlier one: if the *janyarāga* does not contain say, `Ri`, then pick the *mēḷakartā* with <code>Ri<sub>1</sub></code> rather than <code>Ri<sub>2</sub></code> or <code>Ri<sub>3</sub></code>. This arbitrary choice only helps derail the already tenuous *janaka*‐*janya* relationship.
-* Pick the *mēḷakartā* that sounds “closest”. This choice is also arbitrary, as many *janyarāga*s don't sound like any of the candidate parent *mēḷakartā* *rāga*s. *Madhyamavati* can be assigned to *Natabhairavi*, *Kharaharapriya*, *Charukesi* or *Harikambhoji* on this basis, but sounds like none of them.
+* Pick the *mēḷakartā* that sounds “closest”. This choice is also arbitrary, as many *janyarāga*s donʼt sound like any of the candidate parent *mēḷakartā* *rāga*s. *Madhyamavati* can be assigned to *Natabhairavi*, *Kharaharapriya*, *Charukesi* or *Harikambhoji* on this basis, but sounds like none of them.
 
 Many *rāga*s, not amenable to being described as a linear progession of notes, are strait‐jacketed as they are fit into an *ārōhaṇa*/*avarōhaṇa* scheme. *Atana*, *Suratti*, *Sindhubhairavi*, *Purvikalyani*, *Bhairavi*, *Kambhoji* all include phrases that cannot be fit into a linear scale. *Atana* and *Suratti* are especially problematic: no *ārōhaṇa*/*avarōhaṇa* written for them cover even a portion of the phrases possible. Finding a *mēḷakartā* parent is futile.
 
@@ -119,5 +119,5 @@ Pedagogy must focus on learning *rāgabhāva* through *saṅgati*s and *lakṣa�
 ## References
 
 * [Episode 11 of the Sanjay Subrahmanyan show, with Sriram V and Dr. N Ramanathan](http://sanjaysub.libsyn.com/the-sanjay-subrahmanyan-show-episode-11-chat-with-dr-n-ramanathan-and-sriram-v)
-* [Carnatica Archival Centre's Music Appreciation newsletters](http://www.carnatica.net/newsletter/index.html)
+* [Carnatica Archival Centreʼs Music Appreciation newsletters](http://www.carnatica.net/newsletter/index.html)
 * [karnatik.com](http://karnatik.com)
