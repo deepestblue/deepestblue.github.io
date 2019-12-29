@@ -8,6 +8,7 @@ tags:
 modified_time: '2019-11-28T16:02:44.504-08:00'
 blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-7511983616468676323
 blogger_orig_url: https://blog.ambari.sh/2018/05/optimising-catching-bus.html
+description: When walking to a bus stop, I want to minimise the amount of time I wait at the bus stop. How fast or slow should I walk?
 ---
 
 Every so often on my way home, I find myself walking North on Stone Way, attempting to catch a Westbound bus #44 on 45<sup>th</sup> St. at Stone Wy. I can see the buses go past from afar on Stone Way, and when I see a bus go past, I wonder what the implications are for my wait time at the stop. When I'm far enough away, I want a bus to go past already, so that the next bus might show up just as I get to the stop. But as I get nearer the stop, I don't want a bus to go past, as that would mean a longer wait.

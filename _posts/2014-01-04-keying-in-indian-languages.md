@@ -9,6 +9,7 @@ tags:
 modified_time: '2014-05-11T15:37:03.664-07:00'
 blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-1427523954929101801
 blogger_orig_url: https://blog.ambari.sh/2014/01/on-keying-in-indian-languages.html
+description: The first of a three-part article on Indian language computing. This part focusses on software to input Indian languages.
 ---
 
 Right from the time I started out learning Sanskrit, I've had to type in Devanagari to send email, do my assignments, write blog-posts etc. Sometime later, I realised I'd like to be able to write in my mother-tongue, Tamil, too: I was rapidly becoming more fluent at writing in Sanskrit than in Tamil, and that bothered me! I used to use Windows and now use OS X, and have used a variety of tools to be able to compose in Indic scripts. I thought I'd write about my journey, what tools I loved, used, hated and discarded and what I now use.
