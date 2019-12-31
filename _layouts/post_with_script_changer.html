@@ -1,0 +1,38 @@
+---
+layout: post
+---
+    Preferred script for Tamil text
+    <form>
+        <select onchange=convert_tamil_DOM_to_ISO15919()>
+            <option value="knda">Kannada
+            <option value="latn">Latin
+            <option value="mlym">Malayalam
+            <option value="taml" selected>Tamil
+            <option value="telu">Telugu
+        </select>
+    </form>
+
+    Preferred script for Sanskrit text
+    <form>
+       <select onchange=convert_sanskrit_DOM_to_ISO15919()>
+           <option value="deva">Devanagari
+           <option value="gran" selected>Grantha
+           <option value="knda">Kannada
+           <option value="latn">Latin
+           <option value="mlym">Malayalam
+           <option value="telu">Telugu
+       </select>
+    </form>
+
+    <script type="text/javascript">
+        function convert_tamil_DOM_to_ISO15919() {
+            document.body.innerHTML =
+                tamil_str_to_ISO15919(document.body.innerHTML);
+        }
+        function convert_sanskrit_DOM_to_ISO15919() {
+        }
+    </script>
+
+{{ content }}
+
+{% include script_changer.html %}
