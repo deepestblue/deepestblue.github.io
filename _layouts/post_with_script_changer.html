@@ -3,7 +3,7 @@ layout: post
 ---
     Preferred script for Tamil text
     <form>
-        <select onchange=convert_tamil_DOM_to_ISO15919()>
+        <select onchange=convert_tamil_data_to_ISO15919()>
             <option value="knda">Kannada
             <option value="latn">Latin
             <option value="mlym">Malayalam
@@ -11,25 +11,47 @@ layout: post
             <option value="telu">Telugu
         </select>
     </form>
-
     Preferred script for Sanskrit text
     <form>
-       <select onchange=convert_sanskrit_DOM_to_ISO15919()>
-           <option value="deva">Devanagari
-           <option value="gran" selected>Grantha
-           <option value="knda">Kannada
-           <option value="latn">Latin
-           <option value="mlym">Malayalam
-           <option value="telu">Telugu
-       </select>
+        <select onchange=convert_sanskrit_data_to_ISO15919()>
+            <option value="deva">Devanagari
+            <option value="gran" selected>Grantha
+            <option value="knda">Kannada
+            <option value="latn">Latin
+            <option value="mlym">Malayalam
+            <option value="telu">Telugu
+        </select>
     </form>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
-        function convert_tamil_DOM_to_ISO15919() {
-            document.body.innerHTML =
-                tamil_str_to_ISO15919(document.body.innerHTML);
+        function convert_tamil_data_to_ISO15919() {
+//            let title = $(".post-title")[0];
+//            title.textContent = tamil_str_to_ISO15919(title.textContent);
+            let content = $(".post-content")[0];
+
+            let walk_the_DOM = function walk(node, isTamilText) {
+                if (node.nodeType == Node.TEXT_NODE && isTamilText) {
+                    node.textContent = tamil_str_to_ISO15919(node.textContent);
+                    return;
+                }
+                if (node.nodeType == Node.ELEMENT_NODE) {
+                    let lang = node.dataset["lang"];
+                    if (lang) {
+                        isTamilText = (lang == "Tamil");
+                    }
+                }
+                node = node.firstChild;
+                while (node) {
+                    walk(node, isTamilText);
+                    node = node.nextSibling;
+                }
+            };
+
+            walk_the_DOM(content, false);
         }
-        function convert_sanskrit_DOM_to_ISO15919() {
+
+        function convert_sanskrit_data_to_ISO15919() {
         }
     </script>
 
