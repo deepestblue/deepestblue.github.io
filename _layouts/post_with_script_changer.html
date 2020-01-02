@@ -38,7 +38,7 @@ layout: post
                 if (node.nodeType == Node.ELEMENT_NODE) {
                     let lang = node.dataset["lang"];
                     if (lang) {
-                        isTamilText = (lang == "Tamil");
+                        isTamilText = (lang == "ta");
                     }
                 }
                 node = node.firstChild;
@@ -48,7 +48,7 @@ layout: post
                 }
             };
 
-            walk_the_DOM(content, false);
+            walk_the_DOM(content, document.documentElement.lang == "ta");
         }
 
         function convert_sanskrit_data_to_ISO15919() {
