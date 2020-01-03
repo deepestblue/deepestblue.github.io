@@ -3,7 +3,7 @@ layout: post
 ---
     Preferred script for Tamil text
     <form>
-        <select onchange=convert_tamil_data_to_ISO15919()>
+        <select id="xlit-ta">
             <option value="knda">Kannada
             <option value="latn">Latin
             <option value="mlym">Malayalam
@@ -13,7 +13,7 @@ layout: post
     </form>
     Preferred script for Sanskrit text
     <form>
-        <select onchange=convert_sanskrit_data_to_ISO15919()>
+        <select id="xlit-sa" onchange=xlit_sanskrit_data_to_ISO15919()>
             <option value="deva">Devanagari
             <option value="gran" selected>Grantha
             <option value="knda">Kannada
@@ -25,7 +25,21 @@ layout: post
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
-        function convert_tamil_data_to_ISO15919() {
+        (function () {
+            var previous;
+            $('#xlit-ta').on('focus', function () {
+                // Store the current value on focus and on change
+                previous = this.value;
+            }).change(function() {
+                // Do something with the previous value after the change
+                xlit_tamil_data_to_ISO15919(previous, this.value);
+
+                // Make sure the previous value is updated
+                previous = this.value;
+            });
+        })();
+
+        function xlit_tamil_data_to_ISO15919(old_script, new_script) {
             let isLangTa = document.documentElement.lang == "ta";
 
             if (isLangTa) {
@@ -55,7 +69,7 @@ layout: post
             walk_the_DOM(content, isLangTa);
         }
 
-        function convert_sanskrit_data_to_ISO15919() {
+        function xlit_sanskrit_data_to_ISO15919() {
         }
     </script>
 
