@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: post_with_script_changer
 title: மல்லிப்பூ வகை
 date: '2018-05-06T11:09:00.001-07:00'
 author: ambarish
+lang: ta
 tags: 
 modified_time: '2018-06-14T20:15:52.485-07:00'
 blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-959766809751399237
