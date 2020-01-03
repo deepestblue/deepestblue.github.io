@@ -26,10 +26,14 @@ layout: post
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
         function convert_tamil_data_to_ISO15919() {
-//            let title = $(".post-title")[0];
-//            title.textContent = tamil_str_to_ISO15919(title.textContent);
-            let content = $(".post-content")[0];
+            let isLangTa = document.documentElement.lang == "ta";
 
+            if (isLangTa) {
+                let title = $(".post-title")[0];
+                title.textContent = tamil_str_to_ISO15919(title.textContent);
+            }
+
+            let content = $(".post-content")[0];
             let walk_the_DOM = function walk(node, isTamilText) {
                 if (node.nodeType == Node.TEXT_NODE && isTamilText) {
                     node.textContent = tamil_str_to_ISO15919(node.textContent);
@@ -48,7 +52,7 @@ layout: post
                 }
             };
 
-            walk_the_DOM(content, document.documentElement.lang == "ta");
+            walk_the_DOM(content, isLangTa);
         }
 
         function convert_sanskrit_data_to_ISO15919() {
