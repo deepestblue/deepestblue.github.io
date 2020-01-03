@@ -1,78 +1,81 @@
 ---
 layout: post
 ---
-    Preferred script for Tamil text
-    <form>
-        <select id="xlit-ta">
-            <option value="knda">Kannada
-            <option value="latn">Latin
-            <option value="mlym">Malayalam
-            <option value="taml" selected>Tamil
-            <option value="telu">Telugu
-        </select>
-    </form>
-    Preferred script for Sanskrit text
-    <form>
-        <select id="xlit-sa" onchange=xlit_sanskrit_data_to_ISO15919()>
-            <option value="deva">Devanagari
-            <option value="gran" selected>Grantha
-            <option value="knda">Kannada
-            <option value="latn">Latin
-            <option value="mlym">Malayalam
-            <option value="telu">Telugu
-        </select>
-    </form>
+Preferred script for Tamil text
+<form>
+    <select id="select-xlit-ta">
+        <option value="knda">Kannada
+        <option value="latn">Latin
+        <option value="mlym">Malayalam
+        <option value="taml" selected>Tamil
+        <option value="telu">Telugu
+    </select>
+</form>
+Preferred script for Sanskrit text
+<form>
+    <select id="select-xlit-sa" onchange=xlit_sanskrit_data_to_ISO15919()>
+        <option value="deva">Devanagari
+        <option value="gran" selected>Grantha
+        <option value="knda">Kannada
+        <option value="latn">Latin
+        <option value="mlym">Malayalam
+        <option value="telu">Telugu
+    </select>
+</form>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            var previous;
-            $('#xlit-ta').on('focus', function () {
-                // Store the current value on focus and on change
-                previous = this.value;
-            }).change(function() {
-                // Do something with the previous value after the change
-                xlit_tamil_data_to_ISO15919(previous, this.value);
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    let onSelectValueChange = function (selectId, eventHandler) {
+        let previous;
+        $(selectId).on('focus', function () {
+            previous = this.value;
+        }).change(function() {
+            eventHandler(previous, this.value);
+            previous = this.value;
+        });
+    };
 
-                // Make sure the previous value is updated
-                previous = this.value;
-            });
-        })();
+    onSelectValueChange('#select-xlit-ta', xlit_tamil_data);
+    onSelectValueChange('#select-xlit-sa', xlit_sanskrit_data);
 
-        function xlit_tamil_data_to_ISO15919(old_script, new_script) {
-            let isLangTa = document.documentElement.lang == "ta";
+    function xlit_tamil_data(old_script, new_script) {
+        xlit_tamil_data_to_ISO15919(old_script, new_script);
+    }
 
-            if (isLangTa) {
-                let title = $(".post-title")[0];
-                title.textContent = tamil_str_to_ISO15919(title.textContent);
+    function xlit_tamil_data_to_ISO15919(old_script, new_script) {
+        let isLangTa = document.documentElement.lang == "ta";
+
+        if (isLangTa) {
+            let title = $(".post-title")[0];
+            title.textContent = tamil_str_to_ISO15919(title.textContent);
+        }
+
+        let content = $(".post-content")[0];
+        let walk_the_DOM = function walk(node, isTamilText) {
+            if (node.nodeType == Node.TEXT_NODE && isTamilText) {
+                node.textContent = tamil_str_to_ISO15919(node.textContent);
+                return;
             }
-
-            let content = $(".post-content")[0];
-            let walk_the_DOM = function walk(node, isTamilText) {
-                if (node.nodeType == Node.TEXT_NODE && isTamilText) {
-                    node.textContent = tamil_str_to_ISO15919(node.textContent);
-                    return;
+            if (node.nodeType == Node.ELEMENT_NODE) {
+                let lang = node.dataset["lang"];
+                if (lang) {
+                    isTamilText = (lang == "ta");
                 }
-                if (node.nodeType == Node.ELEMENT_NODE) {
-                    let lang = node.dataset["lang"];
-                    if (lang) {
-                        isTamilText = (lang == "ta");
-                    }
-                }
-                node = node.firstChild;
-                while (node) {
-                    walk(node, isTamilText);
-                    node = node.nextSibling;
-                }
-            };
+            }
+            node = node.firstChild;
+            while (node) {
+                walk(node, isTamilText);
+                node = node.nextSibling;
+            }
+        };
 
-            walk_the_DOM(content, isLangTa);
-        }
+        walk_the_DOM(content, isLangTa);
+    }
 
-        function xlit_sanskrit_data_to_ISO15919() {
-        }
-    </script>
+    function xlit_sanskrit_data() {
+    }
+</script>
+
+<script type="text/javascript" src="/assets/js/script_changer.js"></script>
 
 {{ content }}
-
-{% include script_changer.html %}
