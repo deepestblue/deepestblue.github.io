@@ -4,22 +4,22 @@ layout: post
 Preferred script for Tamil text
 <form>
     <select id="select-xlit-ta">
-        <option value="knda">Kannada
+        <option value="knda">ಕನ್ನಡ
         <option value="latn">Latin
-        <option value="mlym">Malayalam
-        <option value="taml" selected>Tamil
-        <option value="telu">Telugu
+        <option value="mlym">മലയാളം
+        <option value="taml" selected>தமிழ்
+        <option value="telu">తెలుగు
     </select>
 </form>
 Preferred script for Sanskrit text
 <form>
     <select id="select-xlit-sa" onchange=xlit_sanskrit_data_to_ISO15919()>
-        <option value="deva">Devanagari
-        <option value="gran" selected>Grantha
-        <option value="knda">Kannada
+        <option value="deva">देवनागरी
+        <option value="gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃
+        <option value="knda">ಕನ್ನಡ
         <option value="latn">Latin
-        <option value="mlym">Malayalam
-        <option value="telu">Telugu
+        <option value="mlym">മലയാളം
+        <option value="telu">తెలుగు
     </select>
 </form>
 
@@ -35,44 +35,52 @@ Preferred script for Sanskrit text
         });
     };
 
-    onSelectValueChange('#select-xlit-ta', xlit_tamil_data);
-    onSelectValueChange('#select-xlit-sa', xlit_sanskrit_data);
+    onSelectValueChange('#select-xlit-ta', xlit_ta_data);
+    onSelectValueChange('#select-xlit-sa', xlit_sa_data);
 
-    function xlit_tamil_data(old_script, new_script) {
-        xlit_tamil_data_to_ISO15919(old_script, new_script);
+    function xlit_ta_data(src_script, dst_script) {
+        if (dst_script == "latn") {
+            latn_xlit_ta_data(src_script, taml_to_latn);
+            return;
+        }
+        if (src_script == "latn") {
+            latn_xlit_ta_data(dst_script, latn_to_taml);
+            return;
+        }
+
+        latn_xlit_ta_data(src_script, taml_to_latn);
+        latn_xlit_ta_data(dst_script, latn_to_taml);
     }
 
-    function xlit_tamil_data_to_ISO15919(old_script, new_script) {
+    function latn_xlit_ta_data(converter) {
         let isLangTa = document.documentElement.lang == "ta";
 
+        let title = $(".post-title")[0];
         if (isLangTa) {
-            let title = $(".post-title")[0];
-            title.textContent = tamil_str_to_ISO15919(title.textContent);
+            title.textContent = converter(title.textContent);
         }
 
         let content = $(".post-content")[0];
-        let walk_the_DOM = function walk(node, isTamilText) {
-            if (node.nodeType == Node.TEXT_NODE && isTamilText) {
-                node.textContent = tamil_str_to_ISO15919(node.textContent);
+        (function walk(node, isTaText) {
+            if (node.nodeType == Node.TEXT_NODE && isTaText) {
+                node.textContent = converter(node.textContent);
                 return;
             }
             if (node.nodeType == Node.ELEMENT_NODE) {
                 let lang = node.dataset["lang"];
                 if (lang) {
-                    isTamilText = (lang == "ta");
+                    isTaText = (lang == "ta");
                 }
             }
             node = node.firstChild;
             while (node) {
-                walk(node, isTamilText);
+                walk(node, isTaText);
                 node = node.nextSibling;
             }
-        };
-
-        walk_the_DOM(content, isLangTa);
+        })(content, isLangTa);
     }
 
-    function xlit_sanskrit_data() {
+    function xlit_sa_data() {
     }
 </script>
 
