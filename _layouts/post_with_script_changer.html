@@ -52,7 +52,7 @@ Preferred script for Sanskrit text
         latn_xlit_ta_data(dst_script, latn_to_taml);
     }
 
-    function latn_xlit_ta_data(converter) {
+    function latn_xlit_ta_data(other_script, converter) {
         let isLangTa = document.documentElement.lang == "ta";
 
         let title = $(".post-title")[0];
