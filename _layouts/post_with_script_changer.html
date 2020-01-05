@@ -1,27 +1,29 @@
 ---
 layout: post
 ---
-Preferred script for Tamil text
-<form>
-    <select id="select-xlit-ta">
-        <option value="knda">ಕನ್ನಡ
-        <option value="latn">Latin
-        <option value="mlym">മലയാളം
-        <option value="taml" selected>தமிழ்
-        <option value="telu">తెలుగు
-    </select>
-</form>
-Preferred script for Sanskrit text
-<form>
-    <select id="select-xlit-sa" onchange=xlit_sanskrit_data_to_ISO15919()>
-        <option value="deva">देवनागरी
-        <option value="gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃
-        <option value="knda">ಕನ್ನಡ
-        <option value="latn">Latin
-        <option value="mlym">മലയാളം
-        <option value="telu">తెలుగు
-    </select>
-</form>
+<div data-lang="en">
+    Preferred script for Tamil text
+    <form>
+        <select id="select-xlit-ta">
+            <option value="knda">ಕನ್ನಡ
+            <option value="latn">Latin
+            <option value="mlym">മലയാളം
+            <option value="taml" selected>தமிழ்
+            <option value="telu">తెలుగు
+        </select>
+    </form>
+    Preferred script for Sanskrit text
+    <form>
+        <select id="select-xlit-sa" onchange=xlit_sanskrit_data_to_ISO15919()>
+            <option value="deva">देवनागरी
+            <option value="gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃
+            <option value="knda">ಕನ್ನಡ
+            <option value="latn">Latin
+            <option value="mlym">മലയാളം
+            <option value="telu">తెలుగు
+        </select>
+    </form>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
