@@ -1,4 +1,4 @@
-function taml_to_latn(source_text) {
+function taml_to_latn(other_script, source_text) {
     let data = {
         consonants: new Set([
             'க','ச','ட','ற','த','ப',
@@ -63,11 +63,10 @@ function taml_to_latn(source_text) {
     return transliterated_text;
 }
 
-function latn_to_taml(source_text) {
-    let data = {
-        diphthongs_and_constituents: [
-            'a', 'i', 'u', 'ai', 'au',
-        ],
+function latn_to_brahmiya(other_script, source_text) {
+    let diphthongs_and_constituents = ['a', 'i', 'u', 'ai', 'au',];
+    let plosive_consonants = ['k', 'c', 'ṭ', 'ṯ', 't', 'p',];
+    let taml_data = {
         vowels: new Map([
             ['a','அ'], ['ā','ஆ'], ['i','இ'], ['ī','ஈ'], ['u','உ'], ['ū','ஊ'],
             ['e','எ'], ['ē','ஏ'], ['ai','ஐ'], ['o','ஒ'], ['ō','ஓ'], ['au','ஔ'],
@@ -84,7 +83,6 @@ function latn_to_taml(source_text) {
             ['Ω','ௐ',], ['₨','௹'], ['〃','௸',], ['#','𑿩',],
         ]),
         modifiers: new Map([['ḵ','ஃ'],]),
-        plosives: ['k', 'c', 'ṭ', 'ṯ', 't', 'p',],
         consonants: new Map([
             ['k','க'],['ṅ','ங'],
             ['c','ச'],['ñ','ஞ'],
@@ -98,13 +96,15 @@ function latn_to_taml(source_text) {
         ]),
     };
 
+    let data = taml_data;
+
     let misc = Array.from(data.misc.keys()).sort().reverse().join('|');
     let modifiers = Array.from(data.modifiers.keys()).sort().reverse().join('|');
-    let plosives = data.plosives.sort().reverse().join('|');
+    let plosives = plosive_consonants.sort().reverse().join('|');
     let diphthong_constituents = 'a:(i|u)';
     let consonants = Array.from(data.consonants.keys()).sort().reverse().join('|');
-    let vowels1 = Array.from(data.vowels.keys()).filter(x => !data.diphthongs_and_constituents.includes(x)).sort().reverse().join('|');
-    let vowels2 = data.diphthongs_and_constituents.sort().reverse().join('|');
+    let vowels1 = Array.from(data.vowels.keys()).filter(x => !diphthongs_and_constituents.includes(x)).sort().reverse().join('|');
+    let vowels2 = diphthongs_and_constituents.sort().reverse().join('|');
 
     source_text = source_text.replace(new RegExp(misc, 'g'), function(match) {
         return data.misc.get(match);
@@ -114,7 +114,7 @@ function latn_to_taml(source_text) {
     });
 
     source_text = source_text.replace(new RegExp(`(${plosives}):`, 'g'), function(match, p1) {
-        return data.plosives.get(p1) + data.vowel_marks.get('');
+        return data.consonants.get(p1) + data.vowel_marks.get('');
     });
     source_text = source_text.replace(new RegExp(diphthong_constituents, 'g'), function(match, p1) {
         return 'a' + data.vowels.get(p1);

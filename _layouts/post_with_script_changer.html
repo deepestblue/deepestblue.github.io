@@ -46,12 +46,12 @@ layout: post
             return;
         }
         if (src_script == "latn") {
-            latn_xlit_ta_data(dst_script, latn_to_taml);
+            latn_xlit_ta_data(dst_script, latn_to_brahmiya);
             return;
         }
 
         latn_xlit_ta_data(src_script, taml_to_latn);
-        latn_xlit_ta_data(dst_script, latn_to_taml);
+        latn_xlit_ta_data(dst_script, latn_to_brahmiya);
     }
 
     function latn_xlit_ta_data(other_script, converter) {
@@ -59,13 +59,13 @@ layout: post
 
         let title = $(".post-title")[0];
         if (isLangTa) {
-            title.textContent = converter(title.textContent);
+            title.textContent = converter(other_script, title.textContent);
         }
 
         let content = $(".post-content")[0];
         (function walk(node, isTaText) {
             if (node.nodeType == Node.TEXT_NODE && isTaText) {
-                node.textContent = converter(node.textContent);
+                node.textContent = converter(other_script, node.textContent);
                 return;
             }
             if (node.nodeType == Node.ELEMENT_NODE) {
