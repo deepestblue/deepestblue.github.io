@@ -65,20 +65,26 @@ function taml_to_latn(source_text) {
 
 function latn_to_taml(source_text) {
     let data = {
-        vowels: {
-            'a':'அ','ā':'ஆ','i':'இ','ī':'ஈ','u':'உ','ū':'ஊ',
-            'e':'எ','ē':'ஏ','ai':'ஐ','o':'ஒ','ō':'ஓ','au':'ஔ',
-        },
+        diphthong_constituents: [
+            'a', 'i', 'u', 'ai', 'au',
+        ],
+        vowels: new Map([
+            ['a', 'அ'], ['ā','ஆ'], ['i','இ'], ['ī','ஈ'], ['u','உ'], ['ū','ஊ'],
+            ['e','எ'], ['ē','ஏ'], ['ai','ஐ'], ['o','ஒ'], ['ō','ஓ'], ['au','ஔ'],
+        ]),
     };
-    while (1) {
-        let regex = /ai|au|i|u|a/g
-        let old_str = source_text;
-        source_text = source_text.replace(regex, function(match) {
-            return data.vowels[match];
-        });
-        if (source_text == old_str)
-            break;
-    }
+    let vowels1 = new RegExp(
+        Array.from(data.vowels.keys()).filter(x => !data.diphthong_constituents.includes(x)).sort().reverse().join('|'),
+    'g');
+    let vowels2 = new RegExp(
+        data.diphthong_constituents.sort().reverse().join('|'),
+        'g');
+    source_text = source_text.replace(vowels1, function(match) {
+        return data.vowels.get(match);
+    });
+    source_text = source_text.replace(vowels2, function(match) {
+        return data.vowels.get(match);
+    });
 
     return source_text;
 }
