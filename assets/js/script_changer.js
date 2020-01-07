@@ -96,7 +96,41 @@ function latn_to_brahmiya(other_script, source_text) {
         ]),
     };
 
-    let data = taml_data;
+    let mlym_data = {
+        vowels: new Map([
+            ['a','അ'], ['ā','ആ'], ['i','ഇ'], ['ī','ഈ'], ['u','ഉ'], ['ū','ഊ'],
+            ['e','എ'], ['ē','ഏ'], ['ai','ഐ'], ['o','ഒ'], ['ō','ഓ'], ['au','ഔ'],
+        ]),
+        vowel_marks: new Map([
+            ['a','ാ'], ['ā','ി'],
+            ['i','ീ'], ['ī','ു'],
+            ['u','ൂ'], ['ū','ൃ'],
+            ['e','െ'], ['ē','േ'], ['ai','ൈ'],
+            ['o','ൊ'], ['ō','ോ'], ['au','ൌ'],
+            ['','്'],
+        ]),
+        misc: new Map([
+        ]),
+        modifiers: new Map([['ḵ','ഃ'],]),
+        consonants: new Map([
+            ['k','ക'],['ṅ','ങ'],
+            ['c','ച'],['ñ','ഞ'],
+            ['ṭ','ട'],['ṇ','ണ'],
+            ['ṯ','റ'],['ṉ','ഩ'],
+            ['t','ത'],['n','ന'],
+            ['p','പ'],['m','മ'],
+            ['y','യ'],['r','ര'],
+            ['ḻ','ല'],['v','വ'],
+            ['ṛ','ഴ'],['ḷ','ള'],
+        ]),
+    };
+
+    let script_data_map = new Map([
+        ["taml", taml_data],
+        ["mlym", mlym_data],
+    ]);
+
+    let data = script_data_map.get(other_script);
 
     let misc = Array.from(data.misc.keys()).sort().reverse().join('|');
     let modifiers = Array.from(data.modifiers.keys()).sort().reverse().join('|');
@@ -106,9 +140,12 @@ function latn_to_brahmiya(other_script, source_text) {
     let vowels1 = Array.from(data.vowels.keys()).filter(x => !diphthongs_and_constituents.includes(x)).sort().reverse().join('|');
     let vowels2 = diphthongs_and_constituents.sort().reverse().join('|');
 
-    source_text = source_text.replace(new RegExp(misc, 'g'), function(match) {
-        return data.misc.get(match);
-    });
+    if (misc.length) {
+        source_text = source_text.replace(new RegExp(misc, 'g'), function(match) {
+            return data.misc.get(match);
+        });
+    }
+
     source_text = source_text.replace(new RegExp(modifiers, 'g'), function(match) {
         return data.modifiers.get(match);
     });
