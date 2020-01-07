@@ -64,8 +64,6 @@ function taml_to_latn(other_script, source_text) {
 }
 
 function latn_to_brahmiya(other_script, source_text) {
-    let diphthongs_and_constituents = ['a', 'i', 'u', 'ai', 'au',];
-    let plosive_consonants = ['k', 'c', 'ṭ', 'ṯ', 't', 'p',];
     let taml_data = {
         vowels: new Map([
             ['a','அ'], ['ā','ஆ'], ['i','இ'], ['ī','ஈ'], ['u','உ'], ['ū','ஊ'],
@@ -102,8 +100,8 @@ function latn_to_brahmiya(other_script, source_text) {
             ['e','എ'], ['ē','ഏ'], ['ai','ഐ'], ['o','ഒ'], ['ō','ഓ'], ['au','ഔ'],
         ]),
         vowel_marks: new Map([
-            ['a','ാ'], ['ā','ി'],
-            ['i','ീ'], ['ī','ു'],
+            ['a',''], ['ā','ാ'],
+            ['i','ി'], ['ī','ീ'],
             ['u','ൂ'], ['ū','ൃ'],
             ['e','െ'], ['ē','േ'], ['ai','ൈ'],
             ['o','ൊ'], ['ō','ോ'], ['au','ൌ'],
@@ -130,12 +128,15 @@ function latn_to_brahmiya(other_script, source_text) {
         ["mlym", mlym_data],
     ]);
 
+    let diphthong_constituents = 'a:(i|u)';
+    let diphthongs_and_constituents = ['a', 'i', 'u', 'ai', 'au',];
+    let plosive_consonants = ['k', 'c', 'ṭ', 'ṯ', 't', 'p',];
+
     let data = script_data_map.get(other_script);
 
     let misc = Array.from(data.misc.keys()).sort().reverse().join('|');
     let modifiers = Array.from(data.modifiers.keys()).sort().reverse().join('|');
     let plosives = plosive_consonants.sort().reverse().join('|');
-    let diphthong_constituents = 'a:(i|u)';
     let consonants = Array.from(data.consonants.keys()).sort().reverse().join('|');
     let vowels1 = Array.from(data.vowels.keys()).filter(x => !diphthongs_and_constituents.includes(x)).sort().reverse().join('|');
     let vowels2 = diphthongs_and_constituents.sort().reverse().join('|');
