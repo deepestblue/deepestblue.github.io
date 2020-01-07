@@ -1,5 +1,38 @@
-function taml_to_latn(other_script, source_text) {
-    let data = {
+function brahmiya_to_latn(other_script, source_text) {
+    let mlym_data = {
+        consonants: new Set([
+            'ക','ച','ട','റ','ത','പ',
+            'ങ','ഞ','ണ','ഩ','ന','മ',
+            'യ','ര','ല','വ','ഴ','ള',
+        ]),
+        vowels: new Set([
+            'അ','ആ','ഇ','ഈ','ഉ','ഊ',
+            'എ','ഏ','ഐ','ഒ','ഓ','ഔ',
+        ]),
+        vowel_marks: new Set([
+            'ാ','ി','ീ','ു','ൂ',
+            'െ','േ','ൈ','ൊ','ോ','ൌ',
+            '്',
+        ]),
+        modifiers: new Set([
+            'ഃ',
+        ]),
+        misc: new Set([
+        ]),
+        char_map: {
+            'ക':'k','ച':'c','ട':'ṭ','റ':'ṯ','ത':'t','പ':'p',
+            'ങ':'ṅ','ഞ':'ñ','ണ':'ṇ','ഩ':'ṉ','ന':'n','മ':'m',
+            'യ':'y','ര':'r','ല':'ḻ','വ':'v','ഴ':'ṛ','ള':'ḷ',
+            'അ':'a','ആ':'ā','ഇ':'i','ഈ':'ī','ഉ':'u','ഊ':'ū',
+            'എ':'e','ഏ':'ē','ഐ':'ai','ഒ':'o','ഓ':'ō','ഔ':'au',
+            'ാ':'ā','ി':'i','ീ':'ī','ു':'u','ൂ':'ū',
+            'െ':'e','േ':'ē','ൈ':'ai','ൊ':'o','ോ':'ō','ൌ':'au',
+            '്':'',
+            'ഃ':'ḵ',
+        },
+    };
+
+    let taml_data = {
         consonants: new Set([
             'க','ச','ட','ற','த','ப',
             'ங','ஞ','ண','ன','ந','ம',
@@ -33,6 +66,12 @@ function taml_to_latn(other_script, source_text) {
             'ௐ':'Ω', '௸':'〃','௹':'₨','𑿩':'#',
         },
     };
+
+    let script_data_map = new Map([
+        ["taml", taml_data],
+        ["mlym", mlym_data],
+    ]);
+    let data = script_data_map.get(other_script);
 
     let is_consonant = false;
     let is_vowel_a = false;
@@ -102,7 +141,7 @@ function latn_to_brahmiya(other_script, source_text) {
         vowel_marks: new Map([
             ['a',''], ['ā','ാ'],
             ['i','ി'], ['ī','ീ'],
-            ['u','ൂ'], ['ū','ൃ'],
+            ['u','ു'], ['ū','ൂ'],
             ['e','െ'], ['ē','േ'], ['ai','ൈ'],
             ['o','ൊ'], ['ō','ോ'], ['au','ൌ'],
             ['','്'],
@@ -123,15 +162,14 @@ function latn_to_brahmiya(other_script, source_text) {
         ]),
     };
 
-    let script_data_map = new Map([
-        ["taml", taml_data],
-        ["mlym", mlym_data],
-    ]);
-
     let diphthong_constituents = 'a:(i|u)';
     let diphthongs_and_constituents = ['a', 'i', 'u', 'ai', 'au',];
     let plosive_consonants = ['k', 'c', 'ṭ', 'ṯ', 't', 'p',];
 
+    let script_data_map = new Map([
+        ["taml", taml_data],
+        ["mlym", mlym_data],
+    ]);
     let data = script_data_map.get(other_script);
 
     let misc = Array.from(data.misc.keys()).sort().reverse().join('|');

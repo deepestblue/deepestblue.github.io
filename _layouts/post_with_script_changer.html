@@ -42,7 +42,7 @@ layout: post
 
     function xlit_ta_data(src_script, dst_script) {
         if (dst_script == "latn") {
-            latn_xlit_ta_data(src_script, taml_to_latn);
+            latn_xlit_ta_data(src_script, brahmiya_to_latn);
             return;
         }
         if (src_script == "latn") {
@@ -50,7 +50,7 @@ layout: post
             return;
         }
 
-        latn_xlit_ta_data(src_script, taml_to_latn);
+        latn_xlit_ta_data(src_script, brahmiya_to_latn);
         latn_xlit_ta_data(dst_script, latn_to_brahmiya);
     }
 
