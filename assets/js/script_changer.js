@@ -118,11 +118,51 @@ let mlym_data = {
     ]),
 };
 
+let telu_data = {
+    char_map: {
+        'క':'k','చ':'c','ట':'ṭ','ఱ':'ṯ','త':'t','ప':'p',
+        'ఙ':'ṅ','ఞ':'ñ','ణ':'ṇ','఩':'ṉ','న':'n','మ':'m',
+        'య':'y','ర':'r','ల':'ḻ','వ':'v','ఴ':'ṛ','ళ':'ḷ',
+        'అ':'a','ఆ':'ā','ఇ':'i','ఈ':'ī','ఉ':'u','ఊ':'ū',
+        'ఎ':'e','ఏ':'ē','ఐ':'ai','ఒ':'o','ఓ':'ō','ఔ':'au',
+        'ా':'ā','ి':'i','ీ':'ī','ు':'u','ూ':'ū',
+        'ె':'e','ే':'ē','ై':'ai','ొ':'o','ో':'ō','ౌ':'au',
+        '్':'',
+        'ః':'ḵ',
+    },
+    vowels: new Map([
+        ['a','అ'], ['ā','ఆ'], ['i','ఇ'], ['ī','ఈ'], ['u','ఉ'], ['ū','ఊ'],
+        ['e','ఎ'], ['ē','ఏ'], ['ai','ఐ'], ['o','ఒ'], ['ō','ఓ'], ['au','ఔ'],
+    ]),
+    vowel_marks: new Map([
+        ['a',''], ['ā','ా'],
+        ['i','ి'], ['ī','ీ'],
+        ['u','ు'], ['ū','ూ'],
+        ['e','ె'], ['ē','ే'], ['ai','ై'],
+        ['o','ొ'], ['ō','ో'], ['au','ౌ'],
+        ['','్'],
+    ]),
+    misc: new Map([]),
+    modifiers: new Map([['ḵ','ః'],]),
+    consonants: new Map([
+        ['k','క'],['ṅ','ఙ'],
+        ['c','చ'],['ñ','ఞ'],
+        ['ṭ','ట'],['ṇ','ణ'],
+        ['ṯ','ఱ'],['ṉ','఩'],
+        ['t','త'],['n','న'],
+        ['p','ప'],['m','మ'],
+        ['y','య'],['r','ర'],
+        ['ḻ','ల'],['v','వ'],
+        ['ṛ','ఴ'],['ḷ','ళ'],
+    ]),
+};
+
 function brahmiya_to_latn(other_script, source_text) {
     let script_data_map = new Map([
         ["knda", knda_data],
         ["mlym", mlym_data],
         ["taml", taml_data],
+        ["telu", telu_data],
     ]);
     let data = script_data_map.get(other_script);
     let vowel_marks = Array.from(data.vowel_marks.values());
@@ -167,6 +207,7 @@ function latn_to_brahmiya(other_script, source_text) {
         ["knda", knda_data],
         ["mlym", mlym_data],
         ["taml", taml_data],
+        ["telu", telu_data],
     ]);
     let data = script_data_map.get(other_script);
 
