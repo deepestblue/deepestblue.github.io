@@ -14,7 +14,7 @@ layout: post
     </form>
     Preferred script for Sanskrit text
     <form>
-        <select id="select-xlit-sa" onchange=xlit_sanskrit_data_to_ISO15919()>
+        <select id="select-xlit-sa">
             <option value="deva">देवनागरी
             <option value="gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃
             <option value="latn">Latin
@@ -34,52 +34,49 @@ layout: post
         });
     };
 
-    onSelectValueChange('#select-xlit-ta', xlit_ta_data);
-    onSelectValueChange('#select-xlit-sa', xlit_sa_data);
+    onSelectValueChange('#select-xlit-ta', function(s,d) { xlit_data("ta", s, d) });
+    onSelectValueChange('#select-xlit-sa', function(s,d) { xlit_data("sa", s, d) });
 
-    function xlit_ta_data(src_script, dst_script) {
+    function xlit_data(lang_code, src_script, dst_script) {
         if (dst_script == "latn") {
-            latn_xlit_ta_data(src_script, brahmiya_to_latn);
+            latn_xlit_data(lang_code, src_script, brahmiya_to_latn);
             return;
         }
         if (src_script == "latn") {
-            latn_xlit_ta_data(dst_script, latn_to_brahmiya);
+            latn_xlit_data(lang_code, dst_script, latn_to_brahmiya);
             return;
         }
 
-        latn_xlit_ta_data(src_script, brahmiya_to_latn);
-        latn_xlit_ta_data(dst_script, latn_to_brahmiya);
+        latn_xlit_data(lang_code, src_script, brahmiya_to_latn);
+        latn_xlit_data(lang_code, dst_script, latn_to_brahmiya);
     }
 
-    function latn_xlit_ta_data(other_script, converter) {
-        let isLangTa = document.documentElement.lang == "ta";
+    function latn_xlit_data(lang_code, other_script, converter) {
+        let lang_matched = document.documentElement.lang == lang_code;
 
         let title = $(".post-title")[0];
-        if (isLangTa) {
+        if (lang_matched) {
             title.textContent = converter(other_script, title.textContent);
         }
 
         let content = $(".post-content")[0];
-        (function walk(node, isTaText) {
-            if (node.nodeType == Node.TEXT_NODE && isTaText) {
+        (function walk(node, lang_matched) {
+            if (node.nodeType == Node.TEXT_NODE && lang_matched) {
                 node.textContent = converter(other_script, node.textContent);
                 return;
             }
             if (node.nodeType == Node.ELEMENT_NODE) {
                 let lang = node.dataset["lang"];
                 if (lang) {
-                    isTaText = (lang == "ta");
+                    lang_matched = (lang == lang_code);
                 }
             }
             node = node.firstChild;
             while (node) {
-                walk(node, isTaText);
+                walk(node, lang_matched);
                 node = node.nextSibling;
             }
-        })(content, isLangTa);
-    }
-
-    function xlit_sa_data() {
+        })(content, lang_matched);
     }
 </script>
 

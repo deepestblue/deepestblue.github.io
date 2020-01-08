@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: post_with_script_changer
 title: 𑌕𑌾𑌕𑌃 𑌗𑌰𑍁𑌡𑌾𑌯𑌤𑍇
 date: '2011-01-23T20:41:00.000-08:00'
 author: ambarish
+lang: sa
 tags:
 modified_time: '2016-12-16T23:10:44.438-08:00'
 blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-1167589636279540182
