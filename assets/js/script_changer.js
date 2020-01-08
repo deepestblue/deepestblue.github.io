@@ -1,5 +1,5 @@
-let taml_data = {
-    char_map: {
+let tamlData = {
+    charMap: {
         'க':'k','ச':'c','ட':'ṭ','ற':'ṯ','த':'t','ப':'p',
         'ங':'ṅ','ஞ':'ñ','ண':'ṇ','ன':'ṉ','ந':'n','ம':'m',
         'ய':'y','ர':'r','ல':'ḻ','வ':'v','ழ':'ṛ','ள':'ḷ',
@@ -15,7 +15,7 @@ let taml_data = {
         ['a','அ'], ['ā','ஆ'], ['i','இ'], ['ī','ஈ'], ['u','உ'], ['ū','ஊ'],
         ['e','எ'], ['ē','ஏ'], ['ai','ஐ'], ['o','ஒ'], ['ō','ஓ'], ['au','ஔ'],
     ]),
-    vowel_marks: new Map([
+    vowelMarks: new Map([
         ['a',''], ['ā','ா'],
         ['i','ி'], ['ī','ீ'],
         ['u','ு'], ['ū','ூ'],
@@ -40,8 +40,8 @@ let taml_data = {
     ]),
 };
 
-let knda_data = {
-    char_map: {
+let kndaData = {
+    charMap: {
         'ಕ':'k','ಚ':'c','ಟ':'ṭ','ಱ':'ṯ','ತ':'t','ಪ':'p',
         'ಙ':'ṅ','ಞ':'ñ','ಣ':'ṇ','಴':'ṉ','ನ':'n','ಮ':'m',
         'ಯ':'y','ರ':'r','ಲ':'ḻ','ವ':'v','ೞ':'ṛ','ಳ':'ḷ',
@@ -56,7 +56,7 @@ let knda_data = {
         ['a','ಅ'], ['ā','ಆ'], ['i','ಇ'], ['ī','ಈ'], ['u','ಉ'], ['ū','ಊ'],
         ['e','ಎ'], ['ē','ಏ'], ['ai','ಐ'], ['o','ಒ'], ['ō','ಓ'], ['au','ಔ'],
     ]),
-    vowel_marks: new Map([
+    vowelMarks: new Map([
         ['a',''], ['ā','ಾ'],
         ['i','ಿ'], ['ī','ೀ'],
         ['u','ು'], ['ū','ೂ'],
@@ -79,8 +79,8 @@ let knda_data = {
     ]),
 };
 
-let mlym_data = {
-    char_map: {
+let mlymData = {
+    charMap: {
         'ക':'k','ച':'c','ട':'ṭ','റ':'ṯ','ത':'t','പ':'p',
         'ങ':'ṅ','ഞ':'ñ','ണ':'ṇ','ഩ':'ṉ','ന':'n','മ':'m',
         'യ':'y','ര':'r','ല':'ḻ','വ':'v','ഴ':'ṛ','ള':'ḷ',
@@ -95,7 +95,7 @@ let mlym_data = {
         ['a','അ'], ['ā','ആ'], ['i','ഇ'], ['ī','ഈ'], ['u','ഉ'], ['ū','ഊ'],
         ['e','എ'], ['ē','ഏ'], ['ai','ഐ'], ['o','ഒ'], ['ō','ഓ'], ['au','ഔ'],
     ]),
-    vowel_marks: new Map([
+    vowelMarks: new Map([
         ['a',''], ['ā','ാ'],
         ['i','ി'], ['ī','ീ'],
         ['u','ു'], ['ū','ൂ'],
@@ -118,8 +118,8 @@ let mlym_data = {
     ]),
 };
 
-let telu_data = {
-    char_map: {
+let teluData = {
+    charMap: {
         'క':'k','చ':'c','ట':'ṭ','ఱ':'ṯ','త':'t','ప':'p',
         'ఙ':'ṅ','ఞ':'ñ','ణ':'ṇ','఩':'ṉ','న':'n','మ':'m',
         'య':'y','ర':'r','ల':'ḻ','వ':'v','ఴ':'ṛ','ళ':'ḷ',
@@ -134,7 +134,7 @@ let telu_data = {
         ['a','అ'], ['ā','ఆ'], ['i','ఇ'], ['ī','ఈ'], ['u','ఉ'], ['ū','ఊ'],
         ['e','ఎ'], ['ē','ఏ'], ['ai','ఐ'], ['o','ఒ'], ['ō','ఓ'], ['au','ఔ'],
     ]),
-    vowel_marks: new Map([
+    vowelMarks: new Map([
         ['a',''], ['ā','ా'],
         ['i','ి'], ['ī','ీ'],
         ['u','ు'], ['ū','ూ'],
@@ -157,101 +157,101 @@ let telu_data = {
     ]),
 };
 
-function brahmiya_to_latn(other_script, source_text) {
-    let script_data_map = new Map([
-        ["knda", knda_data],
-        ["mlym", mlym_data],
-        ["taml", taml_data],
-        ["telu", telu_data],
+function brahmiyaToLatn(otherScript, sourceText) {
+    let scriptDataMap = new Map([
+        ["knda", kndaData],
+        ["mlym", mlymData],
+        ["taml", tamlData],
+        ["telu", teluData],
     ]);
-    let data = script_data_map.get(other_script);
-    let vowel_marks = Array.from(data.vowel_marks.values());
+    let data = scriptDataMap.get(otherScript);
+    let vowelMarks = Array.from(data.vowelMarks.values());
     let consonants = Array.from(data.consonants.values());
 
-    let is_consonant = false;
-    let is_vowel_a = false;
-    let transliterated_text = "";
-    [...source_text].forEach(c => {
-        let is_implicit_a = is_consonant &&
-            ! vowel_marks.includes(c);
-        if (is_implicit_a) {
-            transliterated_text += 'a';
+    let isConsonant = false;
+    let isVowelA = false;
+    let transliteratedText = "";
+    [...sourceText].forEach(c => {
+        let isImplicitA = isConsonant &&
+            ! vowelMarks.includes(c);
+        if (isImplicitA) {
+            transliteratedText += 'a';
         }
-        if (c in data.char_map) {
-            if (is_vowel_a || is_implicit_a) {
-                if (['i','u'].indexOf(data.char_map[c]) >= 0) {
-                    transliterated_text += ':';
+        if (c in data.charMap) {
+            if (isVowelA || isImplicitA) {
+                if (['i','u'].indexOf(data.charMap[c]) >= 0) {
+                    transliteratedText += ':';
                 }
             }
         }
 
-        is_vowel_a = (c in data.char_map) && (data.char_map[c] == 'a');
-        is_consonant = consonants.includes(c);
+        isVowelA = (c in data.charMap) && (data.charMap[c] == 'a');
+        isConsonant = consonants.includes(c);
 
-        transliterated_text += (c in data.char_map) ? data.char_map[c] : c;
+        transliteratedText += (c in data.charMap) ? data.charMap[c] : c;
     });
 
-    if (is_consonant) {
-        transliterated_text += 'a';
+    if (isConsonant) {
+        transliteratedText += 'a';
     }
 
-    return transliterated_text;
+    return transliteratedText;
 }
 
-function latn_to_brahmiya(other_script, source_text) {
-    let diphthong_constituents = 'a:(i|u)';
-    let diphthongs_and_constituents = ['a', 'i', 'u', 'ai', 'au',];
-    let plosive_consonants = ['k', 'c', 'ṭ', 'ṯ', 't', 'p',];
+function latnToBrahmiya(otherScript, sourceText) {
+    let diphthongConstituents = 'a:(i|u)';
+    let diphthongsAndConstituents = ['a', 'i', 'u', 'ai', 'au',];
+    let plosiveConsonants = ['k', 'c', 'ṭ', 'ṯ', 't', 'p',];
 
-    let script_data_map = new Map([
-        ["knda", knda_data],
-        ["mlym", mlym_data],
-        ["taml", taml_data],
-        ["telu", telu_data],
+    let scriptDataMap = new Map([
+        ["knda", kndaData],
+        ["mlym", mlymData],
+        ["taml", tamlData],
+        ["telu", teluData],
     ]);
-    let data = script_data_map.get(other_script);
+    let data = scriptDataMap.get(otherScript);
 
     let misc = Array.from(data.misc.keys()).sort().reverse().join('|');
     let modifiers = Array.from(data.modifiers.keys()).sort().reverse().join('|');
-    let plosives = plosive_consonants.sort().reverse().join('|');
+    let plosives = plosiveConsonants.sort().reverse().join('|');
     let consonants = Array.from(data.consonants.keys()).sort().reverse().join('|');
-    let vowels1 = Array.from(data.vowels.keys()).filter(x => !diphthongs_and_constituents.includes(x)).sort().reverse().join('|');
-    let vowels2 = diphthongs_and_constituents.sort().reverse().join('|');
+    let vowels1 = Array.from(data.vowels.keys()).filter(x => ! diphthongsAndConstituents.includes(x)).sort().reverse().join('|');
+    let vowels2 = diphthongsAndConstituents.sort().reverse().join('|');
 
     if (misc.length) {
-        source_text = source_text.replace(new RegExp(misc, 'g'), function(match) {
+        sourceText = sourceText.replace(new RegExp(misc, 'g'), function(match) {
             return data.misc.get(match);
         });
     }
 
-    source_text = source_text.replace(new RegExp(modifiers, 'g'), function(match) {
+    sourceText = sourceText.replace(new RegExp(modifiers, 'g'), function(match) {
         return data.modifiers.get(match);
     });
 
-    source_text = source_text.replace(new RegExp(`(${plosives}):`, 'g'), function(match, p1) {
-        return data.consonants.get(p1) + data.vowel_marks.get('');
+    sourceText = sourceText.replace(new RegExp(`(${plosives}):`, 'g'), function(match, p1) {
+        return data.consonants.get(p1) + data.vowelMarks.get('');
     });
-    source_text = source_text.replace(new RegExp(diphthong_constituents, 'g'), function(match, p1) {
+    sourceText = sourceText.replace(new RegExp(diphthongConstituents, 'g'), function(match, p1) {
         return 'a' + data.vowels.get(p1);
     });
 
-    source_text = source_text.replace(new RegExp(`(${consonants})(${vowels1})`, 'g'), function(match, p1, p2) {
-        return data.consonants.get(p1) + data.vowel_marks.get(p2);
+    sourceText = sourceText.replace(new RegExp(`(${consonants})(${vowels1})`, 'g'), function(match, p1, p2) {
+        return data.consonants.get(p1) + data.vowelMarks.get(p2);
     });
-    source_text = source_text.replace(new RegExp(vowels1, 'g'), function(match) {
+    sourceText = sourceText.replace(new RegExp(vowels1, 'g'), function(match) {
         return data.vowels.get(match);
     });
 
-    source_text = source_text.replace(new RegExp(`(${consonants})(${vowels2})`, 'g'), function(match, p1, p2) {
-        return data.consonants.get(p1) + data.vowel_marks.get(p2);
+    sourceText = sourceText.replace(new RegExp(`(${consonants})(${vowels2})`, 'g'), function(match, p1, p2) {
+        return data.consonants.get(p1) + data.vowelMarks.get(p2);
     });
-    source_text = source_text.replace(new RegExp(vowels2, 'g'), function(match) {
+    sourceText = sourceText.replace(new RegExp(vowels2, 'g'), function(match) {
         return data.vowels.get(match);
     });
 
-    source_text = source_text.replace(new RegExp(consonants, 'g'), function(match) {
-        return data.consonants.get(match) + data.vowel_marks.get('');
+    sourceText = sourceText.replace(new RegExp(consonants, 'g'), function(match) {
+        return data.consonants.get(match) + data.vowelMarks.get('');
     });
 
-    return source_text;
+    return sourceText;
 }

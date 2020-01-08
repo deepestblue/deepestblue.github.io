@@ -34,49 +34,49 @@ layout: post
         });
     };
 
-    onSelectValueChange('#select-xlit-ta', xlit_data.bind(undefined, "ta"));
-    onSelectValueChange('#select-xlit-sa', xlit_data.bind(undefined, "sa"));
+    onSelectValueChange('#select-xlit-ta', xliterate.bind(undefined, "ta"));
+    onSelectValueChange('#select-xlit-sa', xliterate.bind(undefined, "sa"));
 
-    function xlit_data(lang_code, src_script, dst_script) {
-        if (dst_script == "latn") {
-            latn_xlit_data(lang_code, src_script, brahmiya_to_latn);
+    function xliterate(langCode, srcScript, dstScript) {
+        if (dstScript == "latn") {
+            latnXliterate(langCode, srcScript, brahmiyaToLatn);
             return;
         }
-        if (src_script == "latn") {
-            latn_xlit_data(lang_code, dst_script, latn_to_brahmiya);
+        if (srcScript == "latn") {
+            latnXliterate(langCode, dstScript, latnToBrahmiya);
             return;
         }
 
-        latn_xlit_data(lang_code, src_script, brahmiya_to_latn);
-        latn_xlit_data(lang_code, dst_script, latn_to_brahmiya);
+        latnXliterate(langCode, srcScript, brahmiyaToLatn);
+        latnXliterate(langCode, dstScript, latnToBrahmiya);
     }
 
-    function latn_xlit_data(lang_code, other_script, converter) {
-        let lang_matched = document.documentElement.lang == lang_code;
+    function latnXliterate(langCode, otherScript, converter) {
+        let langMatched = document.documentElement.lang == langCode;
 
         let title = $(".post-title")[0];
-        if (lang_matched) {
-            title.textContent = converter(other_script, title.textContent);
+        if (langMatched) {
+            title.textContent = converter(otherScript, title.textContent);
         }
 
         let content = $(".post-content")[0];
-        (function walk(node, lang_matched) {
-            if (node.nodeType == Node.TEXT_NODE && lang_matched) {
-                node.textContent = converter(other_script, node.textContent);
+        (function walk(node, langMatched) {
+            if (node.nodeType == Node.TEXT_NODE && langMatched) {
+                node.textContent = converter(otherScript, node.textContent);
                 return;
             }
             if (node.nodeType == Node.ELEMENT_NODE) {
                 let lang = node.dataset["lang"];
                 if (lang) {
-                    lang_matched = (lang == lang_code);
+                    langMatched = (lang == langCode);
                 }
             }
             node = node.firstChild;
             while (node) {
-                walk(node, lang_matched);
+                walk(node, langMatched);
                 node = node.nextSibling;
             }
-        })(content, lang_matched);
+        })(content, langMatched);
     }
 </script>
 
