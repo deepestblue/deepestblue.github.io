@@ -34,8 +34,8 @@ layout: post
         });
     };
 
-    onSelectValueChange('#select-xlit-ta', function(s,d) { xlit_data("ta", s, d) });
-    onSelectValueChange('#select-xlit-sa', function(s,d) { xlit_data("sa", s, d) });
+    onSelectValueChange('#select-xlit-ta', xlit_data.bind(undefined, "ta"));
+    onSelectValueChange('#select-xlit-sa', xlit_data.bind(undefined, "sa"));
 
     function xlit_data(lang_code, src_script, dst_script) {
         if (dst_script == "latn") {
