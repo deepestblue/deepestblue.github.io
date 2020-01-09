@@ -356,9 +356,9 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
         return sourceText;
     }
 
-    let misc = Array.from(data.misc.keys()).sort().reverse().join('|');
-    let modifiers = Array.from(data.modifiers.keys()).sort().reverse().join('|');
-    let plosives = plosiveConsonants.sort().reverse().join('|');
+    let misc = Array.from(data.misc.keys()).join('|');
+    let modifiers = Array.from(data.modifiers.keys()).join('|');
+    let plosives = plosiveConsonants.join('|');
     let consonants = Array.from(data.consonants.keys()).sort().reverse().join('|');
     let vowels1 = Array.from(data.vowels.keys()).filter(x => ! diphthongsAndConstituents.includes(x)).sort().reverse().join('|');
     let vowels2 = diphthongsAndConstituents.sort().reverse().join('|');
