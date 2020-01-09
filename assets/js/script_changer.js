@@ -273,10 +273,15 @@ let devaData = {
         ['y','य'], ['r','र'], ['l','ल'], ['v','व'],
         ['ś','श'], ['ṣ','ष'], ['s','स'], ['h','ह'],
     ]),
-
+    numbers: new Map([
+        ['०','0'], ['१','1'], ['२','2'], ['३','3'], ['९','4'],
+        ['५','5'], ['६','6'], ['७','7'], ['८','8'], ['४','9'],
+        ['0','०'], ['1','१'], ['2','२'], ['3','३'], ['4','९'],
+        ['5','५'], ['6','६'], ['7','७'], ['8','८'], ['9','४'],
+    ]),
 };
 
-function brahmiyaToLatn(otherScript, sourceText) {
+function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
     let scriptDataMap = new Map([
         ["deva", devaData],
         ["gran", granData],
@@ -284,8 +289,17 @@ function brahmiyaToLatn(otherScript, sourceText) {
         ["mlym", mlymData],
         ["taml", tamlData],
         ["telu", teluData],
-]);
+    ]);
     let data = scriptDataMap.get(otherScript);
+
+    if (xlitNumbers) {
+        let numbers = Array.from(data.numbers.keys()).filter(x => isNaN(parseInt(x, 10))).join('|');
+        sourceText = sourceText.replace(new RegExp(numbers, 'g'), function(match) {
+            return data.numbers.get(match);
+        });
+        return sourceText;
+    }
+
     let vowelMarks = Array.from(data.vowelMarks.values());
     let consonants = Array.from(data.consonants.values());
 
@@ -319,7 +333,7 @@ function brahmiyaToLatn(otherScript, sourceText) {
     return transliteratedText;
 }
 
-function latnToBrahmiya(otherScript, sourceText) {
+function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
     let diphthongConstituents = 'a:(i|u)';
     let diphthongsAndConstituents = ['a', 'i', 'u', 'ai', 'au',];
     let plosiveConsonants = ['k', 'c', 'ṭ', 'ṯ', 't', 'p',];
@@ -333,6 +347,14 @@ function latnToBrahmiya(otherScript, sourceText) {
         ["telu", teluData],
     ]);
     let data = scriptDataMap.get(otherScript);
+
+    if (xlitNumbers) {
+        let numbers = Array.from(Array(10).keys()).join('|');
+        sourceText = sourceText.replace(new RegExp(numbers, 'g'), function(match) {
+            return data.numbers.get(match);
+        });
+        return sourceText;
+    }
 
     let misc = Array.from(data.misc.keys()).sort().reverse().join('|');
     let modifiers = Array.from(data.modifiers.keys()).sort().reverse().join('|');

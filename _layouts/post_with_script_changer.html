@@ -20,6 +20,17 @@ layout: post
             <option value="latn">Latin</option>
         </select>
     </form>
+    Preferred script for numbers
+    <form>
+        <select id="select-xlit-num">
+            <option value="deva">देवनागरी</option>
+            <option value="knda">ಕನ್ನಡ</option>
+            <option value="latn" selected>Hindu‐Arabic</option>
+            <option value="mlym">മലയാളം</option>
+            <option value="taml">தமிழ்</option>
+            <option value="telu">తెలుగు</option>
+        </select>
+    </form>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,6 +47,7 @@ layout: post
 
     onSelectValueChange('#select-xlit-ta', xliterate.bind(undefined, "ta"));
     onSelectValueChange('#select-xlit-sa', xliterate.bind(undefined, "sa"));
+    onSelectValueChange('#select-xlit-num', xliterate.bind(undefined, "num"));
 
     function xliterate(langCode, srcScript, dstScript) {
         if (dstScript == "latn") {
@@ -52,20 +64,21 @@ layout: post
     }
 
     function latnXliterate(langCode, otherScript, converter) {
-        let langMatched = document.documentElement.lang == langCode;
+        let xlitNumbers = langCode == "num";
+        let langMatched = (document.documentElement.lang == langCode) || xlitNumbers;
 
         let title = $(".post-title")[0];
         if (langMatched) {
-            title.textContent = converter(otherScript, title.textContent);
+            title.textContent = converter(otherScript, title.textContent, xlitNumbers);
         }
 
         let content = $(".post-content")[0];
         (function walk(node, langMatched) {
             if (node.nodeType == Node.TEXT_NODE && langMatched) {
-                node.textContent = converter(otherScript, node.textContent);
+                node.textContent = converter(otherScript, node.textContent, xlitNumbers);
                 return;
             }
-            if (node.nodeType == Node.ELEMENT_NODE) {
+            if ((node.nodeType == Node.ELEMENT_NODE) && ! xlitNumbers) {
                 let lang = node.dataset["lang"];
                 if (lang) {
                     langMatched = (lang == langCode);
