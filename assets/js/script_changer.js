@@ -41,6 +41,12 @@ let tamlData = {
         ['ḻ','ல'], ['v','வ'],
         ['ṛ','ழ'], ['ḷ','ள'],
     ]),
+    numbers: new Map([
+        ['௧','1'], ['௨','2'], ['௩','3'], ['௪','4'], ['௫','5'], ['௬','6'], ['௭','7'], ['௮','8'], ['௯','9'],
+        ['௰','10'], ['௱','100'], ['௲','1000'],
+        ['1','௧'], ['2','௨'], ['3','௩'], ['4','௪'], ['5','௫'], ['6','௬'], ['7','௭'], ['8','௮'], ['9','௯'],
+        ['10','௰'], ['100','௱'], ['1000','௲'],
+    ]),
 };
 
 let granData = {
@@ -136,6 +142,12 @@ let kndaData = {
         ['ḻ','ಲ'], ['v','ವ'],
         ['ṛ','ೞ'], ['ḷ','ಳ'],
     ]),
+    numbers: new Map([
+        ['೦','0'], ['೧','1'], ['೨','2'], ['೩','3'], ['೪','4'],
+        ['೫','5'], ['೬','6'], ['೭','7'], ['೮','8'], ['೯','9'],
+        ['0','೦'], ['1','೧'], ['2','೨'], ['3','೩'], ['4','೪'],
+        ['5','೫'], ['6','೬'], ['7','೭'], ['8','೮'], ['9','೯'],
+    ]),
 };
 
 let mlymData = {
@@ -178,6 +190,12 @@ let mlymData = {
         ['ḻ','ല'], ['v','വ'],
         ['ṛ','ഴ'], ['ḷ','ള'],
     ]),
+    numbers: new Map([
+        ['൧','1'], ['൨','2'], ['൩','3'], ['൪','4'], ['൫','5'], ['൬','6'], ['൭','7'], ['൮','8'], ['൯','9'],
+        ['൰','10'], ['൱','100'], ['൲','1000'],
+        ['1','൧'], ['2','൨'], ['3','൩'], ['4','൪'], ['5','൫'], ['6','൬'], ['7','൭'], ['8','൮'], ['9','൯'],
+        ['10','൰'], ['100','൱'], ['1000','൲'],
+    ]),
 };
 
 let teluData = {
@@ -219,6 +237,12 @@ let teluData = {
         ['y','య'], ['r','ర'],
         ['ḻ','ల'], ['v','వ'],
         ['ṛ','ఴ'], ['ḷ','ళ'],
+    ]),
+    numbers: new Map([
+        ['౦','0'], ['౧','1'], ['౨','2'], ['౩','3'], ['౪','4'],
+        ['౫','5'], ['౬','6'], ['౭','7'], ['౮','8'], ['౯','9'],
+        ['0','౦'], ['1','౧'], ['2','౨'], ['3','౩'], ['4','౪'],
+        ['5','౫'], ['6','౬'], ['7','౭'], ['8','౮'], ['9','౯'],
     ]),
 };
 
@@ -274,10 +298,10 @@ let devaData = {
         ['ś','श'], ['ṣ','ष'], ['s','स'], ['h','ह'],
     ]),
     numbers: new Map([
-        ['०','0'], ['१','1'], ['२','2'], ['३','3'], ['९','4'],
-        ['५','5'], ['६','6'], ['७','7'], ['८','8'], ['४','9'],
-        ['0','०'], ['1','१'], ['2','२'], ['3','३'], ['4','९'],
-        ['5','५'], ['6','६'], ['7','७'], ['8','८'], ['9','४'],
+        ['०','0'], ['१','1'], ['२','2'], ['३','3'], ['४','4'],
+        ['५','5'], ['६','6'], ['७','7'], ['८','8'], ['९','9'],
+        ['0','०'], ['1','१'], ['2','२'], ['3','३'], ['4','४'],
+        ['5','५'], ['6','६'], ['7','७'], ['8','८'], ['9','९'],
     ]),
 };
 
@@ -293,10 +317,47 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
     let data = scriptDataMap.get(otherScript);
 
     if (xlitNumbers) {
+        let convertToLatn = function(sourceNumber) {
+            let digits = Array.from(data.numbers.keys()).filter(
+                x => isNaN(parseInt(x, 10)) && data.numbers.get(x) < 10).join('|');
+            let multipliers = Array.from(data.numbers.keys()).filter(
+                x => isNaN(parseInt(x, 10)) && data.numbers.get(x) >= 10).join('|');
+            let constituents = sourceNumber.split(new RegExp(`(${digits})+|((${multipliers})+)`, 'g'));
+            constituents = constituents.filter(function(ignored, index) {
+                return (index % 4 == 1) || (index % 4 == 2)
+            });
+            constituents = constituents.filter(function(ignored, index) {
+                return (index % 4 == 0) || (index % 4 == 3)
+            });
+            let xlittedNumber = 0;
+            let power = 1;
+            let digit = 0;
+            constituents.forEach(c => {
+                if (c.match(digits)) {
+                    digit = data.numbers.get(c);
+                } else {
+                    for (let m of c) {
+                        power *= data.numbers.get(m);
+                    }
+                    xlittedNumber += digit * power;
+                    power = 1;
+                    digit = 0;
+                }
+            });
+            xlittedNumber += digit * 1;
+            return xlittedNumber;
+        };
+
         let numbers = Array.from(data.numbers.keys()).filter(x => isNaN(parseInt(x, 10))).join('|');
-        sourceText = sourceText.replace(new RegExp(numbers, 'g'), function(match) {
-            return data.numbers.get(match);
-        });
+        if (otherScript == "taml" || otherScript == "mlym") {
+            sourceText = sourceText.replace(new RegExp(`(${numbers})+`, 'g'), function(match) {
+                return convertToLatn(match);
+            });
+        } else {
+            sourceText = sourceText.replace(new RegExp(numbers, 'g'), function(match) {
+                return data.numbers.get(match);
+            });
+        }
         return sourceText;
     }
 
@@ -349,6 +410,34 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
     let data = scriptDataMap.get(otherScript);
 
     if (xlitNumbers) {
+        if (otherScript == "taml" || otherScript == "mlym") {
+            let numbers = Array.from(Array(10).keys()).join('|');
+            let regex = new RegExp(`(${numbers})+`, 'g');
+            sourceText = sourceText.replace(regex, function(match) {
+                let latinNumber = parseInt(match, 10);
+                let power = 1;
+                let xlittedText = "";
+                while (latinNumber > 0) {
+                    let rem = latinNumber % 10;
+                    latinNumber = (latinNumber - rem) / 10;
+                    if (power > 1) {
+                        let maxMultiplier = 1000;
+                        let power2 = power;
+                        while (power2 > maxMultiplier) {
+                            power2 /= maxMultiplier;
+                            xlittedText = data.numbers.get(maxMultiplier.toString()) + xlittedText;
+                        }
+                        xlittedText = data.numbers.get(power2.toString()) + xlittedText;
+                    }
+                    xlittedText = data.numbers.get(rem.toString()) + xlittedText;
+                    power *= 10;
+                }
+                return xlittedText;
+            });
+
+            return sourceText;
+        }
+
         let numbers = Array.from(Array(10).keys()).join('|');
         sourceText = sourceText.replace(new RegExp(numbers, 'g'), function(match) {
             return data.numbers.get(match);
