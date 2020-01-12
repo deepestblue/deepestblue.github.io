@@ -1,0 +1,100 @@
+---
+layout: post
+---
+<div data-lang="en">
+Preferred scripts for Tamil text:
+<form style="display: inline;">
+    <select id="select-xlit-ta">
+        <option value="knda">ಕನ್ನಡ</option>
+        <option value="latn">Latin</option>
+        <option value="mlym">മലയാളം</option>
+        <option value="taml" selected>தமிழ்</option>
+        <option value="telu">తెలుగు</option>
+    </select>
+</form>
+, Sanskrit text:
+<form style="display: inline;">
+    <select id="select-xlit-sa">
+        <option value="deva">देवनागरी</option>
+        <option value="gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
+        <option value="latn">Latin</option>
+    </select>
+</form>
+, and numbers:
+<form style="display: inline;">
+    <select id="select-xlit-num">
+        <option value="deva">देवनागरी</option>
+        <option value="knda">ಕನ್ನಡ</option>
+        <option value="latn">Hindu‐Arabic</option>
+        <option value="mlym">മലയാളം</option>
+        <option value="taml" selected>தமிழ்</option>
+        <option value="telu">తెలుగు</option>
+    </select>
+</form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" data-lang="en">
+    let onSelectValueChange = function (selectId, eventHandler) {
+        let previous;
+        $(selectId).on('focus', function () {
+            previous = this.value;
+        }).change(function() {
+            eventHandler(previous, this.value);
+            previous = this.value;
+        });
+    };
+
+    onSelectValueChange('#select-xlit-ta', xliterate.bind(undefined, "ta"));
+    onSelectValueChange('#select-xlit-sa', xliterate.bind(undefined, "sa"));
+    onSelectValueChange('#select-xlit-num', xliterate.bind(undefined, "num"));
+
+    function xliterate(langCode, srcScript, dstScript) {
+        if (dstScript == "latn") {
+            latnXliterate(langCode, srcScript, brahmiyaToLatn);
+            return;
+        }
+        if (srcScript == "latn") {
+            latnXliterate(langCode, dstScript, latnToBrahmiya);
+            return;
+        }
+
+        latnXliterate(langCode, srcScript, brahmiyaToLatn);
+        latnXliterate(langCode, dstScript, latnToBrahmiya);
+    }
+
+    function latnXliterate(langCode, otherScript, converter) {
+        let xlitNumbers = langCode == "num";
+        let langMatched = (document.documentElement.lang == langCode) || xlitNumbers;
+
+        let title = $(".post-title")[0];
+        if (langMatched) {
+            title.textContent = converter(otherScript, title.textContent, xlitNumbers);
+        }
+
+        let content = $(".post-content")[0];
+        (function walk(node, langMatched) {
+            if (node.nodeType == Node.TEXT_NODE && langMatched) {
+                node.textContent = converter(otherScript, node.textContent, xlitNumbers);
+                return;
+            }
+            if ((node.nodeType == Node.ELEMENT_NODE) && ! xlitNumbers) {
+                let lang = node.dataset["lang"];
+                if (lang) {
+                    langMatched = (lang == langCode);
+                }
+            }
+            node = node.firstChild;
+            while (node) {
+                walk(node, langMatched);
+                node = node.nextSibling;
+            }
+        })(content, langMatched);
+    }
+</script>
+
+<script type="text/javascript" src="/assets/js/script_changer.js"></script>
+
+<hr>
+
+{{ content }}
