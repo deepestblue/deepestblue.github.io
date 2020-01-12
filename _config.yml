@@ -18,12 +18,12 @@ email: noreply@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Personal website + blog of Ambarish Sridharanarayanan.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ambari.sh" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.ambari.sh" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  deepestblue
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-leap-day
+theme: minima
 plugins:
   - jekyll-feed
 
