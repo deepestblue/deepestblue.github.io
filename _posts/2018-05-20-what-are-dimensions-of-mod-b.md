@@ -6,8 +6,6 @@ author: ambarish
 tags:
 - maths
 modified_time: '2018-05-20T16:37:37.180-07:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-7115311366352243547
-blogger_orig_url: https://blog.ambari.sh/2018/05/what-are-dimensions-of-mod-b.html
 description: Given two dimensioned quantities a and b, what are the dimensions of (a mod b)?
 ---
 

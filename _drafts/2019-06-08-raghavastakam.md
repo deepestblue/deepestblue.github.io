@@ -7,8 +7,6 @@ lang: sa
 tags:
 - religion
 modified_time: '2019-06-08T08:26:47.736-07:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-2107078850980426238
-blogger_orig_url: https://blog.ambari.sh/2019/06/raghavastakam.html
 ---
 
     𑌶𑍍𑌰𑍁𑌤𑌿𑌸𑍍𑌮𑍃𑌤𑌿𑌪𑍁𑌰𑌾𑌣𑌾𑌨𑌾𑌮𑌾𑌲𑌯𑌂 𑌕𑌰𑍁𑌣𑌾𑌲𑌯𑌮𑍍 ।

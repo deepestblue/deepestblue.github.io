@@ -6,8 +6,6 @@ author: ambarish
 tags:
 - english
 modified_time: '2014-09-14T08:21:32.879-07:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-7863176915864395178
-blogger_orig_url: https://blog.ambari.sh/2014/09/when-to-use-dashes-and-hyphens.html
 description: A flowchart on when to use hyphens vs. the various dash styles in English punctuation.
 ---
 

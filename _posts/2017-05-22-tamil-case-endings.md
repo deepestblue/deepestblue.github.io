@@ -8,8 +8,6 @@ tags:
 - sanskrit
 - dravidian languages
 modified_time: '2018-01-22T20:31:50.658-08:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-1053067407612041548
-blogger_orig_url: https://blog.ambari.sh/2017/05/blog-post.html
 description: Why case‐endings are irrelevant in Tamil.
 ---
 

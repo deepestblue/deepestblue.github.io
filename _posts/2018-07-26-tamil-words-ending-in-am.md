@@ -7,8 +7,6 @@ lang: ta
 tags:
 - dravidian languages
 modified_time: '2019-02-05T20:34:53.118-08:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-964589826090929226
-blogger_orig_url: https://blog.ambari.sh/2018/07/blog-post.html
 description: Many Tamil words ending in ‐am are often misspelt in context, and this article attempts to redress the mistake.
 ---
 

@@ -7,8 +7,6 @@ tags:
 - sanskrit
 - dravidian languages
 modified_time: '2014-03-25T17:19:30.290-07:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-1703022419470013797
-blogger_orig_url: https://blog.ambari.sh/2014/03/representing-indian-languages-using.html
 description: This second part of a three‐part series on Indic computing focusses on the best Latin‐script representation of Indian language characters.
 ---
 

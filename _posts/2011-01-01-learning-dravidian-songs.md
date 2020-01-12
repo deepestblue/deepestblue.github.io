@@ -8,8 +8,6 @@ tags:
 - music
 - dravidian languages
 modified_time: '2013-11-24T13:11:00.428-08:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-8438291234199576993
-blogger_orig_url: https://blog.ambari.sh/2011/07/blog-post.html
 description: If you speak a Dravidian language, learn the meanings of Carnatic songs through that language and not through English.
 ---
 

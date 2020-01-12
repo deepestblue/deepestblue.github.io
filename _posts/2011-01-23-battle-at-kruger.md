@@ -6,8 +6,6 @@ author: ambarish
 lang: sa
 tags:
 modified_time: '2016-12-16T23:10:44.438-08:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-1167589636279540182
-blogger_orig_url: https://blog.ambari.sh/2011/07/blog-post_3377.html
 description: Why you should go watch the Battle at Kruger on Youtube.
 ---
 

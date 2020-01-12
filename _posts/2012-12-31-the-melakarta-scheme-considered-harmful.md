@@ -6,8 +6,6 @@ author: ambarish
 tags:
 - music
 modified_time: '2016-12-23T23:22:45.617-08:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-7491544719487155587
-blogger_orig_url: https://blog.ambari.sh/2012/12/the-melakarta-scheme-considered-harmful.html
 description: The mēḷakartā scheme considered harmful.
 ---
 

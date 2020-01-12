@@ -7,8 +7,6 @@ lang: sa
 tags:
 - religion
 modified_time: '2019-07-01T12:49:51.674-07:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-3118168152257072820
-blogger_orig_url: https://blog.ambari.sh/2019/05/narasimhapancamrtastotram.html
 description: A commentary on the Narasimhapanchamrtastotram.
 ---
 

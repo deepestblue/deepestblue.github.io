@@ -8,8 +8,6 @@ tags:
 - sanskrit
 - dravidian languages
 modified_time: '2016-12-28T18:41:04.331-08:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-8596570710406998479
-blogger_orig_url: https://blog.ambari.sh/2010/02/blog-post.html
 description: How not to describe Indian languages in Sanskrit.
 ---
 

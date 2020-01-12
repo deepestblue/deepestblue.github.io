@@ -7,8 +7,6 @@ lang: sa
 tags:
 - music
 modified_time: '2017-01-12T23:04:08.305-08:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-490897619428994139
-blogger_orig_url: https://blog.ambari.sh/2011/04/blog-post.html
 description: An analysis of Muthuswami Dikshitarʼs place in the Carnatic music trinity.
 ---
 

@@ -7,8 +7,6 @@ lang: sa
 tags:
 - religion
 modified_time: '2017-07-08T11:55:19.755-07:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-7047413871205156774
-blogger_orig_url: https://blog.ambari.sh/2013/11/blog-post.html
 description: A commentary on the thaniyan on the 45th Ahobilamatha pontiff.
 ---
 

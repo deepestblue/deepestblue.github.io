@@ -7,8 +7,6 @@ lang: sa
 tags:
 - religion
 modified_time: '2018-03-04T13:46:08.113-08:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-5164846403587684631
-blogger_orig_url: https://blog.ambari.sh/2016/07/blog-post.html
 description: A commentary on Sri. Alavandarʼs chatussloki
 ---
 

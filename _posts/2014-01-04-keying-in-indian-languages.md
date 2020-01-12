@@ -7,8 +7,6 @@ tags:
 - sanskrit
 - dravidian languages
 modified_time: '2014-05-11T15:37:03.664-07:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-1427523954929101801
-blogger_orig_url: https://blog.ambari.sh/2014/01/on-keying-in-indian-languages.html
 description: The first of a three-part article on Indian language computing. This part focusses on software to input Indian languages.
 ---
 

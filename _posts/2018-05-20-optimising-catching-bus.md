@@ -6,8 +6,6 @@ author: ambarish
 tags:
 - maths
 modified_time: '2019-11-28T16:02:44.504-08:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-7511983616468676323
-blogger_orig_url: https://blog.ambari.sh/2018/05/optimising-catching-bus.html
 description: When walking to a bus stop, I want to minimise the amount of time I wait at the bus stop. How fast or slow should I walk?
 ---
 

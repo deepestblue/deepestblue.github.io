@@ -7,8 +7,6 @@ tags:
 - sanskrit
 - dravidian languages
 modified_time: '2017-07-30T16:52:38.831-07:00'
-blogger_id: tag:blogger.com,1999:blog-826032011974850866.post-9137063985524364798
-blogger_orig_url: https://blog.ambari.sh/2014/03/a-custom-keymap-for-indian-languages.html
 description: The final part of a three-part series on Indic computing. The focus of this part is a custom keymap for inputting Sanskrit and Tamil.
 ---
 
