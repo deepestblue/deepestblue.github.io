@@ -4,8 +4,7 @@ title: 𑌯𑌾𑌮𑍁𑌨𑌮𑍁𑌨𑍇𑌃 𑌚𑌤𑍁𑌃𑌶𑍍𑌲𑍋
 date: '2016-07-11T15:07:00.000-07:00'
 author: ambarish
 lang: sa
-tags:
-- religion
+tags: [religion]
 modified_time: '2018-03-04T13:46:08.113-08:00'
 description: A commentary on Sri. Alavandarʼs chatussloki
 ---

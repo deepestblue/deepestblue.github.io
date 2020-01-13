@@ -4,8 +4,7 @@ title: 𑌨𑌰𑌸𑌿𑌂𑌹𑌪𑌞𑍍𑌚𑌾𑌮𑍃𑌤𑌸𑍍𑌤𑍋�
 date: '2019-05-19T17:29:00.001-07:00'
 author: ambarish
 lang: sa
-tags:
-- religion
+tags: [religion]
 modified_time: '2019-07-01T12:49:51.674-07:00'
 description: A commentary on the Narasimhapanchamrtastotram.
 ---

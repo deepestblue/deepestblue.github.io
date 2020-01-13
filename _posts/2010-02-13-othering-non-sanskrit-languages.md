@@ -4,9 +4,7 @@ title: 𑌸𑌂𑌸𑍍𑌕𑍃𑌤𑌾𑌤𑍍 𑌇𑌤𑌰𑌾𑌃 𑌭𑌾�
 date: '2010-02-13T18:53:00.000-08:00'
 author: ambarish
 lang: sa
-tags:
-- sanskrit
-- dravidian languages
+tags: [sanskrit, "dravidian languages"]
 modified_time: '2016-12-28T18:41:04.331-08:00'
 description: How not to describe Indian languages in Sanskrit.
 ---

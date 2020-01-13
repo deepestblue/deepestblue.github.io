@@ -4,9 +4,7 @@ title: வேற்றுமையுருபுகள் அவத்தம்
 date: '2017-05-22T21:22:00.001-07:00'
 author: ambarish
 lang: ta
-tags:
-- sanskrit
-- dravidian languages
+tags: [sanskrit, "dravidian languages"]
 modified_time: '2018-01-22T20:31:50.658-08:00'
 description: Why case‐endings are irrelevant in Tamil.
 ---

@@ -3,8 +3,7 @@ layout: post
 title: The mēḷakartā scheme considered harmful
 date: '2012-12-31T01:19:00.000-08:00'
 author: ambarish
-tags:
-- music
+tags: [music]
 modified_time: '2016-12-23T23:22:45.617-08:00'
 description: The mēḷakartā scheme considered harmful.
 ---
