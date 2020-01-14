@@ -4,8 +4,7 @@ title: ௪௰௫𑌤𑌮𑌸𑍍𑌯 𑌅𑌹𑍋𑌬𑌿𑌲𑌮𑌠𑌾𑌧�
 date: '2013-11-16T10:19:00.000-08:00'
 author: ambarish
 lang: sa
-tags:
-- religion
+tags: [religion]
 modified_time: '2017-07-08T11:55:19.755-07:00'
 description: A commentary on the thaniyan on the 45th Ahobilamatha pontiff.
 ---

@@ -4,8 +4,7 @@ title: Raghavastakam
 date: '2019-06-08T08:26:00.000-07:00'
 author: ambarish
 lang: sa
-tags:
-- religion
+tags: [religion]
 modified_time: '2019-06-08T08:26:47.736-07:00'
 ---
 

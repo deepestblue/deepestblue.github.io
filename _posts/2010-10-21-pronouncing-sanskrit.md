@@ -4,8 +4,7 @@ title: 𑌸𑌂𑌸𑍍𑌕𑍃𑌤𑍋𑌚𑍍𑌚𑌾𑌰𑌣𑌮𑍍
 date: '2010-10-21T09:00:00.000-07:00'
 author: ambarish
 lang: sa
-tags:
-- sanskrit
+tags: [sanskrit]
 modified_time: '2017-05-22T23:01:32.655-07:00'
 description: Some common Sanskrit mispronounciations.
 ---

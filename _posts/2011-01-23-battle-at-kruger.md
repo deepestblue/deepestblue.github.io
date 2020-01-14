@@ -4,7 +4,6 @@ title: 𑌕𑌾𑌕𑌃 𑌗𑌰𑍁𑌡𑌾𑌯𑌤𑍇
 date: '2011-01-23T20:41:00.000-08:00'
 author: ambarish
 lang: sa
-tags:
 modified_time: '2016-12-16T23:10:44.438-08:00'
 description: Why you should go watch the Battle at Kruger on Youtube.
 ---

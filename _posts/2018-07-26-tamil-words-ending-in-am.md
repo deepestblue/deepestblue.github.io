@@ -4,8 +4,7 @@ title: அத்துச்சாரியை பெயரிற்கு ம�
 date: '2018-07-26T07:40:00.000-07:00'
 author: ambarish
 lang: ta
-tags:
-- dravidian languages
+tags: ["dravidian languages"]
 modified_time: '2019-02-05T20:34:53.118-08:00'
 description: Many Tamil words ending in ‐am are often misspelt in context, and this article attempts to redress the mistake.
 ---
