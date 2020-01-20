@@ -8,6 +8,6 @@ modified_time: '2014-09-14T08:21:32.879-07:00'
 description: A flowchart on when to use hyphens vs. the various dash styles in English punctuation.
 ---
 
-<iframe allowfullscreen frameborder="0" style="width:1000px; height:2000px" src="https://www.lucidchart.com/documents/embeddedchart/8086111b-62ab-4d9c-afbd-48e33f231bcf"></iframe>
+<iframe allowfullscreen frameborder="0" style="width:590px; height:1400px" src="https://www.lucidchart.com/documents/embeddedchart/8086111b-62ab-4d9c-afbd-48e33f231bcf"></iframe>
 
 [![mind mapping software](https://www.lucidchart.com/img/diagrams-lucidchart.png){:height="30px" width="100px"}](https://www.lucidchart.com/pages/examples/mind_mapping_software)
