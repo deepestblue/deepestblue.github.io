@@ -1,0 +1,11 @@
+<div id="banner">
+  {%- assign page_paths = site.pages | map: "path" -%}
+  <div class="downloads">
+    {%- for path in page_paths -%}
+      {%- assign my_page = site.pages | where: "path", path | first -%}
+      {%- if my_page.title -%}
+        <span style="padding: 0px 5px;"><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></span>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>

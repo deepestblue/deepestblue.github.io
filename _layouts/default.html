@@ -1,43 +1,19 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang }}">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-{% seo %}
+{%- seo -%}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-
       <header>
-        <a href = "/">
-        <h1>{{ site.title }}</h1>
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
-        </a>
+        <a href = "/"><h1>{{ site.title }}</h1><p>{{ site.description }}</p></a>
       </header>
 
-      <div id="banner">
-        {%- assign default_paths = site.pages | map: "path" -%}
-        {%- assign page_paths = site.header_pages | default: default_paths -%}
-        <div class="downloads">
-          {%- if page_paths -%}
-              {%- for path in page_paths -%}
-                {%- assign my_page = site.pages | where: "path", path | first -%}
-                {%- if my_page.title -%}
-                <span><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}&nbsp;&nbsp;&nbsp;</a></span>
-                {%- endif -%}
-              {%- endfor -%}
-        {%- endif -%}
-        </div>
-      </div><!-- end banner -->
-
+      {%- include banner.html -%}
     <div class="wrapper">
       <nav>
         <ul></ul>
@@ -45,19 +21,8 @@
       <section>
         <h1>{{ page.title | escape }}</h1>
         <p>
-          <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-            {%- assign date_format = "%a, %d %b, %Y" -%}
-            {{ page.date | date: date_format }}
-          </time>
-          {%- if page.author -%}
-          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">
-            {{ page.author }}
-          </span></span>
-          {%- endif -%}
-          {%- if page.tags.size > 0 -%}
-          • <span>{{page.tags | join: ', '}}</span>
-          {%- endif -%}
         {{ content }}
+        </p>
       </section>
     </div>
   </body>
