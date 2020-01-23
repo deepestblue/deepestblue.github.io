@@ -1,17 +1,12 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
+list_title: Posts
 ---
+Welcome to my blog! Feel free to read posts below, go through <a href="/tags">articles by category</a> or read <a href="/about">a short bio of me</a>.
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
+<div>
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <h2 class="post-list-heading">{{ page.list_title }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
@@ -31,5 +26,4 @@ layout: default
 
     <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
-
 </div>
