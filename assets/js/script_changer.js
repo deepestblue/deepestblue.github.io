@@ -420,16 +420,23 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
                 while (latinNumber > 0) {
                     let rem = latinNumber % 10;
                     latinNumber = (latinNumber - rem) / 10;
-                    if (power > 1) {
-                        let maxMultiplier = 1000;
-                        let power2 = power;
-                        while (power2 > maxMultiplier) {
-                            power2 /= maxMultiplier;
-                            xlittedText = data.numbers.get(maxMultiplier.toString()) + xlittedText;
+                    let tamilDigit = data.numbers.get(rem.toString());
+                    if (tamilDigit) {
+                        if (power > 1) {
+                            let maxMultiplier = 1000;
+                            let power2 = power;
+                            while (power2 > maxMultiplier) {
+                                power2 /= maxMultiplier;
+                                xlittedText = data.numbers.get(maxMultiplier.toString()) + xlittedText;
+                            }
+                            xlittedText = data.numbers.get(power2.toString()) + xlittedText;
+                            if (rem > 1) {
+                                xlittedText = tamilDigit + xlittedText;
+                            }
+                        } else {
+                            xlittedText = tamilDigit + xlittedText;
                         }
-                        xlittedText = data.numbers.get(power2.toString()) + xlittedText;
                     }
-                    xlittedText = data.numbers.get(rem.toString()) + xlittedText;
                     power *= 10;
                 }
                 return xlittedText;
