@@ -81,7 +81,7 @@
             }
 
             let content = $("[data-id=page-content]")[0];
-            (function walk(node, langMatched) {
+            let walk = function(node, langMatched) {
                 if (node.nodeType == Node.TEXT_NODE && langMatched) {
                     node.textContent = converter(otherScript, node.textContent, xlitNumbers);
                     return;
@@ -97,7 +97,9 @@
                     walk(node, langMatched);
                     node = node.nextSibling;
                 }
-            })(content, langMatched);
+            };
+            walk(content, langMatched);
+            walk($("nav")[0], langMatched);
         }
     </script>
 
