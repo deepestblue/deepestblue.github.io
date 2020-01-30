@@ -41,14 +41,15 @@
     </form>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript" data-lang="en">
         'use strict';
-        let onSelectValueChange = function (selectId, eventHandler) {
+        let onSelectValueChange = function (selector, eventHandler) {
             let previous;
-            $(selectId).on('focus', function () {
+            let elt = document.querySelector(selector);
+            elt.addEventListener("focus", function() {
                 previous = this.value;
-            }).change(function() {
+            });
+            elt.addEventListener("change", function() {
                 eventHandler(previous, this.value);
                 previous = this.value;
             });
@@ -76,12 +77,11 @@
             let xlitNumbers = langCode == "num";
             let langMatched = (document.documentElement.lang == langCode) || xlitNumbers;
 
-            let title = $("[data-id=page-title]")[0];
+            let title = document.querySelector("[data-id=page-title]");
             if (langMatched) {
                 title.textContent = converter(otherScript, title.textContent, xlitNumbers);
             }
 
-            let content = $("[data-id=page-content]")[0];
             let walk = function(node, langMatched) {
                 if (node.nodeType == Node.TEXT_NODE && langMatched) {
                     node.textContent = converter(otherScript, node.textContent, xlitNumbers);
@@ -99,8 +99,8 @@
                     node = node.nextSibling;
                 }
             };
-            walk(content, langMatched);
-            walk($("nav")[0], langMatched);
+            walk(document.querySelector("[data-id=page-content]"), langMatched);
+            walk(document.querySelector("nav"), langMatched);
         }
     </script>
 
