@@ -101,16 +101,16 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
                 while (latinNumber > 0) {
                     let rem = latinNumber % 10;
                     latinNumber = (latinNumber - rem) / 10;
-                    let tamilDigit = data.numbers.get(rem.toString());
+                    let tamilDigit = data.numbers.get(rem);
                     if (tamilDigit) {
                         if (power > 1) {
                             let maxMultiplier = 1000;
                             let power2 = power;
                             while (power2 > maxMultiplier) {
                                 power2 /= maxMultiplier;
-                                xlittedText = data.numbers.get(maxMultiplier.toString()) + xlittedText;
+                                xlittedText = data.numbers.get(maxMultiplier) + xlittedText;
                             }
-                            xlittedText = data.numbers.get(power2.toString()) + xlittedText;
+                            xlittedText = data.numbers.get(power2) + xlittedText;
                             if (rem > 1) {
                                 xlittedText = tamilDigit + xlittedText;
                             }
@@ -128,7 +128,7 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
 
         let numbers = Array.from(Array(10).keys()).join('|');
         sourceText = sourceText.replace(new RegExp(numbers, 'g'), function(match) {
-            return data.numbers.get(match);
+            return data.numbers.get(parseInt(match, 10));
         });
         return sourceText;
     }
