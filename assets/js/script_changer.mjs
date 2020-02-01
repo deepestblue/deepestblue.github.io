@@ -1,6 +1,6 @@
 export { brahmiyaToLatn, latnToBrahmiya };
 
-import { scriptDataMap } from "./script_data.js";
+import { scriptDataMap } from "./script_data.mjs";
 
 function dravidianToLatinNumbers(sourceNumber, data) {
     let digits = Array.from(data.numbers.keys()).filter(
