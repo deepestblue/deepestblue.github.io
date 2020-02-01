@@ -1,5 +1,3 @@
-'use strict';
-
 let tamlData = {
     charMap: {
         'அ':'a','ஆ':'ā','இ':'i','ஈ':'ī','உ':'u','ஊ':'ū',
@@ -498,3 +496,5 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
 
     return sourceText;
 }
+
+export { brahmiyaToLatn, latnToBrahmiya };
