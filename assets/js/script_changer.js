@@ -2,52 +2,52 @@ export { brahmiyaToLatn, latnToBrahmiya };
 
 import { scriptDataMap } from "./script_data.js";
 
+function dravidianToLatinNumbers(sourceNumber, data) {
+    let digits = Array.from(data.numbers.keys()).filter(
+        x => isNaN(parseInt(x, 10)) && data.numbers.get(x) < 10).join('|');
+    let multipliers = Array.from(data.numbers.keys()).filter(
+        x => isNaN(parseInt(x, 10)) && data.numbers.get(x) >= 10).join('|');
+    let constituents = sourceNumber.split(new RegExp(`(${digits})+|((${multipliers})+)`, 'g'));
+    constituents = constituents.filter(function(ignored, index) {
+        return (index % 4 == 1) || (index % 4 == 2)
+    });
+    constituents = constituents.filter(function(ignored, index) {
+        return (index % 4 == 0) || (index % 4 == 3)
+    });
+    let xlittedNumber = 0;
+    let power = 1;
+    let digit = 0;
+    constituents.forEach(c => {
+        if (c.match(digits)) {
+            digit = data.numbers.get(c);
+        } else {
+            for (let m of c) {
+                power *= data.numbers.get(m);
+            }
+            xlittedNumber += digit * power;
+            power = 1;
+            digit = 0;
+        }
+    });
+    xlittedNumber += digit * 1;
+    return xlittedNumber;
+}
+
 function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
     let data = scriptDataMap.get(otherScript);
 
     if (xlitNumbers) {
-        let convertToLatn = function(sourceNumber) {
-            let digits = Array.from(data.numbers.keys()).filter(
-                x => isNaN(parseInt(x, 10)) && data.numbers.get(x) < 10).join('|');
-            let multipliers = Array.from(data.numbers.keys()).filter(
-                x => isNaN(parseInt(x, 10)) && data.numbers.get(x) >= 10).join('|');
-            let constituents = sourceNumber.split(new RegExp(`(${digits})+|((${multipliers})+)`, 'g'));
-            constituents = constituents.filter(function(ignored, index) {
-                return (index % 4 == 1) || (index % 4 == 2)
-            });
-            constituents = constituents.filter(function(ignored, index) {
-                return (index % 4 == 0) || (index % 4 == 3)
-            });
-            let xlittedNumber = 0;
-            let power = 1;
-            let digit = 0;
-            constituents.forEach(c => {
-                if (c.match(digits)) {
-                    digit = data.numbers.get(c);
-                } else {
-                    for (let m of c) {
-                        power *= data.numbers.get(m);
-                    }
-                    xlittedNumber += digit * power;
-                    power = 1;
-                    digit = 0;
-                }
-            });
-            xlittedNumber += digit * 1;
-            return xlittedNumber;
-        };
-
         let numbers = Array.from(data.numbers.keys()).filter(x => isNaN(parseInt(x, 10))).join('|');
-        if (otherScript == "taml" || otherScript == "mlym") {
-            sourceText = sourceText.replace(new RegExp(`(${numbers})+`, 'g'), function(match) {
-                return convertToLatn(match);
-            });
-        } else {
-            sourceText = sourceText.replace(new RegExp(numbers, 'g'), function(match) {
+        if (otherScript != "taml" && otherScript != "mlym") {
+            return sourceText.replace(new RegExp(numbers, 'g'), function(match) {
                 return data.numbers.get(match);
             });
         }
-        return sourceText;
+
+        let wholeNumberAtATime = new RegExp(`(${numbers})+`, 'g');
+        return sourceText.replace(wholeNumberAtATime, function(match) {
+            return dravidianToLatinNumbers(match, data);
+        });
     }
 
     let vowelMarks = Array.from(data.vowelMarks.values());
@@ -83,6 +83,34 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
     return transliteratedText;
 }
 
+function latnToDravidianNumbers(sourceNumber, data) {
+    let power = 1;
+    let xlittedText = "";
+    while (sourceNumber > 0) {
+        let rem = sourceNumber % 10;
+        sourceNumber = (sourceNumber - rem) / 10;
+        let tamilDigit = data.numbers.get(rem);
+        if (tamilDigit) {
+            if (power > 1) {
+                let maxMultiplier = 1000;
+                let power2 = power;
+                while (power2 > maxMultiplier) {
+                    power2 /= maxMultiplier;
+                    xlittedText = data.numbers.get(maxMultiplier) + xlittedText;
+                }
+                xlittedText = data.numbers.get(power2) + xlittedText;
+                if (rem > 1) {
+                    xlittedText = tamilDigit + xlittedText;
+                }
+            } else {
+                xlittedText = tamilDigit + xlittedText;
+            }
+        }
+        power *= 10;
+    }
+    return xlittedText;
+}
+
 function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
     let diphthongConstituents = 'a:(i|u)';
     let diphthongsAndConstituents = ['a', 'i', 'u', 'ai', 'au',];
@@ -91,47 +119,19 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
     let data = scriptDataMap.get(otherScript);
 
     if (xlitNumbers) {
-        if (otherScript == "taml" || otherScript == "mlym") {
-            let numbers = Array.from(Array(10).keys()).join('|');
-            let regex = new RegExp(`(${numbers})+`, 'g');
-            sourceText = sourceText.replace(regex, function(match) {
-                let latinNumber = parseInt(match, 10);
-                let power = 1;
-                let xlittedText = "";
-                while (latinNumber > 0) {
-                    let rem = latinNumber % 10;
-                    latinNumber = (latinNumber - rem) / 10;
-                    let tamilDigit = data.numbers.get(rem);
-                    if (tamilDigit) {
-                        if (power > 1) {
-                            let maxMultiplier = 1000;
-                            let power2 = power;
-                            while (power2 > maxMultiplier) {
-                                power2 /= maxMultiplier;
-                                xlittedText = data.numbers.get(maxMultiplier) + xlittedText;
-                            }
-                            xlittedText = data.numbers.get(power2) + xlittedText;
-                            if (rem > 1) {
-                                xlittedText = tamilDigit + xlittedText;
-                            }
-                        } else {
-                            xlittedText = tamilDigit + xlittedText;
-                        }
-                    }
-                    power *= 10;
-                }
-                return xlittedText;
-            });
+        let numbers = Array.from(Array(10).keys()).join('|');
 
-            return sourceText;
+        if (otherScript != "taml" && otherScript != "mlym") {
+            return sourceText.replace(new RegExp(numbers, 'g'), function(match) {
+                return data.numbers.get(parseInt(match, 10));
+            });
         }
 
-        let numbers = Array.from(Array(10).keys()).join('|');
-        sourceText = sourceText.replace(new RegExp(numbers, 'g'), function(match) {
-            return data.numbers.get(parseInt(match, 10));
+        let wholeNumberAtATime = new RegExp(`(${numbers})+`, 'g');
+        return sourceText.replace(wholeNumberAtATime, function(match) {
+            return latnToDravidianNumbers(parseInt(match, 10), data);
         });
-        return sourceText;
-    }
+}
 
     let misc = Array.from(data.misc.keys()).join('|');
     let modifiers = Array.from(data.modifiers.keys()).join('|');
