@@ -7,29 +7,25 @@ function dravidianToLatinNumbers(sourceNumber, data) {
         x => isNaN(parseInt(x, 10)) && data.numbers.get(x) < 10).join('|');
     let multipliers = Array.from(data.numbers.keys()).filter(
         x => isNaN(parseInt(x, 10)) && data.numbers.get(x) >= 10).join('|');
-    let constituents = sourceNumber.split(new RegExp(`(${digits})+|((${multipliers})+)`, 'g'));
-    constituents = constituents.filter(function(ignored, index) {
-        return (index % 4 == 1) || (index % 4 == 2)
-    });
-    constituents = constituents.filter(function(ignored, index) {
-        return (index % 4 == 0) || (index % 4 == 3)
-    });
+    let ten = data.numbers.get(10);
+    let hundred = data.numbers.get(100);
+    let thousand = data.numbers.get(1000);
+
     let xlittedNumber = 0;
-    let power = 1;
-    let digit = 0;
-    constituents.forEach(c => {
-        if (c.match(digits)) {
-            digit = data.numbers.get(c);
-        } else {
-            for (let m of c) {
-                power *= data.numbers.get(m);
-            }
-            xlittedNumber += digit * power;
-            power = 1;
-            digit = 0;
+    let groupRegex = new RegExp(`(?:(?:${digits})(?:${ten}|${hundred})?${thousand}*)|(?:${multipliers})${thousand}*`, 'g');
+    sourceNumber.match(groupRegex).forEach(g => {
+        let groupElements = g.split('');
+        let groupValue = 1;
+        let head = data.numbers.get(groupElements[0]);
+        if (head < 10)
+        {
+            groupValue = head;
+            groupElements.shift();
         }
+        let power = groupElements.reduce(
+            (accumulator, currentValue) => accumulator * data.numbers.get(currentValue), 1);
+        xlittedNumber += groupValue * power;
     });
-    xlittedNumber += digit * 1;
     return xlittedNumber;
 }
 
