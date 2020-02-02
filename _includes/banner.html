@@ -77,11 +77,6 @@
             let xlitNumbers = langCode == "num";
             let langMatched = (document.documentElement.lang == langCode) || xlitNumbers;
 
-            let title = document.querySelector("[data-id=page-title]");
-            if (langMatched) {
-                title.textContent = converter(otherScript, title.textContent, xlitNumbers);
-            }
-
             let walk = function(node, langMatched) {
                 if (node.nodeType == Node.TEXT_NODE && langMatched) {
                     node.textContent = converter(otherScript, node.textContent, xlitNumbers);
@@ -99,6 +94,8 @@
                     node = node.nextSibling;
                 }
             };
+
+            walk(document.querySelector("[data-id=page-title]"), langMatched);
             walk(document.querySelector("[data-id=page-content]"), langMatched);
             walk(document.querySelector("nav"), langMatched);
         }
