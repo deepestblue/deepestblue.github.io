@@ -2,6 +2,12 @@ export { brahmiyaToLatn, latnToBrahmiya };
 
 import { scriptDataMap } from "./script_data.mjs";
 
+let implicitVowel = 'a';
+let plosiveConsonants = ['k', 'g', 'c', 'j', 'ṭ', 'ḍ', 'ṯ', 'ḏ', 't', 'd', 'p', 'b',];
+let suppressedVowel = '';
+let aspirateConsonant = 'h';
+let separator = ':';
+
 function dravidianToLatinNumbers(sourceNumber, data) {
     let digits = Array.from(data.numbers.keys()).filter(
         x => isNaN(parseInt(x, 10)) && data.numbers.get(x) < 10).join('|');
@@ -55,29 +61,38 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
 
     let isConsonant = false;
     let isVowelA = false;
+    let isPlosive = false;
+    let isHalfPlosive = false;
+
     let transliteratedText = "";
     [...sourceText].forEach(c => {
         let isImplicitA = isConsonant &&
             ! vowelMarks.includes(c);
         if (isImplicitA) {
-            transliteratedText += 'a';
+            transliteratedText += implicitVowel;
         }
         if (c in data.charMap) {
+            if (isHalfPlosive && data.charMap[c] == aspirateConsonant) {
+                transliteratedText += separator;
+            }
+
             if (isVowelA || isImplicitA) {
                 if (['i','u'].indexOf(data.charMap[c]) >= 0) {
-                    transliteratedText += ':';
+                    transliteratedText += separator;
                 }
             }
         }
 
-        isVowelA = (c in data.charMap) && (data.charMap[c] == 'a');
+        isHalfPlosive = isPlosive && data.charMap[c] == suppressedVowel;
+        isPlosive = plosiveConsonants.includes(data.charMap[c]);
+        isVowelA = data.charMap[c] == implicitVowel;
         isConsonant = consonants.includes(c);
 
         transliteratedText += (c in data.charMap) ? data.charMap[c] : c;
     });
 
     if (isConsonant) {
-        transliteratedText += 'a';
+        transliteratedText += implicitVowel;
     }
 
     return transliteratedText;
@@ -122,8 +137,6 @@ function latnToDravidianNumbers(sourceNumber, data) {
 function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
     let diphthongConstituents = 'a:(i|u)';
     let diphthongsAndConstituents = ['a', 'i', 'u', 'ai', 'au',];
-    let plosiveConsonants = ['k', 'c', 'ṭ', 'ṯ', 't', 'p',];
-
     let data = scriptDataMap.get(otherScript);
 
     if (xlitNumbers) {
@@ -158,11 +171,11 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
         return data.modifiers.get(match);
     });
 
-    sourceText = sourceText.replace(new RegExp(`(${plosives}):`, 'g'), function(match, p1) {
-        return data.consonants.get(p1) + data.vowelMarks.get('');
+    sourceText = sourceText.replace(new RegExp(`(${plosives})${separator}`, 'g'), function(match, p1) {
+        return data.consonants.get(p1) + data.vowelMarks.get(suppressedVowel);
     });
     sourceText = sourceText.replace(new RegExp(diphthongConstituents, 'g'), function(match, p1) {
-        return 'a' + data.vowels.get(p1);
+        return implicitVowel + data.vowels.get(p1);
     });
 
     sourceText = sourceText.replace(new RegExp(`(${consonants})(${vowels1})`, 'g'), function(match, p1, p2) {
@@ -180,7 +193,7 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
     });
 
     sourceText = sourceText.replace(new RegExp(consonants, 'g'), function(match) {
-        return data.consonants.get(match) + data.vowelMarks.get('');
+        return data.consonants.get(match) + data.vowelMarks.get(suppressedVowel);
     });
 
     return sourceText;

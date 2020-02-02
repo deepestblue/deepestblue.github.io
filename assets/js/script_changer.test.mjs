@@ -98,7 +98,7 @@ let devaData = {
         "अऊ",
         "इओऐअओनितीनौळईअ",
         "अग्ः",
-//        "ब्हण्हपइच्हउअइअओ",
+        "ब्हण्हपइच्हउअइअओ",
     ],
     latn : [
         "a ā i ī u ū r̥ r̥̄ l̥ l̥̄ ē ai ō au aṁ am̐ aḥ",
@@ -113,7 +113,7 @@ let devaData = {
         "aū",
         "iōaiaōnitīnauḷaīa",
         "agḥ",
-//        "b:haṇhapa:ic:ha:ua:iaō",
+        "b:haṇhapa:ic:ha:ua:iaō",
     ],
 };
 
