@@ -2,18 +2,25 @@ export { brahmiyaToLatn, latnToBrahmiya };
 
 import { scriptDataMap } from "./script_data.mjs";
 
-let implicitVowel = 'a';
-let plosiveConsonants = ['k', 'g', 'c', 'j', 'ṭ', 'ḍ', 'ṯ', 'ḏ', 't', 'd', 'p', 'b',];
-let suppressedVowel = '';
-let aspirateConsonant = 'h';
-let separator = ':';
+const implicitVowel = 'a';
+const plosiveConsonants = ['k', 'g', 'c', 'j', 'ṭ', 'ḍ', 'ṯ', 'ḏ', 't', 'd', 'p', 'b',];
+const suppressedVowel = '';
+const aspirateConsonant = 'h';
+const separator = ':';
+
+const diphthongAntecedent = 'a';
+const diphthongConsequents = ['i', 'u'];
+
+const disjunctor = '|';
+
+const regex = s => new RegExp(s, 'g');
 
 function dravidianToLatinNumbers(sourceNumber, data) {
-    let digits = Array.from(data.numbers.keys()).filter(
-        x => isNaN(parseInt(x, 10)) && data.numbers.get(x) < 10).join('|');
-    let multipliers = Array.from(data.numbers.keys()).filter(
-        x => isNaN(parseInt(x, 10)) && data.numbers.get(x) >= 10).join('|');
-    let constituents = sourceNumber.split(new RegExp(`(${digits})+|((${multipliers})+)`, 'g'));
+    const digits = Array.from(data.numbers.keys()).filter(
+        x => isNaN(parseInt(x, 10)) && data.numbers.get(x) < 10).join(disjunctor);
+    const multipliers = Array.from(data.numbers.keys()).filter(
+        x => isNaN(parseInt(x, 10)) && data.numbers.get(x) >= 10).join(disjunctor);
+    let constituents = sourceNumber.split(regex(`(${digits})+|((${multipliers})+)`));
     constituents = constituents.filter(function(ignored, index) {
         return (index % 4 == 1) || (index % 4 == 2)
     });
@@ -27,7 +34,7 @@ function dravidianToLatinNumbers(sourceNumber, data) {
         if (c.match(digits)) {
             digit = data.numbers.get(c);
         } else {
-            for (let m of c) {
+            for (const m of c) {
                 power *= data.numbers.get(m);
             }
             xlittedNumber += digit * power;
@@ -40,24 +47,23 @@ function dravidianToLatinNumbers(sourceNumber, data) {
 }
 
 function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
-    let data = scriptDataMap.get(otherScript);
+    const data = scriptDataMap.get(otherScript);
 
     if (xlitNumbers) {
-        let numbers = Array.from(data.numbers.keys()).filter(x => isNaN(parseInt(x, 10))).join('|');
+        const numbers = Array.from(data.numbers.keys()).filter(x => isNaN(parseInt(x, 10))).join(disjunctor);
         if (otherScript != "taml" && otherScript != "mlym") {
-            return sourceText.replace(new RegExp(numbers, 'g'), function(match) {
+            return sourceText.replace(regex(numbers), function(match) {
                 return data.numbers.get(match);
             });
         }
 
-        let wholeNumberAtATime = new RegExp(`(${numbers})+`, 'g');
-        return sourceText.replace(wholeNumberAtATime, function(match) {
+        return sourceText.replace(regex(`(${numbers})+`), function(match) {
             return dravidianToLatinNumbers(match, data);
         });
     }
 
-    let vowelMarks = Array.from(data.vowelMarks.values());
-    let consonants = Array.from(data.consonants.values());
+    const vowelMarks = Array.from(data.vowelMarks.values());
+    const consonants = Array.from(data.consonants.values());
 
     let isConsonant = false;
     let isVowelA = false;
@@ -77,7 +83,7 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
             }
 
             if (isVowelA || isImplicitA) {
-                if (['i','u'].indexOf(data.charMap[c]) >= 0) {
+                if (diphthongConsequents.indexOf(data.charMap[c]) >= 0) {
                     transliteratedText += separator;
                 }
             }
@@ -110,9 +116,9 @@ function latnToDravidianNumbers(sourceNumber, data) {
     let power = 1;
     let xlittedText = "";
     while (sourceNumber > 0) {
-        let rem = sourceNumber % 10;
+        const rem = sourceNumber % 10;
         sourceNumber = (sourceNumber - rem) / 10;
-        let tamilDigit = data.numbers.get(rem);
+        const tamilDigit = data.numbers.get(rem);
         if (tamilDigit) {
             if (power > 1) {
                 let maxMultiplier = 1000;
@@ -135,64 +141,62 @@ function latnToDravidianNumbers(sourceNumber, data) {
 }
 
 function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
-    let diphthongConstituents = 'a:(i|u)';
-    let diphthongsAndConstituents = ['a', 'i', 'u', 'ai', 'au',];
-    let data = scriptDataMap.get(otherScript);
+    const diphthongsAndConstituents = ['a', 'i', 'u', 'ai', 'au',];
+    const data = scriptDataMap.get(otherScript);
 
     if (xlitNumbers) {
-        let numbers = Array.from(Array(10).keys()).join('|');
+        const numbers = Array.from(Array(10).keys()).join(disjunctor);
 
         if (otherScript != "taml" && otherScript != "mlym") {
-            return sourceText.replace(new RegExp(numbers, 'g'), function(match) {
+            return sourceText.replace(regex(numbers), function(match) {
                 return data.numbers.get(parseInt(match, 10));
             });
         }
 
-        let wholeNumberAtATime = new RegExp(`(${numbers})+`, 'g');
-        return sourceText.replace(wholeNumberAtATime, function(match) {
+        return sourceText.replace(regex(`(${numbers})+`), function(match) {
             return latnToDravidianNumbers(parseInt(match, 10), data);
         });
 }
 
-    let misc = Array.from(data.misc.keys()).join('|');
-    let modifiers = Array.from(data.modifiers.keys()).join('|');
-    let plosives = plosiveConsonants.join('|');
-    let consonants = Array.from(data.consonants.keys()).sort().reverse().join('|');
-    let vowels1 = Array.from(data.vowels.keys()).filter(x => ! diphthongsAndConstituents.includes(x)).sort().reverse().join('|');
-    let vowels2 = diphthongsAndConstituents.sort().reverse().join('|');
+    const misc = Array.from(data.misc.keys()).join(disjunctor);
+    const modifiers = Array.from(data.modifiers.keys()).join(disjunctor);
+    const plosives = plosiveConsonants.join(disjunctor);
+    const consonants = Array.from(data.consonants.keys()).sort().reverse().join(disjunctor);
+    const vowels1 = Array.from(data.vowels.keys()).filter(x => ! diphthongsAndConstituents.includes(x)).sort().reverse().join(disjunctor);
+    const vowels2 = diphthongsAndConstituents.sort().reverse().join(disjunctor);
 
     if (misc.length) {
-        sourceText = sourceText.replace(new RegExp(misc, 'g'), function(match) {
+        sourceText = sourceText.replace(regex(misc), function(match) {
             return data.misc.get(match);
         });
     }
 
-    sourceText = sourceText.replace(new RegExp(modifiers, 'g'), function(match) {
+    sourceText = sourceText.replace(regex(modifiers), function(match) {
         return data.modifiers.get(match);
     });
 
-    sourceText = sourceText.replace(new RegExp(`(${plosives})${separator}`, 'g'), function(match, p1) {
+    sourceText = sourceText.replace(regex(`(${plosives})${separator}`), function(match, p1) {
         return data.consonants.get(p1) + data.vowelMarks.get(suppressedVowel);
     });
-    sourceText = sourceText.replace(new RegExp(diphthongConstituents, 'g'), function(match, p1) {
+    sourceText = sourceText.replace(regex(`${diphthongAntecedent}${separator}(${diphthongConsequents.join(disjunctor)})`), function(match, p1) {
         return implicitVowel + data.vowels.get(p1);
     });
 
-    sourceText = sourceText.replace(new RegExp(`(${consonants})(${vowels1})`, 'g'), function(match, p1, p2) {
+    sourceText = sourceText.replace(regex(`(${consonants})(${vowels1})`), function(match, p1, p2) {
         return data.consonants.get(p1) + data.vowelMarks.get(p2);
     });
-    sourceText = sourceText.replace(new RegExp(vowels1, 'g'), function(match) {
+    sourceText = sourceText.replace(regex(vowels1), function(match) {
         return data.vowels.get(match);
     });
 
-    sourceText = sourceText.replace(new RegExp(`(${consonants})(${vowels2})`, 'g'), function(match, p1, p2) {
+    sourceText = sourceText.replace(regex(`(${consonants})(${vowels2})`), function(match, p1, p2) {
         return data.consonants.get(p1) + data.vowelMarks.get(p2);
     });
-    sourceText = sourceText.replace(new RegExp(vowels2, 'g'), function(match) {
+    sourceText = sourceText.replace(regex(vowels2), function(match) {
         return data.vowels.get(match);
     });
 
-    sourceText = sourceText.replace(new RegExp(consonants, 'g'), function(match) {
+    sourceText = sourceText.replace(regex(consonants), function(match) {
         return data.consonants.get(match) + data.vowelMarks.get(suppressedVowel);
     });
 

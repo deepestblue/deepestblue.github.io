@@ -2,9 +2,9 @@ import chai from "./chai.js";
 
 import { brahmiyaToLatn, latnToBrahmiya } from "./script_changer.mjs";
 
-let assert = chai.assert;
+const assert = chai.assert;
 
-let tamlData = {
+const tamlData = {
     taml : [
         "அ ஆ இ ஈ உ ஊ எ ஏ ஐ ஒ ஓ ஔ ஃ",
         "க கா கி கீ கு கூ கெ கே கை கொ கோ கௌ",
@@ -50,7 +50,7 @@ function testLatinToTamil() {
 testTamilToLatin();
 testLatinToTamil();
 
-let teluData = {
+const teluData = {
     telu : [
         "అ ఆ ఇ ఈ ఉ ఊ ఎ ఏ ఐ ఒ ఓ ఔ",
         "క కా కి కీ కు కూ కె కే కై కొ కో కౌ",
@@ -84,7 +84,7 @@ function testLatinToTelugu() {
 testTeluguToLatin();
 testLatinToTelugu();
 
-let devaData = {
+const devaData = {
     deva : [
         "अ आ इ ई उ ऊ ऋ ॠ ऌ ॡ ए ऐ ओ औ अं अँ अः",
         "क का कि की कु कू कृ कॄ कॢ कॣ के कै को कौ कं कँ कः",
@@ -136,7 +136,7 @@ function testLatinToDevanagari() {
 testDevanagariToLatin();
 testLatinToDevanagari();
 
-let numData = {
+const numData = {
     taml : [
         "௦",
         "௧ ௨ ௩ ௪ ௫ ௬ ௭ ௮ ௯",
