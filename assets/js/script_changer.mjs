@@ -84,6 +84,14 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
 }
 
 function latnToDravidianNumbers(sourceNumber, data) {
+    if (sourceNumber < 0) {
+        throw new Error("No support for negative numbers.");
+    }
+
+    if (sourceNumber == 0) {
+        return data.numbers.get(sourceNumber);
+    }
+
     let power = 1;
     let xlittedText = "";
     while (sourceNumber > 0) {

@@ -135,3 +135,51 @@ function testLatinToDevanagari() {
 
 testDevanagariToLatin();
 testLatinToDevanagari();
+
+let numData = {
+    taml : [
+        "௦",
+        "௧ ௨ ௩ ௪ ௫ ௬ ௭ ௮ ௯",
+//        "௰ ௱ ௲",
+    ],
+    telu : [
+        "౦",
+        "౧ ౨ ౩ ౪ ౫ ౬ ౭ ౮ ౯",
+//        "౧౦ ౧౦౦ ౧౦౦౦",
+    ],
+    deva : [
+        "०",
+        "१ २ ३ ४ ५ ६ ७ ८ ९",
+//        "१० १०० १०००",
+    ],
+    latn : [
+        "0",
+        "1 2 3 4 5 6 7 8 9",
+//        "10 100 1000",
+    ],
+};
+
+function testNumbers() {
+    [...Array(numData.latn.length).keys()].forEach(function(i) {
+        assert.equal(
+            brahmiyaToLatn("taml", numData.taml[i], true),
+            numData.latn[i]);
+        assert.equal(
+            latnToBrahmiya("taml", numData.latn[i], true),
+            numData.taml[i]);
+        assert.equal(
+            brahmiyaToLatn("telu", numData.telu[i], true),
+            numData.latn[i]);
+        assert.equal(
+            latnToBrahmiya("telu", numData.latn[i], true),
+            numData.telu[i]);
+        assert.equal(
+            brahmiyaToLatn("deva", numData.deva[i], true),
+            numData.latn[i]);
+        assert.equal(
+            latnToBrahmiya("deva", numData.latn[i], true),
+            numData.deva[i]);
+    });
+}
+
+testNumbers();
