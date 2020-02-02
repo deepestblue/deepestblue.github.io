@@ -42,7 +42,7 @@
     </div>
 
     <script type="module" data-lang="en">
-        import { brahmiyaToLatn, latnToBrahmiya } from '/assets/js/script_changer.mjs';
+        import { brahmiyaToLatn, latnToBrahmiya } from "/assets/js/script_changer.mjs";
         let onSelectValueChange = function (selector, eventHandler) {
             let previous;
             let elt = document.querySelector(selector);
@@ -55,9 +55,9 @@
             });
         };
 
-        onSelectValueChange('#select-xlit-ta', xliterate.bind(undefined, "ta"));
-        onSelectValueChange('#select-xlit-sa', xliterate.bind(undefined, "sa"));
-        onSelectValueChange('#select-xlit-num', xliterate.bind(undefined, "num"));
+        onSelectValueChange("#select-xlit-ta", xliterate.bind(undefined, "ta"));
+        onSelectValueChange("#select-xlit-sa", xliterate.bind(undefined, "sa"));
+        onSelectValueChange("#select-xlit-num", xliterate.bind(undefined, "num"));
 
         function xliterate(langCode, srcScript, dstScript) {
             if (dstScript == "latn") {

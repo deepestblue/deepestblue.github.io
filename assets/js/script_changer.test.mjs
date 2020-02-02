@@ -1,6 +1,6 @@
-import chai from './chai.js';
+import chai from "./chai.js";
 
-import { brahmiyaToLatn, latnToBrahmiya } from './script_changer.mjs';
+import { brahmiyaToLatn, latnToBrahmiya } from "./script_changer.mjs";
 
 let assert = chai.assert;
 
