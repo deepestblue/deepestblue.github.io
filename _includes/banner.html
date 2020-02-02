@@ -41,7 +41,8 @@
     </form>
     </div>
 
-    <script type="text/javascript" data-lang="en">
+    <script type="module" data-lang="en">
+        import { brahmiyaToLatn, latnToBrahmiya } from '/assets/js/script_changer.mjs';
         let onSelectValueChange = function (selector, eventHandler) {
             let previous;
             let elt = document.querySelector(selector);
@@ -102,8 +103,6 @@
             walk(document.querySelector("nav"), langMatched);
         }
     </script>
-
-    <script type="text/javascript" src="/assets/js/script_changer.js"></script>
 
     {%- endif -%}
 </div>
