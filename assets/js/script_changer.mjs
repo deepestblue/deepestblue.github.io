@@ -66,15 +66,15 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
     const consonants = Array.from(data.consonants.values());
 
     let isConsonant = false;
-    let isVowelA = false;
+    let isVowelImplicitVowel = false;
     let isPlosive = false;
     let isHalfPlosive = false;
 
     let transliteratedText = "";
     [...sourceText].forEach(c => {
-        let isImplicitA = isConsonant &&
+        let shouldEmitImplicitVowel = isConsonant &&
             ! vowelMarks.includes(c);
-        if (isImplicitA) {
+        if (shouldEmitImplicitVowel) {
             transliteratedText += implicitVowel;
         }
         if (c in data.charMap) {
@@ -82,7 +82,7 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
                 transliteratedText += separator;
             }
 
-            if (isVowelA || isImplicitA) {
+            if (isVowelImplicitVowel || shouldEmitImplicitVowel) {
                 if (diphthongConsequents.indexOf(data.charMap[c]) >= 0) {
                     transliteratedText += separator;
                 }
@@ -91,7 +91,7 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
 
         isHalfPlosive = isPlosive && data.charMap[c] == suppressedVowel;
         isPlosive = plosiveConsonants.includes(data.charMap[c]);
-        isVowelA = data.charMap[c] == implicitVowel;
+        isVowelImplicitVowel = data.charMap[c] == implicitVowel;
         isConsonant = consonants.includes(c);
 
         transliteratedText += (c in data.charMap) ? data.charMap[c] : c;
