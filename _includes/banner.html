@@ -43,7 +43,7 @@
 
     <script type="module" data-lang="en">
         import { brahmiyaToLatn, latnToBrahmiya } from "/assets/js/script_changer.mjs";
-        let onSelectValueChange = function (selector, eventHandler) {
+        const onSelectValueChange = function (selector, eventHandler) {
             let previous;
             let elt = document.querySelector(selector);
             elt.addEventListener("focus", function() {
@@ -74,10 +74,10 @@
         }
 
         function latnXliterate(langCode, otherScript, converter) {
-            let xlitNumbers = langCode == "num";
+            const xlitNumbers = langCode == "num";
             let langMatched = (document.documentElement.lang == langCode) || xlitNumbers;
 
-            let walk = function(node, langMatched) {
+            const walk = function(node, langMatched) {
                 if (node.nodeType == Node.TEXT_NODE && langMatched) {
                     node.textContent = converter(otherScript, node.textContent, xlitNumbers);
                     return;

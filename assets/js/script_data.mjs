@@ -1,6 +1,6 @@
 export { scriptDataMap };
 
-let tamlData = {
+const tamlData = {
     charMap: {
         'அ':'a','ஆ':'ā','இ':'i','ஈ':'ī','உ':'u','ஊ':'ū',
         'எ':'e','ஏ':'ē','ஐ':'ai','ஒ':'o','ஓ':'ō','ஔ':'au',
@@ -53,7 +53,7 @@ let tamlData = {
     ]),
 };
 
-let granData = {
+const granData = {
     charMap: {
         '𑌅':'a','𑌆':'ā','𑌇':'i','𑌈':'ī','𑌉':'u','𑌊':'ū','𑌋':'r̥','𑍠':'r̥̄','𑌌':'l̥','𑍡':'l̥̄',
         '𑌏':'ē','𑌐':'ai','𑌓':'ō','𑌔':'au',
@@ -106,7 +106,7 @@ let granData = {
     ]),
 };
 
-let kndaData = {
+const kndaData = {
     charMap: {
         'ಅ':'a','ಆ':'ā','ಇ':'i','ಈ':'ī','ಉ':'u','ಊ':'ū',
         'ಎ':'e','ಏ':'ē','ಐ':'ai','ಒ':'o','ಓ':'ō','ಔ':'au',
@@ -154,7 +154,7 @@ let kndaData = {
     ]),
 };
 
-let mlymData = {
+const mlymData = {
     charMap: {
         'അ':'a','ആ':'ā','ഇ':'i','ഈ':'ī','ഉ':'u','ഊ':'ū',
         'എ':'e','ഏ':'ē','ഐ':'ai','ഒ':'o','ഓ':'ō','ഔ':'au',
@@ -204,7 +204,7 @@ let mlymData = {
     ]),
 };
 
-let teluData = {
+const teluData = {
     charMap: {
         'అ':'a','ఆ':'ā','ఇ':'i','ఈ':'ī','ఉ':'u','ఊ':'ū',
         'ఎ':'e','ఏ':'ē','ఐ':'ai','ఒ':'o','ఓ':'ō','ఔ':'au',
@@ -252,7 +252,7 @@ let teluData = {
     ]),
 };
 
-let devaData = {
+const devaData = {
     charMap: {
         'अ':'a','आ':'ā','इ':'i','ई':'ī','उ':'u','ऊ':'ū','ऋ':'r̥','ॠ':'r̥̄','ऌ':'l̥','ॡ':'l̥̄',
         'ए':'ē','ऐ':'ai','ओ':'ō','औ':'au',
@@ -311,7 +311,7 @@ let devaData = {
     ]),
 };
 
-let scriptDataMap = new Map([
+const scriptDataMap = new Map([
     ["deva", devaData],
     ["gran", granData],
     ["knda", kndaData],
