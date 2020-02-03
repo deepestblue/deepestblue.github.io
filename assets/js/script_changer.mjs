@@ -82,6 +82,8 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
                     transliteratedText += separator;
                 }
             }
+        } else {
+//            throw "Should not come here once numbers are accounted for.";
         }
 
         isHalfPlosive = isPlosive && data.charMap[c] == suppressedVowel;
