@@ -108,30 +108,43 @@ function latnToDravidianNumbers(sourceNumber, data) {
         return data.numbers.get(sourceNumber);
     }
 
-    let power = 1;
-    let xlittedText = "";
-    while (sourceNumber > 0) {
-        const rem = sourceNumber % 10;
-        sourceNumber = (sourceNumber - rem) / 10;
-        if (rem > 0) {
-            const tamilDigit = data.numbers.get(rem);
-            if (power > 1) {
-                let maxMultiplier = 1000;
-                let power2 = power;
-                while (power2 > maxMultiplier) {
-                    power2 /= maxMultiplier;
-                    xlittedText = data.numbers.get(maxMultiplier) + xlittedText;
-                }
-                xlittedText = data.numbers.get(power2) + xlittedText;
-                if (rem > 1) {
-                    xlittedText = tamilDigit + xlittedText;
-                }
-            } else {
-                xlittedText = tamilDigit + xlittedText;
+    const convertSmallNumber = function(sourceNumber) {
+        let xlittedText = "";
+
+        const units = sourceNumber % 10;
+        sourceNumber = (sourceNumber - units) / 10;
+        if (units > 0) {
+            xlittedText = data.numbers.get(units) + xlittedText;
+        }
+
+        const tens = sourceNumber % 10;
+        sourceNumber = (sourceNumber - tens) / 10;
+        if (tens > 0) {
+            xlittedText = data.numbers.get(10) + xlittedText;
+            if (tens > 1) {
+                xlittedText = data.numbers.get(tens) + xlittedText;
             }
         }
-        power *= 10;
+
+        const hundreds = sourceNumber % 10;
+        sourceNumber = (sourceNumber - hundreds) / 10;
+        if (hundreds > 0) {
+            xlittedText = data.numbers.get(100) + xlittedText;
+            if (hundreds > 1) {
+                xlittedText = data.numbers.get(hundreds) + xlittedText;
+            }
+        }
+
+        return xlittedText;
     }
+
+    let xlittedText = "";
+    do {
+        const rem = sourceNumber % 1000;
+        xlittedText = convertSmallNumber(rem) + xlittedText;
+        sourceNumber = (sourceNumber - rem) / 1000;
+    } while (sourceNumber > 1000);
+
     return xlittedText;
 }
 
