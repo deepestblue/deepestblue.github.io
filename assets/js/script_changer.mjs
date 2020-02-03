@@ -9,7 +9,7 @@ const aspirateConsonant = 'h';
 const separator = ':';
 
 const diphthongAntecedent = 'a';
-const diphthongConsequents = ['i', 'u'];
+const diphthongConsequents = ['i', 'u',];
 
 const disjunctor = '|';
 
@@ -141,7 +141,7 @@ function latnToDravidianNumbers(sourceNumber, data) {
 }
 
 function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
-    const diphthongsAndConstituents = ['a', 'i', 'u', 'ai', 'au',];
+
     const data = scriptDataMap.get(otherScript);
 
     if (xlitNumbers) {
@@ -162,6 +162,8 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
     const modifiers = Array.from(data.modifiers.keys()).join(disjunctor);
     const plosives = plosiveConsonants.join(disjunctor);
     const consonants = Array.from(data.consonants.keys()).sort().reverse().join(disjunctor);
+
+    const diphthongsAndConstituents = diphthongConsequents.map(s => diphthongAntecedent + s).concat(diphthongConsequents).concat(new Array(diphthongAntecedent));
     const vowels1 = Array.from(data.vowels.keys()).filter(x => ! diphthongsAndConstituents.includes(x)).sort().reverse().join(disjunctor);
     const vowels2 = diphthongsAndConstituents.sort().reverse().join(disjunctor);
 
