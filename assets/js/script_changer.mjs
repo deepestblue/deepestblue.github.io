@@ -113,8 +113,8 @@ function latnToDravidianNumbers(sourceNumber, data) {
     while (sourceNumber > 0) {
         const rem = sourceNumber % 10;
         sourceNumber = (sourceNumber - rem) / 10;
-        const tamilDigit = data.numbers.get(rem);
-        if (tamilDigit) {
+        if (rem > 0) {
+            const tamilDigit = data.numbers.get(rem);
             if (power > 1) {
                 let maxMultiplier = 1000;
                 let power2 = power;
