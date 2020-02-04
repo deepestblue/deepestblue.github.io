@@ -16,27 +16,55 @@ const disjunctor = '|';
 const regex = s => new RegExp(s, 'g');
 
 function dravidianToLatinNumbers(sourceNumber, data) {
-    const digits = Array.from(data.numbers.keys()).filter(
-        x => isNaN(parseInt(x, 10)) && data.numbers.get(x) < 10).join(disjunctor);
-    const multipliers = Array.from(data.numbers.keys()).filter(
-        x => isNaN(parseInt(x, 10)) && data.numbers.get(x) >= 10).join(disjunctor);
     const ten = data.numbers.get(10);
     const hundred = data.numbers.get(100);
     const thousand = data.numbers.get(1000);
 
-    let xlittedNumber = 0;
-    const groupRegex = regex(`(?:(?:${digits})(?:${ten}|${hundred})?${thousand}*)|(?:${multipliers})${thousand}*`);
-    sourceNumber.match(groupRegex).forEach(g => {
-        let groupElements = g.split('');
-        let groupValue = 1;
-        let head = data.numbers.get(groupElements[0]);
-        if (head < 10) {
-            groupValue = head;
-            groupElements.shift();
+    const convertSmallNumber = function(sourceNumber) {
+        let xlittedNumber = 0;
+        const hundreds = sourceNumber.indexOf(hundred);
+        if (hundreds >= 0) {
+            if (hundreds == 0) {
+                xlittedNumber += 100;
+                sourceNumber = sourceNumber.slice(1);
+            } else {
+                xlittedNumber += 100 * data.numbers.get(sourceNumber[0]);
+                sourceNumber = sourceNumber.slice(2);
+            }
         }
-        const power = groupElements.reduce(
-            (accumulator, currentValue) => accumulator * data.numbers.get(currentValue), 1);
-        xlittedNumber += groupValue * power;
+        const tens = sourceNumber.indexOf(ten);
+        if (tens >= 0) {
+            if (tens == 0) {
+                xlittedNumber += 10;
+                sourceNumber = sourceNumber.slice(1);
+            } else {
+                xlittedNumber += 10 * data.numbers.get(sourceNumber[0]);
+                sourceNumber = sourceNumber.slice(2);
+            }
+        }
+
+        if (sourceNumber.length > 0) {
+            xlittedNumber += data.numbers.get(sourceNumber[0]);
+        }
+        return xlittedNumber;
+    };
+
+    let xlittedNumber = 0;
+    const numbersExceptThousand = Array.from(data.numbers.keys()).filter(x => isNaN(parseInt(x, 10))).filter(x => x!=thousand).join(disjunctor);
+    const groupRegex = regex(`(?:${numbersExceptThousand})*${thousand}*`);
+    let power = 1;
+    sourceNumber.match(groupRegex).reverse().forEach(g => {
+        const thousands = g.match(regex(`${thousand}*$`))[0].length;
+        if (thousands == 0) {
+            xlittedNumber += convertSmallNumber(g);
+        } else {
+            g = g.slice(0, -thousands);
+            const power = 1000 ** thousands;
+            if (g == "") {
+                xlittedNumber += power;
+            }
+            xlittedNumber += power * convertSmallNumber(g);
+        }
     });
     return xlittedNumber;
 }
