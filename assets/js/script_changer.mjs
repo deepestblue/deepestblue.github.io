@@ -1,5 +1,3 @@
-export { brahmiyaToLatn, latnToBrahmiya };
-
 import { scriptDataMap } from "./script_data.mjs";
 
 const implicitVowel = 'a';
@@ -22,10 +20,10 @@ function dravidianToLatinNumbers(sourceNumber, data) {
         x => isNaN(parseInt(x, 10)) && data.numbers.get(x) >= 10).join(disjunctor);
     let constituents = sourceNumber.split(regex(`(${digits})+|((${multipliers})+)`));
     constituents = constituents.filter(function(ignored, index) {
-        return (index % 4 == 1) || (index % 4 == 2)
+        return index % 4 == 1 || index % 4 == 2;
     });
     constituents = constituents.filter(function(ignored, index) {
-        return (index % 4 == 0) || (index % 4 == 3)
+        return index % 4 == 0 || index % 4 == 3;
     });
     let xlittedNumber = 0;
     let power = 1;
@@ -96,7 +94,7 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
         isVowelImplicitVowel = data.charMap[c] == implicitVowel;
         isConsonant = consonants.includes(c);
 
-        transliteratedText += (c in data.charMap) ? data.charMap[c] : c;
+        transliteratedText += c in data.charMap ? data.charMap[c] : c;
     });
 
     if (isConsonant) {
@@ -206,3 +204,5 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
 
     return sourceText;
 }
+
+export { brahmiyaToLatn, latnToBrahmiya };

@@ -1,5 +1,3 @@
-export { scriptDataMap };
-
 const tamlData = {
     charMap: {
         'அ':'a','ஆ':'ā','இ':'i','ஈ':'ī','உ':'u','ஊ':'ū',
@@ -319,3 +317,5 @@ const scriptDataMap = new Map([
     ["taml", tamlData],
     ["telu", teluData],
 ]);
+
+export { scriptDataMap };
