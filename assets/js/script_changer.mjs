@@ -1,5 +1,3 @@
-export { brahmiyaToLatn, latnToBrahmiya };
-
 import { scriptDataMap } from "./script_data.mjs";
 
 const implicitVowel = 'a';
@@ -52,7 +50,6 @@ function dravidianToLatinNumbers(sourceNumber, data) {
     let xlittedNumber = 0;
     const numbersExceptThousand = Array.from(data.numbers.keys()).filter(x => isNaN(parseInt(x, 10))).filter(x => x!=thousand).join(disjunctor);
     const groupRegex = regex(`(?:${numbersExceptThousand})*${thousand}*`);
-    let power = 1;
     sourceNumber.match(groupRegex).reverse().forEach(g => {
         const thousands = g.match(regex(`${thousand}*$`))[0].length;
         if (thousands == 0) {
@@ -119,7 +116,7 @@ function brahmiyaToLatn(otherScript, sourceText, xlitNumbers) {
         isVowelImplicitVowel = data.charMap[c] == implicitVowel;
         isConsonant = consonants.includes(c);
 
-        transliteratedText += (c in data.charMap) ? data.charMap[c] : c;
+        transliteratedText += c in data.charMap ? data.charMap[c] : c;
     });
 
     if (isConsonant) {
@@ -175,7 +172,7 @@ function latnToDravidianNumbers(sourceNumber, data) {
         }
 
         return xlittedText;
-    }
+    };
 
     let xlittedText = "";
 
@@ -251,3 +248,5 @@ function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
 
     return sourceText;
 }
+
+export { brahmiyaToLatn, latnToBrahmiya };
