@@ -1,3 +1,5 @@
+/* global QUnit:false */
+
 import { brahmiyaToLatn, latnToBrahmiya } from "/assets/js/script_changer.mjs";
 
 const tamlData = {
