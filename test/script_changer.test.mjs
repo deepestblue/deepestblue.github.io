@@ -1,8 +1,4 @@
-import chai from "./chai.js";
-
-import { brahmiyaToLatn, latnToBrahmiya } from "./script_changer.mjs";
-
-const assert = chai.assert;
+import { brahmiyaToLatn, latnToBrahmiya } from "/assets/js/script_changer.mjs";
 
 const tamlData = {
     taml : [
@@ -31,24 +27,21 @@ const tamlData = {
     ],
 };
 
-function testTamilToLatin() {
+QUnit.test("தமிழ் → Latin", function(assert) {
     [...Array(tamlData.taml.length).keys()].forEach(function(i) {
         assert.equal(
             brahmiyaToLatn("taml", tamlData.taml[i], false),
             tamlData.latn[i]);
     });
-}
+});
 
-function testLatinToTamil() {
+QUnit.test("தமிழ் ← Latin", function(assert) {
     [...Array(tamlData.latn.length).keys()].forEach(function(i) {
         assert.equal(
             latnToBrahmiya("taml", tamlData.latn[i], false),
             tamlData.taml[i]);
     });
-}
-
-testTamilToLatin();
-testLatinToTamil();
+});
 
 const teluData = {
     telu : [
@@ -65,24 +58,21 @@ const teluData = {
     ],
 };
 
-function testTeluguToLatin() {
+QUnit.test("తెలుగు → Latin", function(assert) {
     [...Array(teluData.telu.length).keys()].forEach(function(i) {
         assert.equal(
             brahmiyaToLatn("telu", teluData.telu[i], false),
             teluData.latn[i]);
     });
-}
+});
 
-function testLatinToTelugu() {
+QUnit.test("తెలుగు ← Latin", function(assert) {
     [...Array(teluData.latn.length).keys()].forEach(function(i) {
         assert.equal(
             latnToBrahmiya("telu", teluData.latn[i], false),
             teluData.telu[i]);
     });
-}
-
-testTeluguToLatin();
-testLatinToTelugu();
+});
 
 const devaData = {
     deva : [
@@ -117,24 +107,21 @@ const devaData = {
     ],
 };
 
-function testDevanagariToLatin() {
+QUnit.test("देवनागरी → Latin", function(assert) {
     [...Array(devaData.deva.length).keys()].forEach(function(i) {
         assert.equal(
             brahmiyaToLatn("deva", devaData.deva[i], false),
             devaData.latn[i]);
     });
-}
+});
 
-function testLatinToDevanagari() {
+QUnit.test("देवनागरी ← Latin", function(assert) {
     [...Array(devaData.latn.length).keys()].forEach(function(i) {
         assert.equal(
             latnToBrahmiya("deva", devaData.latn[i], false),
             devaData.deva[i]);
     });
-}
-
-testDevanagariToLatin();
-testLatinToDevanagari();
+});
 
 const numData = {
     taml : [
@@ -159,7 +146,7 @@ const numData = {
     ],
 };
 
-function testNumbers() {
+QUnit.test("Numbers", function(assert) {
     [...Array(numData.latn.length).keys()].forEach(function(i) {
         assert.equal(
             brahmiyaToLatn("taml", numData.taml[i], true),
@@ -180,6 +167,4 @@ function testNumbers() {
             latnToBrahmiya("deva", numData.latn[i], true),
             numData.deva[i]);
     });
-}
-
-testNumbers();
+});
