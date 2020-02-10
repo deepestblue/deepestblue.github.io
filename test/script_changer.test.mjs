@@ -29,7 +29,7 @@ const tamlData = {
 
 QUnit.test("தமிழ் → Latin", function(assert) {
     [...Array(tamlData.taml.length).keys()].forEach(function(i) {
-        assert.equal(
+        assert.deepEqual(
             brahmiyaToLatn("taml", tamlData.taml[i], false),
             tamlData.latn[i]);
     });
@@ -37,7 +37,7 @@ QUnit.test("தமிழ் → Latin", function(assert) {
 
 QUnit.test("தமிழ் ← Latin", function(assert) {
     [...Array(tamlData.latn.length).keys()].forEach(function(i) {
-        assert.equal(
+        assert.deepEqual(
             latnToBrahmiya("taml", tamlData.latn[i], false),
             tamlData.taml[i]);
     });
@@ -60,7 +60,7 @@ const teluData = {
 
 QUnit.test("తెలుగు → Latin", function(assert) {
     [...Array(teluData.telu.length).keys()].forEach(function(i) {
-        assert.equal(
+        assert.deepEqual(
             brahmiyaToLatn("telu", teluData.telu[i], false),
             teluData.latn[i]);
     });
@@ -68,7 +68,7 @@ QUnit.test("తెలుగు → Latin", function(assert) {
 
 QUnit.test("తెలుగు ← Latin", function(assert) {
     [...Array(teluData.latn.length).keys()].forEach(function(i) {
-        assert.equal(
+        assert.deepEqual(
             latnToBrahmiya("telu", teluData.latn[i], false),
             teluData.telu[i]);
     });
@@ -109,7 +109,7 @@ const devaData = {
 
 QUnit.test("देवनागरी → Latin", function(assert) {
     [...Array(devaData.deva.length).keys()].forEach(function(i) {
-        assert.equal(
+        assert.deepEqual(
             brahmiyaToLatn("deva", devaData.deva[i], false),
             devaData.latn[i]);
     });
@@ -117,7 +117,7 @@ QUnit.test("देवनागरी → Latin", function(assert) {
 
 QUnit.test("देवनागरी ← Latin", function(assert) {
     [...Array(devaData.latn.length).keys()].forEach(function(i) {
-        assert.equal(
+        assert.deepEqual(
             latnToBrahmiya("deva", devaData.latn[i], false),
             devaData.deva[i]);
     });
@@ -148,22 +148,22 @@ const numData = {
 
 QUnit.test("Numbers", function(assert) {
     [...Array(numData.latn.length).keys()].forEach(function(i) {
-        assert.equal(
+        assert.deepEqual(
             brahmiyaToLatn("taml", numData.taml[i], true),
             numData.latn[i]);
-        assert.equal(
+        assert.deepEqual(
             latnToBrahmiya("taml", numData.latn[i], true),
             numData.taml[i]);
-        assert.equal(
+        assert.deepEqual(
             brahmiyaToLatn("telu", numData.telu[i], true),
             numData.latn[i]);
-        assert.equal(
+        assert.deepEqual(
             latnToBrahmiya("telu", numData.latn[i], true),
             numData.telu[i]);
-        assert.equal(
+        assert.deepEqual(
             brahmiyaToLatn("deva", numData.deva[i], true),
             numData.latn[i]);
-        assert.equal(
+        assert.deepEqual(
             latnToBrahmiya("deva", numData.latn[i], true),
             numData.deva[i]);
     });
