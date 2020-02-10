@@ -27,17 +27,19 @@ const tamlData = {
     ],
 };
 
-QUnit.test("தமிழ் → Latin", function(assert) {
-    [...Array(tamlData.taml.length).keys()].forEach(function(i) {
-        assert.equal(
+QUnit.module("தமிழ் → Latin");
+[...Array(tamlData.taml.length).keys()].forEach(function(i) {
+    QUnit.test(tamlData.taml[i], function(assert) {
+        assert.deepEqual(
             brahmiyaToLatn("taml", tamlData.taml[i], false),
             tamlData.latn[i]);
     });
 });
 
-QUnit.test("தமிழ் ← Latin", function(assert) {
-    [...Array(tamlData.latn.length).keys()].forEach(function(i) {
-        assert.equal(
+QUnit.module("Latin → தமிழ்");
+[...Array(tamlData.latn.length).keys()].forEach(function(i) {
+    QUnit.test(tamlData.latn[i], function(assert) {
+        assert.deepEqual(
             latnToBrahmiya("taml", tamlData.latn[i], false),
             tamlData.taml[i]);
     });
@@ -58,17 +60,19 @@ const teluData = {
     ],
 };
 
-QUnit.test("తెలుగు → Latin", function(assert) {
-    [...Array(teluData.telu.length).keys()].forEach(function(i) {
-        assert.equal(
+QUnit.module("తెలుగు → Latin");
+[...Array(teluData.telu.length).keys()].forEach(function(i) {
+    QUnit.test(teluData.telu[i], function(assert) {
+        assert.deepEqual(
             brahmiyaToLatn("telu", teluData.telu[i], false),
             teluData.latn[i]);
     });
 });
 
-QUnit.test("తెలుగు ← Latin", function(assert) {
-    [...Array(teluData.latn.length).keys()].forEach(function(i) {
-        assert.equal(
+QUnit.module("Latin → తెలుగు");
+[...Array(teluData.latn.length).keys()].forEach(function(i) {
+    QUnit.test(teluData.latn[i], function(assert) {
+        assert.deepEqual(
             latnToBrahmiya("telu", teluData.latn[i], false),
             teluData.telu[i]);
     });
@@ -107,22 +111,25 @@ const devaData = {
     ],
 };
 
-QUnit.test("देवनागरी → Latin", function(assert) {
-    [...Array(devaData.deva.length).keys()].forEach(function(i) {
-        assert.equal(
+QUnit.module("देवनागरी → Latin");
+[...Array(devaData.deva.length).keys()].forEach(function(i) {
+    QUnit.test(devaData.deva[i], function(assert) {
+        assert.deepEqual(
             brahmiyaToLatn("deva", devaData.deva[i], false),
             devaData.latn[i]);
     });
 });
 
-QUnit.test("देवनागरी ← Latin", function(assert) {
-    [...Array(devaData.latn.length).keys()].forEach(function(i) {
-        assert.equal(
+QUnit.module("Latin → देवनागरी");
+[...Array(devaData.latn.length).keys()].forEach(function(i) {
+    QUnit.test(devaData.latn[i], function(assert) {
+        assert.deepEqual(
             latnToBrahmiya("deva", devaData.latn[i], false),
             devaData.deva[i]);
     });
 });
 
+QUnit.module("Numbers");
 const numData = {
     taml : [
         "௦",
@@ -182,24 +189,34 @@ const numData = {
     ],
 };
 
-QUnit.test("Numbers", function(assert) {
-    [...Array(numData.latn.length).keys()].forEach(function(i) {
-        assert.equal(
+[...Array(numData.latn.length).keys()].forEach(function(i) {
+    QUnit.test("தமிழ் " + numData.taml[i], function(assert) {
+        assert.deepEqual(
             brahmiyaToLatn("taml", numData.taml[i], true),
             numData.latn[i]);
-        assert.equal(
+        });
+    QUnit.test(numData.latn[i] + " → தமிழ்", function(assert) {
+            assert.deepEqual(
             latnToBrahmiya("taml", numData.latn[i], true),
             numData.taml[i]);
-        assert.equal(
+        });
+    QUnit.test("తెలుగు " + numData.telu[i], function(assert) {
+        assert.deepEqual(
             brahmiyaToLatn("telu", numData.telu[i], true),
             numData.latn[i]);
-        assert.equal(
+        });
+    QUnit.test(numData.latn[i] + " → తెలుగు", function(assert) {
+        assert.deepEqual(
             latnToBrahmiya("telu", numData.latn[i], true),
             numData.telu[i]);
-        assert.equal(
+        });
+    QUnit.test("देवनागरी " + numData.deva[i], function(assert) {
+        assert.deepEqual(
             brahmiyaToLatn("deva", numData.deva[i], true),
             numData.latn[i]);
-        assert.equal(
+        });
+    QUnit.test(numData.latn[i] + " → देवनागरी", function(assert) {
+        assert.deepEqual(
             latnToBrahmiya("deva", numData.latn[i], true),
             numData.deva[i]);
     });
