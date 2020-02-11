@@ -14,33 +14,55 @@ const disjunctor = '|';
 const regex = s => new RegExp(s, 'g');
 
 function dravidianToLatinNumbers(sourceNumber, data) {
-    const digits = Array.from(data.numbers.keys()).filter(
-        x => isNaN(parseInt(x, 10)) && data.numbers.get(x) < 10).join(disjunctor);
-    const multipliers = Array.from(data.numbers.keys()).filter(
-        x => isNaN(parseInt(x, 10)) && data.numbers.get(x) >= 10).join(disjunctor);
-    let constituents = sourceNumber.split(regex(`(${digits})+|((${multipliers})+)`));
-    constituents = constituents.filter(function(ignored, index) {
-        return index % 4 == 1 || index % 4 == 2;
-    });
-    constituents = constituents.filter(function(ignored, index) {
-        return index % 4 == 0 || index % 4 == 3;
-    });
-    let xlittedNumber = 0;
-    let power = 1;
-    let digit = 0;
-    constituents.forEach(c => {
-        if (c.match(digits)) {
-            digit = data.numbers.get(c);
-        } else {
-            for (const m of c) {
-                power *= data.numbers.get(m);
+    const ten = data.numbers.get(10);
+    const hundred = data.numbers.get(100);
+    const thousand = data.numbers.get(1000);
+
+    const convertSmallNumber = function(sourceNumber) {
+        let xlittedNumber = 0;
+        const hundreds = sourceNumber.indexOf(hundred);
+        if (hundreds >= 0) {
+            if (hundreds == 0) {
+                xlittedNumber += 100;
+                sourceNumber = sourceNumber.slice(1);
+            } else {
+                xlittedNumber += 100 * data.numbers.get(sourceNumber[0]);
+                sourceNumber = sourceNumber.slice(2);
             }
-            xlittedNumber += digit * power;
-            power = 1;
-            digit = 0;
+        }
+        const tens = sourceNumber.indexOf(ten);
+        if (tens >= 0) {
+            if (tens == 0) {
+                xlittedNumber += 10;
+                sourceNumber = sourceNumber.slice(1);
+            } else {
+                xlittedNumber += 10 * data.numbers.get(sourceNumber[0]);
+                sourceNumber = sourceNumber.slice(2);
+            }
+        }
+
+        if (sourceNumber.length > 0) {
+            xlittedNumber += data.numbers.get(sourceNumber[0]);
+        }
+        return xlittedNumber;
+    };
+
+    let xlittedNumber = 0;
+    const numbersExceptThousand = Array.from(data.numbers.keys()).filter(x => isNaN(parseInt(x, 10))).filter(x => x!=thousand).join(disjunctor);
+    const groupRegex = regex(`(?:${numbersExceptThousand})*${thousand}*`);
+    sourceNumber.match(groupRegex).reverse().forEach(g => {
+        const thousands = g.match(regex(`${thousand}*$`))[0].length;
+        if (thousands == 0) {
+            xlittedNumber += convertSmallNumber(g);
+        } else {
+            g = g.slice(0, -thousands);
+            const power = 1000 ** thousands;
+            if (g == "") {
+                xlittedNumber += power;
+            }
+            xlittedNumber += power * convertSmallNumber(g);
         }
     });
-    xlittedNumber += digit * 1;
     return xlittedNumber;
 }
 
@@ -113,30 +135,49 @@ function latnToDravidianNumbers(sourceNumber, data) {
         return data.numbers.get(sourceNumber);
     }
 
-    let power = 1;
-    let xlittedText = "";
-    while (sourceNumber > 0) {
-        const rem = sourceNumber % 10;
-        sourceNumber = (sourceNumber - rem) / 10;
-        const tamilDigit = data.numbers.get(rem);
-        if (tamilDigit) {
-            if (power > 1) {
-                let maxMultiplier = 1000;
-                let power2 = power;
-                while (power2 > maxMultiplier) {
-                    power2 /= maxMultiplier;
-                    xlittedText = data.numbers.get(maxMultiplier) + xlittedText;
-                }
-                xlittedText = data.numbers.get(power2) + xlittedText;
-                if (rem > 1) {
-                    xlittedText = tamilDigit + xlittedText;
-                }
-            } else {
-                xlittedText = tamilDigit + xlittedText;
+    const convertSmallNumber = function(sourceNumber) {
+        let xlittedText = "";
+
+        const units = sourceNumber % 10;
+        sourceNumber = (sourceNumber - units) / 10;
+        if (units > 0) {
+            xlittedText = data.numbers.get(units) + xlittedText;
+        }
+
+        const tens = sourceNumber % 10;
+        sourceNumber = (sourceNumber - tens) / 10;
+        if (tens > 0) {
+            xlittedText = data.numbers.get(10) + xlittedText;
+            if (tens > 1) {
+                xlittedText = data.numbers.get(tens) + xlittedText;
             }
         }
-        power *= 10;
+
+        const hundreds = sourceNumber % 10;
+        sourceNumber = (sourceNumber - hundreds) / 10;
+        if (hundreds > 0) {
+            xlittedText = data.numbers.get(100) + xlittedText;
+            if (hundreds > 1) {
+                xlittedText = data.numbers.get(hundreds) + xlittedText;
+            }
+        }
+
+        return xlittedText;
+    };
+
+    let xlittedText = "", power = 0;
+    while (sourceNumber > 0) {
+        const rem = sourceNumber % 1000;
+        if (rem > 0) {
+            xlittedText = data.numbers.get(1000).repeat(power) + xlittedText;
+            if (rem > 1 || power == 0) {
+                xlittedText = convertSmallNumber(rem, data) + xlittedText;
+            }
+        }
+        sourceNumber = (sourceNumber - rem) / 1000;
+        ++power;
     }
+
     return xlittedText;
 }
 
