@@ -162,26 +162,23 @@ function latnToDravidianNumbers(sourceNumber, data) {
             }
         }
 
-        const thousands = sourceNumber % 10;
-        sourceNumber = (sourceNumber - thousands) / 10;
-        if (thousands > 0) {
-            xlittedText = data.numbers.get(1000) + xlittedText;
-            if (thousands > 1) {
-                xlittedText = data.numbers.get(thousands) + xlittedText;
-            }
-        }
-
         return xlittedText;
     };
 
-    let xlittedText = "";
-
-    while (sourceNumber >= 10000) {
+    let xlittedText = "", power = 0;
+    while (sourceNumber > 0) {
         const rem = sourceNumber % 1000;
-        xlittedText = data.numbers.get(1000) + convertSmallNumber(rem, data) + xlittedText;
+        if (rem > 0) {
+            xlittedText = data.numbers.get(1000).repeat(power) + xlittedText;
+            if (rem > 1 || power == 0) {
+                xlittedText = convertSmallNumber(rem, data) + xlittedText;
+            }
+        }
         sourceNumber = (sourceNumber - rem) / 1000;
+        ++power;
     }
-    return convertSmallNumber(sourceNumber, data) + xlittedText;
+
+    return xlittedText;
 }
 
 function latnToBrahmiya(otherScript, sourceText, xlitNumbers) {
