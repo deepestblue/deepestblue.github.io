@@ -20,7 +20,7 @@
             <option value="telu">తెలుగు</option>
         </select>
     </form>
-    , Sanskrit text:
+    and Sanskrit text:
     <form style="display: inline;">
         <select id="select-xlit-sa">
             <option value="deva">देवनागरी</option>
@@ -28,21 +28,10 @@
             <option value="latn">Latin</option>
         </select>
     </form>
-    , and numbers:
-    <form style="display: inline;">
-        <select id="select-xlit-num">
-            <option value="deva">देवनागरी</option>
-            <option value="knda">ಕನ್ನಡ</option>
-            <option value="latn">Hindu‐Arabic</option>
-            <option value="mlym">മലയാളം</option>
-            <option value="taml" selected>தமிழ்</option>
-            <option value="telu">తెలుగు</option>
-        </select>
-    </form>
     </div>
 
     <script type="module" data-lang="en">
-        import { brahmiyaToLatn, latnToBrahmiya } from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.1.0/src/script_changer.mjs";
+        import { brahmicToLatin, latinToBrahmic } from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.1.2/src/script_changer.mjs";
         const onSelectValueChange = function (selector, eventHandler) {
             let previous;
             let elt = document.querySelector(selector);
@@ -57,37 +46,37 @@
 
         onSelectValueChange("#select-xlit-ta", xliterate.bind(undefined, "ta"));
         onSelectValueChange("#select-xlit-sa", xliterate.bind(undefined, "sa"));
-        onSelectValueChange("#select-xlit-num", xliterate.bind(undefined, "num"));
 
         function xliterate(langCode, srcScript, dstScript) {
             if (dstScript == "latn") {
-                latnXliterate(langCode, srcScript, brahmiyaToLatn);
+                latnXliterate(langCode, srcScript, brahmicToLatin);
                 return;
             }
             if (srcScript == "latn") {
-                latnXliterate(langCode, dstScript, latnToBrahmiya);
+                latnXliterate(langCode, dstScript, latinToBrahmic);
                 return;
             }
 
-            latnXliterate(langCode, srcScript, brahmiyaToLatn);
-            latnXliterate(langCode, dstScript, latnToBrahmiya);
+            latnXliterate(langCode, srcScript, brahmicToLatin);
+            latnXliterate(langCode, dstScript, latinToBrahmic);
         }
 
         function latnXliterate(langCode, otherScript, converter) {
-            const xlitNumbers = langCode == "num";
-            let langMatched = (document.documentElement.lang == langCode) || xlitNumbers;
-
-            const walk = function(node, langMatched) {
-                if (node.nodeType == Node.TEXT_NODE && langMatched) {
-                    node.textContent = converter(otherScript, node.textContent, xlitNumbers);
+            function walk(node, langMatched) {
+                if (node.nodeType == Node.TEXT_NODE) {
+                    if (langMatched) {
+                        node.textContent = converter(otherScript, node.textContent);
+                    }
                     return;
                 }
-                if ((node.nodeType == Node.ELEMENT_NODE) && ! xlitNumbers) {
-                    let lang = node.dataset["lang"];
+
+                if (node.nodeType == Node.ELEMENT_NODE) {
+                    const lang = node.dataset["lang"];
                     if (lang) {
-                        langMatched = (lang == langCode);
+                        langMatched = lang == langCode;
                     }
                 }
+
                 node = node.firstChild;
                 while (node) {
                     walk(node, langMatched);
@@ -95,10 +84,13 @@
                 }
             };
 
+            const langMatched = document.documentElement.lang == langCode;
+
             walk(document.querySelector("[data-id=page-title]"), langMatched);
             walk(document.querySelector("[data-id=page-content]"), langMatched);
             walk(document.querySelector("nav"), langMatched);
         }
+
     </script>
 
     {%- endif -%}
