@@ -50,11 +50,12 @@
             "[data-id=page-content]",
             "nav",
         ].map(sel => document.querySelector(sel));
+        const docLang = document.documentElement.lang;
 
         onSelectValueChange("#select-xlit-ta",
-            xliterate.bind(undefined, nodesToXliterate, "ta"));
+            xliterate.bind(undefined, nodesToXliterate, docLang, "ta"));
         onSelectValueChange("#select-xlit-sa",
-            xliterate.bind(undefined, nodesToXliterate, "sa"));
+            xliterate.bind(undefined, nodesToXliterate, docLang, "sa"));
 
     </script>
 
