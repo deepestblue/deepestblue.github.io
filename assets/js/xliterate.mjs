@@ -20,11 +20,8 @@ function latnXliterate(nodes, langCode, otherScript, converter) {
             langMatched = lang == langCode;
         }
 
-        node = node.firstChild;
-        while (node) {
-            walk(node, langMatched);
-            node = node.nextSibling;
-        }
+        node.childNodes.forEach(
+            child => walk(child, langMatched));
     }
 
     const langMatched = document.documentElement.lang == langCode;
