@@ -31,6 +31,8 @@
     </div>
 
     <script type="module">
+        // Ensuring the form‐select's change event‐handler has access to
+        // both the old and new values.
         function onSelectValueChange(selector, eventHandler) {
             let previous;
             let elt = document.querySelector(selector);
@@ -45,13 +47,17 @@
 
         import { xliterate } from "/assets/js/xliterate.mjs";
 
+        // The DOM nodes to transliterate.
         const nodes = [
             "[data-id=page-title]",
             "[data-id=page-content]",
             "nav",
         ].map(sel => document.querySelector(sel));
+
         const docLang = document.documentElement.lang;
 
+        // Adding (a suitably bound) xliterate as a handler
+        // for the form‐selectsʼ change events.
         onSelectValueChange("#select-xlit-ta",
             xliterate.bind(undefined,
                 { nodes, docLang, langCode: "ta", }

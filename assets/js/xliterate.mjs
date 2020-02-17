@@ -2,11 +2,13 @@
 
 import { brahmicToLatin, latinToBrahmic } from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.1.2/src/script_changer.mjs";
 
-function latnXliterate({ nodes, docLang, langCode}, otherScript, converter) {
-    function walk(node, langMatched) {
+// Close walk on langCode and converter and return it.
+function closedWalk(langCode, converter) {
+    // Walk the DOM starting at node.
+    return function walk(node, langMatched) {
         if (node.nodeType == Node.TEXT_NODE) {
             if (langMatched) {
-                node.textContent = converter(otherScript, node.textContent);
+                node.textContent = converter(node.textContent);
             }
             return;
         }
@@ -22,13 +24,19 @@ function latnXliterate({ nodes, docLang, langCode}, otherScript, converter) {
 
         node.childNodes.forEach(
             child => walk(child, langMatched));
-    }
-
-    const langMatched = docLang == langCode;
-
-    nodes.forEach(node => walk(node, langMatched));
+    };
 }
 
+// Transliterate between Latin and otherScript using converter.
+function latnXliterate({ nodes, docLang, langCode}, otherScript, converter) {
+    nodes.forEach(node =>
+        closedWalk(langCode,
+            converter.bind(undefined, otherScript)
+        )(node, docLang == langCode)
+    );
+}
+
+// Given domParams, transliterate from srcScript to dstScript
 function xliterate(domParams, srcScript, dstScript) {
     if (dstScript == "latn") {
         latnXliterate(domParams, srcScript, brahmicToLatin);
@@ -39,6 +47,7 @@ function xliterate(domParams, srcScript, dstScript) {
         return;
     }
 
+    // Transliterate from one Brahmic script to another through Latin.
     latnXliterate(domParams, srcScript, brahmicToLatin);
     latnXliterate(domParams, dstScript, latinToBrahmic);
 }
