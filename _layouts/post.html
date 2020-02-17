@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-<span data-lang="en">
 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" style="padding: 0px 3px;">{%- assign date_format = "%a, %d %b, %Y" -%}{{ page.date | date: date_format }}</time>
 {%- if page.author -%}
   •<span itemprop="author name" itemscope itemtype="http://schema.org/Person" style="padding: 0px 3px;">{{ page.author }}</span>
@@ -9,7 +8,6 @@ layout: default
 {%- if page.tags.size > 0 -%}
   •<span style="padding: 0px 3px;">{{page.tags | join: ', '}}</span>
 {%- endif -%}
-</span>
 <br />
 <br />
 
