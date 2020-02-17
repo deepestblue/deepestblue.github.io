@@ -2,7 +2,7 @@
 
 import { brahmicToLatin, latinToBrahmic } from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.1.2/src/script_changer.mjs";
 
-function latnXliterate(nodes, documentLang, langCode, otherScript, converter) {
+function latnXliterate({ nodes, docLang, langCode}, otherScript, converter) {
     function walk(node, langMatched) {
         if (node.nodeType == Node.TEXT_NODE) {
             if (langMatched) {
@@ -24,23 +24,23 @@ function latnXliterate(nodes, documentLang, langCode, otherScript, converter) {
             child => walk(child, langMatched));
     }
 
-    const langMatched = documentLang == langCode;
+    const langMatched = docLang == langCode;
 
     nodes.forEach(node => walk(node, langMatched));
 }
 
-function xliterate(nodes, documentLang, langCode, srcScript, dstScript) {
+function xliterate(domParams, srcScript, dstScript) {
     if (dstScript == "latn") {
-        latnXliterate(nodes, documentLang, langCode, srcScript, brahmicToLatin);
+        latnXliterate(domParams, srcScript, brahmicToLatin);
         return;
     }
     if (srcScript == "latn") {
-        latnXliterate(nodes, documentLang, langCode, dstScript, latinToBrahmic);
+        latnXliterate(domParams, dstScript, latinToBrahmic);
         return;
     }
 
-    latnXliterate(nodes, documentLang, langCode, srcScript, brahmicToLatin);
-    latnXliterate(nodes, documentLang, langCode, dstScript, latinToBrahmic);
+    latnXliterate(domParams, srcScript, brahmicToLatin);
+    latnXliterate(domParams, dstScript, latinToBrahmic);
 }
 
 export { xliterate };

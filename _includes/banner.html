@@ -45,7 +45,7 @@
 
         import { xliterate } from "/assets/js/xliterate.mjs";
 
-        const nodesToXliterate = [
+        const nodes = [
             "[data-id=page-title]",
             "[data-id=page-content]",
             "nav",
@@ -53,10 +53,13 @@
         const docLang = document.documentElement.lang;
 
         onSelectValueChange("#select-xlit-ta",
-            xliterate.bind(undefined, nodesToXliterate, docLang, "ta"));
+            xliterate.bind(undefined,
+                { nodes, docLang, langCode: "ta", }
+            ));
         onSelectValueChange("#select-xlit-sa",
-            xliterate.bind(undefined, nodesToXliterate, docLang, "sa"));
-
+            xliterate.bind(undefined,
+                { nodes, docLang, langCode: "sa", }
+            ));
     </script>
 
   {%- endif -%}
