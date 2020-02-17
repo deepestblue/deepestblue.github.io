@@ -9,30 +9,29 @@
     {%- endfor -%}
   </div>
   {%- if page.layout == "post_with_script_changer" -%}
-  <div style="line-height: 52px; padding: 0px 5px; text-transform: uppercase;">
-    Preferred scripts for Tamil text:
-    <form style="display: inline;">
+    <div style="line-height: 52px; padding: 0px 5px; text-transform: uppercase;">
+      Preferred scripts for Tamil text:
+      <form style="display: inline;">
         <select id="select-xlit-ta">
-            <option value="knda">ಕನ್ನಡ</option>
-            <option value="latn">Latin</option>
-            <option value="mlym">മലയാളം</option>
-            <option value="taml" selected>தமிழ்</option>
-            <option value="telu">తెలుగు</option>
+          <option value="knda">ಕನ್ನಡ</option>
+          <option value="latn">Latin</option>
+          <option value="mlym">മലയാളം</option>
+          <option value="taml" selected>தமிழ்</option>
+          <option value="telu">తెలుగు</option>
         </select>
-    </form>
-    and Sanskrit text:
-    <form style="display: inline;">
+      </form>
+      and Sanskrit text:
+      <form style="display: inline;">
         <select id="select-xlit-sa">
-            <option value="deva">देवनागरी</option>
-            <option value="gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
-            <option value="latn">Latin</option>
+          <option value="deva">देवनागरी</option>
+          <option value="gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
+          <option value="latn">Latin</option>
         </select>
-    </form>
+      </form>
     </div>
 
     <script type="module">
-        import { brahmicToLatin, latinToBrahmic } from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.1.2/src/script_changer.mjs";
-        const onSelectValueChange = function (selector, eventHandler) {
+        function onSelectValueChange(selector, eventHandler) {
             let previous;
             let elt = document.querySelector(selector);
             elt.addEventListener("focus", function() {
@@ -44,54 +43,20 @@
             });
         };
 
-        onSelectValueChange("#select-xlit-ta", xliterate.bind(undefined, "ta"));
-        onSelectValueChange("#select-xlit-sa", xliterate.bind(undefined, "sa"));
+        import { xliterate } from "/assets/js/xliterate.mjs";
 
-        function xliterate(langCode, srcScript, dstScript) {
-            if (dstScript == "latn") {
-                latnXliterate(langCode, srcScript, brahmicToLatin);
-                return;
-            }
-            if (srcScript == "latn") {
-                latnXliterate(langCode, dstScript, latinToBrahmic);
-                return;
-            }
+        const nodesToXliterate = [
+            "[data-id=page-title]",
+            "[data-id=page-content]",
+            "nav",
+        ].map(sel => document.querySelector(sel));
 
-            latnXliterate(langCode, srcScript, brahmicToLatin);
-            latnXliterate(langCode, dstScript, latinToBrahmic);
-        }
-
-        function latnXliterate(langCode, otherScript, converter) {
-            function walk(node, langMatched) {
-                if (node.nodeType == Node.TEXT_NODE) {
-                    if (langMatched) {
-                        node.textContent = converter(otherScript, node.textContent);
-                    }
-                    return;
-                }
-
-                if (node.nodeType == Node.ELEMENT_NODE) {
-                    const lang = node.dataset["lang"];
-                    if (lang) {
-                        langMatched = lang == langCode;
-                    }
-                }
-
-                node = node.firstChild;
-                while (node) {
-                    walk(node, langMatched);
-                    node = node.nextSibling;
-                }
-            };
-
-            const langMatched = document.documentElement.lang == langCode;
-
-            walk(document.querySelector("[data-id=page-title]"), langMatched);
-            walk(document.querySelector("[data-id=page-content]"), langMatched);
-            walk(document.querySelector("nav"), langMatched);
-        }
+        onSelectValueChange("#select-xlit-ta",
+            xliterate.bind(undefined, nodesToXliterate, "ta"));
+        onSelectValueChange("#select-xlit-sa",
+            xliterate.bind(undefined, nodesToXliterate, "sa"));
 
     </script>
 
-    {%- endif -%}
+  {%- endif -%}
 </div>
