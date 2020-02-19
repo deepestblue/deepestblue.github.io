@@ -2,7 +2,7 @@
 
 import { brahmicToLatin, latinToBrahmic } from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.1.2/src/script_changer.mjs";
 
-// Close walk on langCode and converter and return it.
+// Create a closure of walk on langCode and converter.
 function closedWalk(langCode, converter) {
     // Walk the DOM starting at node.
     return function walk(node, langMatched) {
@@ -28,7 +28,7 @@ function closedWalk(langCode, converter) {
 }
 
 // Transliterate between Latin and otherScript using converter.
-function latnXliterate({ nodes, docLang, langCode}, otherScript, converter) {
+function latnXliterate({nodes, docLang, langCode}, otherScript, converter) {
     nodes.forEach(node =>
         closedWalk(langCode,
             converter.bind(undefined, otherScript)
@@ -36,7 +36,8 @@ function latnXliterate({ nodes, docLang, langCode}, otherScript, converter) {
     );
 }
 
-// Given domParams, transliterate from srcScript to dstScript
+// Given domParams, transliterate from srcScript to dstScript,
+// through Latin as necessary.
 function xliterate(domParams, srcScript, dstScript) {
     if (dstScript == "latn") {
         latnXliterate(domParams, srcScript, brahmicToLatin);
