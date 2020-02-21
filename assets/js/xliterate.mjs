@@ -3,7 +3,7 @@
 import { transliterate } from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.2.0/src/saulabhya.min.js";
 
 // Create a closure of walk on langCode and the source and destination scripts.
-function closedWalk(langCode, srcScript, dstScript) {
+function closeWalkOn(langCode, srcScript, dstScript) {
     // Walk the DOM starting at node.
     return function walk(node, langMatched) {
         if (node.nodeType == Node.TEXT_NODE) {
@@ -29,9 +29,8 @@ function closedWalk(langCode, srcScript, dstScript) {
 
 // Transliterate all the text in the given nodes from srcScript to dstScript.
 function transliterateDOM(nodes, docLang, langCode, srcScript, dstScript) {
-    nodes.forEach(node =>
-        closedWalk(langCode, srcScript, dstScript)(node, docLang == langCode)
-    );
+    const closedWalk = closeWalkOn(langCode, srcScript, dstScript);
+    nodes.forEach(node => closedWalk(node, docLang == langCode));
 }
 
 export { transliterateDOM };
