@@ -14,11 +14,11 @@ description: The names of various jasmine variants.
 
 | தமிழ்ப்பெயர் | வடமொழிப்பெயர் | ஆங்கிலப்பெயர் | இருசொற்பெயர் |
 |---|---|---|---|
-| பிச்சி, சாதிமல்லி | <span data-lang="sa">𑌜𑌾𑌤𑌿 𑌉𑌤 𑌮𑌾𑌲𑌤𑍀</span> | <span data-lang="en">Royal jasmine</span> | *Jasminum grandiflorum*{:data-lang="en"} |
+| பிச்சி, சாதிமல்லி | <span data-lang="sa">𑌜𑌾𑌤𑌿𑌃 𑌉𑌤 𑌮𑌾𑌲𑌤𑍀</span> | <span data-lang="en">Royal jasmine</span> | *Jasminum grandiflorum*{:data-lang="en"} |
 | நித்தியமல்லி, பெருமல்லி | ? | <span data-lang="en">Brazilian jasmine</span> | *Jasminum fluminense*{:data-lang="en"} |
 | குண்டுமல்லி, இருவாய்ச்சி | <span data-lang="sa">𑌨𑌵𑌮𑌲𑍍𑌲𑌿𑌕𑌾</span> | <span data-lang="en">Arabian jasmine</span> | *Jasminum sambac*{:data-lang="en"} |
 | முல்லை, உச்சிமல்லி | <span data-lang="sa">𑌯𑍂𑌥𑌿𑌕𑌾</span> | ? | *Jasminum auriculatum*{:data-lang="en"} |
-| கத்தூரிமல்லி | <span data-lang="sa">𑌕𑍁𑌨𑍍𑌦</span> | <span data-lang="en">Indian jasmine</span> | *Indian jasmine*{:data-lang="en"} |
+| கத்தூரிமல்லி | <span data-lang="sa">𑌕𑍁𑌨𑍍𑌦𑌃</span> | <span data-lang="en">Indian jasmine</span> | *Indian jasmine*{:data-lang="en"} |
 | காட்டுமல்லி | <span data-lang="sa">𑌵𑌨𑌮𑌲𑍍𑌲𑌿𑌕𑌾</span> | <span data-lang="en">Wild jasmine </span>| *Jasminum angustiflorum*{:data-lang="en"} |
 
 பட்டியலில் குற்றம் குறைகள் அறிந்தோர் தொடர்பு கொள்ளுமாறு வேண்டுகிறேன்.
