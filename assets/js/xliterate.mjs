@@ -1,14 +1,14 @@
 /* global Node:false */
 
-import { brahmicToLatin, latinToBrahmic } from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.1.2/src/script_changer.mjs";
+import { transliterate } from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.2.0/src/saulabhya.min.js";
 
-// Create a closure of walk on langCode and converter.
-function closedWalk(langCode, converter) {
+// Create a closure of walk on langCode and the source and destination scripts.
+function closedWalk(langCode, srcScript, dstScript) {
     // Walk the DOM starting at node.
     return function walk(node, langMatched) {
         if (node.nodeType == Node.TEXT_NODE) {
             if (langMatched) {
-                node.textContent = converter(node.textContent);
+                node.textContent = transliterate(srcScript, dstScript, node.textContent);
             }
             return;
         }
@@ -27,30 +27,11 @@ function closedWalk(langCode, converter) {
     };
 }
 
-// Transliterate between Latin and otherScript using converter.
-function latnXliterate({nodes, docLang, langCode}, otherScript, converter) {
+// Transliterate all the text in the given nodes from srcScript to dstScript.
+function transliterateDOM(nodes, docLang, langCode, srcScript, dstScript) {
     nodes.forEach(node =>
-        closedWalk(langCode,
-            converter.bind(undefined, otherScript)
-        )(node, docLang == langCode)
+        closedWalk(langCode, srcScript, dstScript)(node, docLang == langCode)
     );
 }
 
-// Given domParams, transliterate from srcScript to dstScript,
-// through Latin as necessary.
-function xliterate(domParams, srcScript, dstScript) {
-    if (dstScript == "latn") {
-        latnXliterate(domParams, srcScript, brahmicToLatin);
-        return;
-    }
-    if (srcScript == "latn") {
-        latnXliterate(domParams, dstScript, latinToBrahmic);
-        return;
-    }
-
-    // Transliterate from one Brahmic script to another through Latin.
-    latnXliterate(domParams, srcScript, brahmicToLatin);
-    latnXliterate(domParams, dstScript, latinToBrahmic);
-}
-
-export { xliterate };
+export { transliterateDOM };
