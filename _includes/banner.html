@@ -45,6 +45,8 @@
             });
         };
 
+        import { transliterate as transliterator }
+          from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.2.0/src/saulabhya.min.js";
         import { transliterateDOM } from "/assets/js/transliterateDOM.js";
 
         // The DOM nodes to transliterate.
@@ -59,9 +61,9 @@
         // Adding (a suitably bound) xliterate as a handler
         // for the form‐selectsʼ change events.
         onSelectValueChange("#select-xlit-ta",
-            transliterateDOM.bind(undefined, nodes, docLang, "ta"));
+            transliterateDOM.bind(undefined, transliterator, nodes, docLang, "ta"));
         onSelectValueChange("#select-xlit-sa",
-            transliterateDOM.bind(undefined, nodes, docLang, "sa"));
+            transliterateDOM.bind(undefined, transliterator, nodes, docLang, "sa"));
     </script>
 
   {%- endif -%}

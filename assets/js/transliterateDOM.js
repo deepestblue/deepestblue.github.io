@@ -1,14 +1,12 @@
 /* global Node:false */
 
-import { transliterate } from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.2.0/src/saulabhya.min.js";
-
 // Create a closure of walk on langCode and the source and target scripts.
-function closeWalkOn(langCode, srcScript, tgtScript) {
+function closeWalkOn(transliterator, langCode, srcScript, tgtScript) {
     // Walk the DOM starting at node.
     return function walk(node, langMatched) {
         if (node.nodeType == Node.TEXT_NODE) {
             if (langMatched) {
-                node.textContent = transliterate(srcScript, tgtScript, node.textContent);
+                node.textContent = transliterator(srcScript, tgtScript, node.textContent);
             }
             return;
         }
@@ -28,8 +26,8 @@ function closeWalkOn(langCode, srcScript, tgtScript) {
 }
 
 // Transliterate all the text in the given nodes from srcScript to tgtScript.
-function transliterateDOM(nodes, docLang, langCode, srcScript, tgtScript) {
-    const closedWalk = closeWalkOn(langCode, srcScript, tgtScript);
+function transliterateDOM(transliterator, nodes, docLang, langCode, srcScript, tgtScript) {
+    const closedWalk = closeWalkOn(transliterator, langCode, srcScript, tgtScript);
     nodes.forEach(node => closedWalk(node, docLang == langCode));
 }
 
