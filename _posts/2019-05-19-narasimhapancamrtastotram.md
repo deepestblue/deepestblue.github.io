@@ -6,7 +6,7 @@ author: ambarish
 lang: sa
 tags: [religion]
 modified_time: '2019-07-01T12:49:51.674-07:00'
-description: A commentary on the Narasimhapanchamrtastotram.
+description: A commentary on the Narasimhapancamrtastotram.
 ---
 
     𑌰𑌾𑌮𑌾𑌯 𑌰𑌾𑌮𑌭𑌦𑍍𑌰𑌾𑌯 𑌰𑌾𑌮𑌚𑌨𑍍𑌦𑍍𑌰𑌾𑌯 𑌵𑍇𑌧𑌸𑍇 ।
