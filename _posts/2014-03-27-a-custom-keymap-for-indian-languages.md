@@ -4,7 +4,6 @@ title: A custom keymap for Indian languages
 date: '2014-03-27T23:46:00.000-07:00'
 author: ambarish
 tags: [sanskrit, "dravidian languages"]
-modified_time: '2017-07-30T16:52:38.831-07:00'
 description: The final part of a three-part series on Indic computing. The focus of this part is a custom keymap for inputting Sanskrit and Tamil.
 ---
 

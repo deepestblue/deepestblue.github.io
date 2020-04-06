@@ -4,7 +4,6 @@ title: What are the dimensions of a mod b?
 date: '2018-05-20T16:37:00.002-07:00'
 author: ambarish
 tags: [maths]
-modified_time: '2018-05-20T16:37:37.180-07:00'
 description: Given two dimensioned quantities a and b, what are the dimensions of (a mod b)?
 ---
 

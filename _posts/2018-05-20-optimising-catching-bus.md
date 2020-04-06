@@ -4,7 +4,6 @@ title: Optimising catching the bus
 date: '2018-05-20T19:47:00.000-07:00'
 author: ambarish
 tags: [maths]
-modified_time: '2019-11-28T16:02:44.504-08:00'
 description: When walking to a bus stop, I want to minimise the amount of time I wait at the bus stop. How fast or slow should I walk?
 ---
 

@@ -5,7 +5,6 @@ date: '2011-04-24T00:20:00.000-07:00'
 author: ambarish
 lang: sa
 tags: [music]
-modified_time: '2017-01-12T23:04:08.305-08:00'
 description: An analysis of Muthuswami Dikshitarʼs place in the Carnatic music trinity.
 ---
 

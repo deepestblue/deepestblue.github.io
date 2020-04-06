@@ -4,7 +4,6 @@ title: Keying in Indian languages
 date: '2014-01-04T14:24:00.003-08:00'
 author: ambarish
 tags: [sanskrit, "dravidian languages"]
-modified_time: '2014-05-11T15:37:03.664-07:00'
 description: The first of a three-part article on Indian language computing. This part focusses on software to input Indian languages.
 ---
 

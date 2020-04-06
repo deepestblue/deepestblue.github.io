@@ -5,7 +5,6 @@ date: '2011-01-01T16:01:00.000-08:00'
 author: ambarish
 lang: ta
 tags: [music, "dravidian languages"]
-modified_time: '2013-11-24T13:11:00.428-08:00'
 description: If you speak a Dravidian language, learn the meanings of Carnatic songs through that language and not through English.
 ---
 

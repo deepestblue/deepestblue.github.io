@@ -4,7 +4,6 @@ title: Representing Indian languages using the Latin script
 date: '2014-03-02T03:51:00.002-08:00'
 author: ambarish
 tags: [sanskrit, "dravidian languages"]
-modified_time: '2014-03-25T17:19:30.290-07:00'
 description: This second part of a three‐part series on Indic computing focusses on the best Latin‐script representation of Indian language characters.
 ---
 
