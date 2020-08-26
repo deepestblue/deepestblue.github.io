@@ -13,9 +13,9 @@ Today, there are groups that make a stand against the different waves of colonis
 
 | Colonisers | Timeline | Effects | Deniers & Apologists |
 |-|-|-|
-| The English and other Europeans | 15th–19th c. CE | English fluency, Wealth loss, Native language disfluency | Westernised urban‐dwellers [^English1] [^English2] |
-| The Mughals and other Turkic peoples | 14th–18th c. CE | Persian flavours, Wheat, Persian attire | Dravidian movement, the left‐wing [^Mughal1] |
-| The Aryans | 2000 BCE–present | Rice, Loss of millets, Eradication of native religions, Syncretism with Dharmic religions, Hindustani cultural hegemony | Upper‐caste Hindus [^Aryan1] [^Aryan2] [^Aryan3] |
+| The English and other Europeans | 15th–19th c. CE | English fluency, wealth loss, native language disfluency | Westernised urban‐dwellers [^English1] [^English2] |
+| The Mughals and other Turkic peoples | 14th–18th c. CE | Persian flavours, wheat, Persian attire | Dravidian movement, the left‐wing [^Mughal1] |
+| The Aryans | 2000 BCE–present | Rice, loss of millets, eradication of native religions, syncretism with Dharmic religions, Hindustani cultural hegemony | Upper‐caste Hindus [^Aryan1] [^Aryan2] [^Aryan3] |
 
 ____________
 
