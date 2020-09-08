@@ -4,10 +4,23 @@
 @import "{{ site.theme }}";
 
 @font-face {
-    font-family: "Sampradaya";
+    font-family: "Sampradaya-OSX";
     src: url("/assets/fonts/Sampradaya-osx.ttf") format("truetype");
 }
 
-body { font-family: 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif, Sampradaya; }
-code { font-family: 'Lucida Sans', Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Sampradaya; }
-html, button, input, select, textarea { font-family: sans-serif, Sampradaya; }
+@font-face {
+    font-family: "Sampradaya-Windows";
+    src: url("/assets/fonts/Sampradaya-windows.ttf") format("truetype");
+}
+
+html[data-useragent*='Mac OS X'] {
+    body { font-family: 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif, Sampradaya-OSX; }
+    code { font-family: 'Lucida Sans', Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Sampradaya-OSX; }
+    html, button, input, select, textarea { font-family: sans-serif, Sampradaya-OSX; }
+}
+
+html:not([data-useragent*='Mac OS X']) {
+    body { font-family: 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif, Sampradaya-Windows; }
+    code { font-family: 'Lucida Sans', Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Sampradaya-Windows; }
+    html, button, input, select, textarea { font-family: sans-serif, Sampradaya-Windows; }
+}
