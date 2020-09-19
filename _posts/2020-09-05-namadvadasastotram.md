@@ -43,7 +43,7 @@ description: The namadvadasastotram in a table.
 * 𑌮𑍁𑌸𑌲𑌃
 * 𑌤𑍍𑌰𑌿𑌶𑍂𑌲𑌮𑍍
 
-𑌆𑌵𑌲𑍍𑌯𑌾𑌮𑌸𑍍𑌯𑌾𑌂 𑌮𑍁𑌦𑍍𑌗𑌰𑌾𑌯𑍁𑌧𑌮𑍍 𑌉𑌪𑍇𑌕𑍍𑌷𑌿𑌤𑌮𑍍 । 𑌕𑌿𑌞𑍍𑌚 𑌷𑌟𑍍 𑌆𑌯𑍁𑌧𑌾𑌨𑍍𑌤𑌰𑌾𑌣𑌿 𑌪𑌠𑍍𑌯𑌨𑍍𑌤𑍇 𑌯𑌥𑌾
+𑌆𑌵𑌲𑍀𑌯𑌂 𑌮𑍁𑌦𑍍𑌗𑌰𑌾𑌯𑍁𑌧𑌰𑌹𑌿𑌤𑌾 । 𑌕𑌿𑌞𑍍𑌚 𑌷𑌟𑍍 𑌆𑌯𑍁𑌧𑌾𑌨𑍍𑌤𑌰𑌾𑌣𑌿 𑌅𑌸𑍍𑌯𑌾𑌃 𑌪𑌠𑍍𑌯𑌨𑍍𑌤𑍇 𑌯𑌥𑌾
 * 𑌪𑌰𑌶𑍁𑌃 <span data-lang="en">(Axe)</span>
 * 𑌦𑌣𑍍𑌡𑌃 <span data-lang="en">(Stick)</span>
 * 𑌅𑌙𑍍𑌕𑍁𑌶𑌃 <span data-lang="en">(Goad)</span>
