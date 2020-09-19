@@ -5,12 +5,12 @@
 
 @font-face {
     font-family: "Sampradaya-OSX";
-    src: url("/assets/fonts/Sampradaya-osx.ttf") format("truetype");
+    src: local("Sampradaya"), url("/assets/fonts/Sampradaya-osx.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Sampradaya-Windows";
-    src: url("/assets/fonts/Sampradaya-windows.ttf") format("truetype");
+    src: local("Sampradaya"), url("/assets/fonts/Sampradaya-windows.ttf") format("truetype");
 }
 
 html[data-useragent*='Mac OS X'] {
