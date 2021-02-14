@@ -1,4 +1,4 @@
-<div id="banner">
+<div id="banner" lang="en">
   {%- assign page_paths = site.pages | map: "path" -%}
   <div class="downloads">
     {%- for path in page_paths -%}
@@ -16,7 +16,7 @@
           <option value="knda">ಕನ್ನಡ</option>
           <option value="latn">Latin</option>
           <option value="mlym">മലയാളം</option>
-          <option value="taml" selected>தமிழ்</option>
+          <option value="taml" lang="ta" selected>தமிழ்</option>
           <option value="telu">తెలుగు</option>
         </select>
       </form>
@@ -24,7 +24,7 @@
       <form style="display: inline;">
         <select id="select-xlit-sa">
           <option value="deva">देवनागरी</option>
-          <option value="gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
+          <option value="gran" lang="sa" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
           <option value="latn">Latin</option>
         </select>
       </form>
