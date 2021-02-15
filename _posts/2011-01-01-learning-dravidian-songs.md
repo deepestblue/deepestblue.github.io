@@ -1,5 +1,5 @@
 ---
-layout: post_with_script_changer
+layout: post
 title: திராவிடமொழியில் பெயர்ப்பு
 date: '2011-01-01T16:01:00.000-08:00'
 author: ambarish

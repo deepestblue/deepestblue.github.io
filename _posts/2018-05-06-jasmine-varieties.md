@@ -1,5 +1,5 @@
 ---
-layout: post_with_script_changer
+layout: post
 title: மல்லிப்பூ வகை
 date: '2018-05-06T11:09:00.001-07:00'
 author: ambarish

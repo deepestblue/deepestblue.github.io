@@ -8,63 +8,57 @@
       {%- endif -%}
     {%- endfor -%}
   </div>
-  {%- if page.layout == "post_with_script_changer" -%}
-    <div style="line-height: 52px; padding: 0px 5px; text-transform: uppercase;">
-      Preferred scripts for Tamil text:
-      <form style="display: inline;">
-        <select id="select-xlit-ta">
-          <option value="knda">ಕನ್ನಡ</option>
-          <option value="latn">Latin</option>
-          <option value="mlym">മലയാളം</option>
-          <option value="taml" lang="ta" selected>தமிழ்</option>
-          <option value="telu">తెలుగు</option>
-        </select>
-      </form>
-      and Sanskrit text:
-      <form style="display: inline;">
-        <select id="select-xlit-sa">
-          <option value="deva">देवनागरी</option>
-          <option value="gran" lang="sa" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
-          <option value="latn">Latin</option>
-        </select>
-      </form>
-    </div>
+  <div style="line-height: 52px; padding: 0px 5px; text-transform: uppercase;">
+    Preferred scripts for Tamil text:
+    <form style="display: inline;">
+      <select id="select-xlit-ta">
+        <option value="knda">ಕನ್ನಡ</option>
+        <option value="latn">Latin</option>
+        <option value="mlym">മലയാളം</option>
+        <option value="taml" selected>தமிழ்</option>
+        <option value="telu">తెలుగు</option>
+      </select>
+    </form>
+    and Sanskrit text:
+    <form style="display: inline;">
+      <select id="select-xlit-sa">
+        <option value="deva">देवनागरी</option>
+        <option value="gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
+        <option value="latn"">Latin</option>
+      </select>
+    </form>
+  </div>
 
-    <script type="module">
-        // Ensuring the form‐select’s change event‐handler has access to
-        // both the old and new values.
-        function onSelectValueChange(selector, eventHandler) {
-            let previous;
-            let elt = document.querySelector(selector);
-            elt.addEventListener("focus", function() {
-                previous = this.value;
-            });
-            elt.addEventListener("change", function() {
-                eventHandler(previous, this.value);
-                previous = this.value;
-            });
-        };
+  <script type="module">
+      // Ensuring the form‐select’s change event‐handler has access to
+      // both the old and new values.
+      function onSelectValueChange(selector, eventHandler) {
+          let previous;
+          let elt = document.querySelector(selector);
+          elt.addEventListener("focus", function() {
+              previous = this.value;
+          });
+          elt.addEventListener("change", function() {
+              eventHandler(previous, this.value);
+              previous = this.value;
+          });
+      };
 
-        import { transliterate as transliterator }
-          from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.2.0/src/saulabhya.min.js";
-        import { transliterateDOM } from "/assets/js/transliterateDOM.js";
+      import { transliterate as transliterator }
+        from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.2.0/src/saulabhya.min.js";
+      import { transliterateDOM } from "/assets/js/transliterateDOM.js";
 
-        // The DOM nodes to transliterate.
-        const nodes = [
-            "[data-id=page-title]",
-            "[data-id=page-content]",
-            "nav",
-        ].map(sel => document.querySelector(sel));
+      // The DOM nodes to transliterate.
+      const nodes = ["html",
+      ].map(sel => document.querySelector(sel));
 
-        const docLang = document.documentElement.lang;
+      const docLang = document.documentElement.lang;
 
-        // Adding (a suitably bound) xliterate as a handler
-        // for the form‐selectsʼ change events.
-        onSelectValueChange("#select-xlit-ta",
-            transliterateDOM.bind(undefined, transliterator, nodes, docLang, "ta"));
-        onSelectValueChange("#select-xlit-sa",
-            transliterateDOM.bind(undefined, transliterator, nodes, docLang, "sa"));
-    </script>
-
-  {%- endif -%}
+      // Adding (a suitably bound) xliterate as a handler
+      // for the form‐selectsʼ change events.
+      onSelectValueChange("#select-xlit-ta",
+          transliterateDOM.bind(undefined, transliterator, nodes, docLang, "ta"));
+      onSelectValueChange("#select-xlit-sa",
+          transliterateDOM.bind(undefined, transliterator, nodes, docLang, "sa"));
+  </script>
 </div>

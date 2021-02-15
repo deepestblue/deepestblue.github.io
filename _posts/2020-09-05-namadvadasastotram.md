@@ -1,5 +1,5 @@
 ---
-layout: post_with_script_changer
+layout: post
 title: 𑌨𑌾𑌮𑌦𑍍𑌵𑌾𑌦𑌶𑌸𑍍𑌤𑍋𑌤𑍍𑌰𑌮𑍍
 date: '2020-09-05T17:06:57.000-07:00'
 author: ambarish
