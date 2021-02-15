@@ -1,6 +1,7 @@
 ---
 layout: default
 list_title: Posts
+lang: en
 ---
 Welcome to my blog! Feel free to browse through posts below, go through [articles by category](/tags) or read [a short bio of me](/about).
 
@@ -12,7 +13,11 @@ Welcome to my blog! Feel free to browse through posts below, go through [article
     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 
 * {{ post.date | date: date_format }}
+{%- if post.lang == nil %}
 ### [{{ post.title | escape }}]({{ post.url | relative_url }})
+{% else %}
+### [{{ post.title | escape }}]({{ post.url | relative_url }}){:lang="{{ post.lang }}"}
+{% endif %}
 
   {% endfor %}
 
