@@ -46,13 +46,22 @@
 
       import { transliterate as transliterator }
         from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.2.0/src/saulabhya.min.js";
-      import { transliterateDOM } from "/assets/js/transliterateDOM.js";
+      import { transform } from "/assets/js/transliterateDOM.js";
 
-      // Adding (a suitably bound) transliterate as a handler
-      // for the form‐selectsʼ change events.
-      onSelectValueChange("#select-xlit-ta",
-          transliterateDOM.bind(undefined, transliterator, "ta"));
-      onSelectValueChange("#select-xlit-sa",
-          transliterateDOM.bind(undefined, transliterator, "sa"));
+      // Adding handlers for the form‐selectsʼ change events.
+      onSelectValueChange(
+        "#select-xlit-ta",
+        (prev, curr) => {
+          transform("ta",
+            transliterator.bind(undefined, prev, curr))
+            (document.documentElement)
+      });
+      onSelectValueChange(
+        "#select-xlit-sa",
+        (prev, curr) => {
+          transform("sa",
+            transliterator.bind(undefined, prev, curr))
+            (document.documentElement)
+      });
   </script>
 </div>

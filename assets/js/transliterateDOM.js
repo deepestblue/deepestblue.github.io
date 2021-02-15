@@ -1,29 +1,23 @@
 /* global Node:false */
 
-// Transliterate all the text in the given nodes from srcScript to tgtScript.
-function transliterateDOM(transliterator, langCode, srcScript, tgtScript) {
-    const root = document.documentElement;
-
-    (function walk(node, langMatched) {
-        // Walk the DOM starting at node.
-        if (node.nodeType == Node.TEXT_NODE) {
-            if (langMatched) {
-                node.textContent = transliterator(srcScript, tgtScript, node.textContent);
-            }
-            return;
+// Transliterate all the text in the given langCode.
+function transform(langCode, transliterate) {
+    return function walk(node, langMatched) {
+        switch (node.nodeType) {
+            case Node.ELEMENT_NODE:
+                if (node.lang) {
+                    langMatched = node.lang == langCode;
+                }
+                node.childNodes.forEach(
+                    child => walk(child, langMatched));
+                break;
+            case Node.TEXT_NODE:
+                if (langMatched) {
+                    node.textContent = transliterate(node.textContent);
+                }
+                break;
         }
-
-        if (node.nodeType != Node.ELEMENT_NODE) {
-            return;
-        }
-
-        if (node.lang) {
-            langMatched = node.lang == langCode;
-        }
-
-        node.childNodes.forEach(
-            child => walk(child, langMatched));
-    })(root, root.lang == langCode);
+    };
 }
 
-export { transliterateDOM };
+export { transform };
