@@ -15,7 +15,7 @@ function closeWalkOn(transliterator, langCode, srcScript, tgtScript) {
             return;
         }
 
-        const lang = node.dataset.lang;
+        const lang = node.getAttribute("lang");
         if (lang) {
             langMatched = lang == langCode;
         }

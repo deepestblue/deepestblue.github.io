@@ -1,5 +1,5 @@
 ---
-layout: post_with_script_changer
+layout: post
 title: அத்துச்சாரியை பெயரிற்கு முன்னும் வரும்
 date: '2018-07-26T07:40:00.000-07:00'
 author: ambarish
