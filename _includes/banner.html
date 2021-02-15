@@ -48,17 +48,11 @@
         from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.2.0/src/saulabhya.min.js";
       import { transliterateDOM } from "/assets/js/transliterateDOM.js";
 
-      // The DOM nodes to transliterate.
-      const nodes = ["html",
-      ].map(sel => document.querySelector(sel));
-
-      const docLang = document.documentElement.lang;
-
-      // Adding (a suitably bound) xliterate as a handler
+      // Adding (a suitably bound) transliterate as a handler
       // for the form‐selectsʼ change events.
       onSelectValueChange("#select-xlit-ta",
-          transliterateDOM.bind(undefined, transliterator, nodes, docLang, "ta"));
+          transliterateDOM.bind(undefined, transliterator, "ta"));
       onSelectValueChange("#select-xlit-sa",
-          transliterateDOM.bind(undefined, transliterator, nodes, docLang, "sa"));
+          transliterateDOM.bind(undefined, transliterator, "sa"));
   </script>
 </div>

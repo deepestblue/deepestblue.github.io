@@ -1,9 +1,11 @@
 /* global Node:false */
 
-// Create a closure of walk on langCode and the source and target scripts.
-function closeWalkOn(transliterator, langCode, srcScript, tgtScript) {
-    // Walk the DOM starting at node.
-    return function walk(node, langMatched) {
+// Transliterate all the text in the given nodes from srcScript to tgtScript.
+function transliterateDOM(transliterator, langCode, srcScript, tgtScript) {
+    const root = document.documentElement;
+
+    (function walk(node, langMatched) {
+        // Walk the DOM starting at node.
         if (node.nodeType == Node.TEXT_NODE) {
             if (langMatched) {
                 node.textContent = transliterator(srcScript, tgtScript, node.textContent);
@@ -15,20 +17,13 @@ function closeWalkOn(transliterator, langCode, srcScript, tgtScript) {
             return;
         }
 
-        const lang = node.getAttribute("lang");
-        if (lang) {
-            langMatched = lang == langCode;
+        if (node.lang) {
+            langMatched = node.lang == langCode;
         }
 
         node.childNodes.forEach(
             child => walk(child, langMatched));
-    };
-}
-
-// Transliterate all the text in the given nodes from srcScript to tgtScript.
-function transliterateDOM(transliterator, nodes, docLang, langCode, srcScript, tgtScript) {
-    const closedWalk = closeWalkOn(transliterator, langCode, srcScript, tgtScript);
-    nodes.forEach(node => closedWalk(node, docLang == langCode));
+    })(root, root.lang == langCode);
 }
 
 export { transliterateDOM };
