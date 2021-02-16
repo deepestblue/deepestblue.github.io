@@ -4,23 +4,12 @@
 @import "{{ site.theme }}";
 
 @font-face {
-    font-family: "Sampradaya-OSX";
-    src: local("Sampradaya"), url("/assets/fonts/Sampradaya-osx.ttf") format("truetype");
+    font-family: "Sampradaya";
+    src: local("Sampradaya"), url("/assets/fonts/Sampradaya.ttf") format("truetype");
 }
 
-@font-face {
-    font-family: "Sampradaya-Windows";
-    src: local("Sampradaya"), url("/assets/fonts/Sampradaya-windows.ttf") format("truetype");
-}
+body *:lang(en) { font-family: 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif }
+header h1:lang(en) { font-family: 'Copse', "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-html[data-useragent*='Mac OS X'] {
-    body { font-family: 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif, Sampradaya-OSX; }
-    code { font-family: 'Lucida Sans', Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Sampradaya-OSX; }
-    html, button, input, select, textarea { font-family: sans-serif, Sampradaya-OSX; }
-}
-
-html:not([data-useragent*='Mac OS X']) {
-    body { font-family: 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif, Sampradaya-Windows; }
-    code { font-family: 'Lucida Sans', Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Sampradaya-Windows; }
-    html, button, input, select, textarea { font-family: sans-serif, Sampradaya-Windows; }
-}
+:lang(ta), #select-ta, #option-taml { font-family: Vijaya, "Tamil MN"; }
+:lang(sa), #select-sa, #option-gran { font-family: Sampradaya; }

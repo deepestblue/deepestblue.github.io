@@ -11,20 +11,20 @@
   <div style="line-height: 52px; padding: 0px 5px; text-transform: uppercase;">
     Preferred scripts for Tamil text:
     <form style="display: inline;">
-      <select id="select-xlit-ta">
+      <select id="select-ta">
         <option value="knda">ಕನ್ನಡ</option>
         <option value="latn">Latin</option>
         <option value="mlym">മലയാളം</option>
-        <option value="taml" selected>தமிழ்</option>
+        <option value="taml" id="option-taml" selected>தமிழ்</option>
         <option value="telu">తెలుగు</option>
       </select>
     </form>
     and Sanskrit text:
     <form style="display: inline;">
-      <select id="select-xlit-sa">
+      <select id="select-sa">
         <option value="deva">देवनागरी</option>
-        <option value="gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
-        <option value="latn"">Latin</option>
+        <option value="gran" id="option-gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
+        <option value="latn">Latin</option>
       </select>
     </form>
   </div>
@@ -50,14 +50,14 @@
 
       // Adding handlers for the form‐selectsʼ change events.
       onSelectValueChange(
-        "#select-xlit-ta",
+        "#select-ta",
         (prev, curr) => {
           transform("ta",
             transliterator.bind(undefined, prev, curr))
             (document.documentElement)
       });
       onSelectValueChange(
-        "#select-xlit-sa",
+        "#select-sa",
         (prev, curr) => {
           transform("sa",
             transliterator.bind(undefined, prev, curr))
