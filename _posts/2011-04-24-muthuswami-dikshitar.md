@@ -8,7 +8,6 @@ tags: [music]
 description: An analysis of Muthuswami Dikshitarʼs place in the Carnatic music trinity.
 ---
 
-
 𑌦𑌕𑍍𑌷𑌿𑌣𑌭𑌾𑌰𑌤𑍀𑌯𑌶𑌾𑌸𑍍𑌤𑍍𑌰𑍀𑌯𑌸𑌙𑍍𑌗𑍀𑌤𑌲𑍋𑌕𑌃 𑌅𑌨𑍇𑌕𑍈𑌰𑍍𑌵𑌾𑌗𑍍𑌗𑍇𑌯𑌕𑌾𑌰𑍈𑌃 𑌸𑌮𑌲𑌙𑍍𑌕𑍃𑌤𑍋 𑌵𑌿𑌦𑍍𑌯𑌤𑍇 । 𑌤𑍇𑌷𑍁 𑌤𑍍𑌰𑌿𑌮𑍂𑌰𑍍𑌤𑌿𑌨𑌾𑌮𑌾𑌨𑍋 𑌵𑌿𑌖𑍍𑌯𑌾𑌤𑌾𑌃 । 𑌤𑍍𑌰𑌿𑌮𑍂𑌰𑍍𑌤𑌿𑌷𑍍𑌵𑌨𑍍𑌯𑌤𑌮𑌃 𑌕𑌵𑌿𑌃 𑌵𑍈𑌣𑌿𑌕𑍋 𑌗𑌾𑌯𑌕𑌶𑍍𑌚 𑌮𑍁𑌗𑍍𑌧𑌸𑍍𑌵𑌾𑌮𑌿𑌦𑍀𑌕𑍍𑌷𑌿𑌤𑌨𑌾𑌮𑌾 । 𑌤𑌦𑍍𑌰𑌚𑌨𑌾𑌲𑍋𑌕𑌨𑌾𑌯 𑌯𑌤𑍍𑌨𑍋𑌯𑌂 𑌕𑍃𑌤𑌃 ।
 
 ### 𑌜𑍀𑌵𑌿𑌤𑌮𑍍
@@ -63,12 +62,12 @@ description: An analysis of Muthuswami Dikshitarʼs place in the Carnatic music 
 
 ____________
 
-[^Bala_Gopala]: <http://sahityam.net/wiki/Bala_Gopala>{:lang="en"}
-[^Ranganayakam]: <http://sahityam.net/wiki/Ranga_Nayakam_Bhavaye>{:lang="en"}
+[^Bala_Gopala]: <http://sahityam.net/wiki/Bala_Gopala>{:lang="zxx-Latn"}
+[^Ranganayakam]: <http://sahityam.net/wiki/Ranga_Nayakam_Bhavaye>{:lang="zxx-Latn"}
 [^Hari2]: 𑌹𑌰𑌿𑌵𑌰𑌰𑍂𑌪𑌃 𑌹𑌰𑌿𑌵𑌰𑌸𑍍𑌯 𑌰𑍂𑌪𑌂 𑌯𑌸𑍍𑌯 𑌸𑌃 । 𑌹𑌰𑌿𑌵𑌰𑌃 𑌹𑌰𑍀𑌣𑌾𑌂 𑌵𑌰𑌃 𑌕𑌪𑍀𑌨𑌾𑌂 𑌶𑍍𑌰𑍇𑌷𑍍𑌠𑌃 । 𑌤𑌸𑍍𑌯 𑌕𑌪𑌿𑌶𑍍𑌰𑍇𑌷𑍍𑌠𑌸𑍍𑌯 𑌰𑍂𑌪𑌂 𑌯𑌸𑍍𑌯 𑌸𑌃 𑌹𑌨𑍁𑌮𑌾𑌨𑍍 ।
 [^Hari3]: 𑌹𑌰𑌿𑌹𑌯𑌃 𑌹𑌰𑌿𑌃 𑌹𑌯𑌃 𑌯𑌸𑍍𑌯 𑌸𑌃 । 𑌹𑌰𑌿𑌃 𑌸𑍍𑌵𑌰𑍍𑌣𑌃 𑌹𑌯𑌃 𑌅𑌶𑍍𑌵𑌃 𑌯𑌸𑍍𑌯 𑌸𑌃 । 𑌸𑍍𑌵𑌰𑍍𑌣𑌾𑌶𑍍𑌵𑌃 𑌦𑍇𑌵𑍇𑌨𑍍𑌦𑍍𑌰𑌃 ।
-[^Annapoorne]: <http://sahityam.net/wiki/Annapoorne_Vishalakshi>{:lang="en"}
-[^Nilacalanatham]: <http://sahityam.net/wiki/Neelachala_Natham>{:lang="en"}
-[^Srisulinim]: <http://sahityam.net/wiki/SrI_Sulinim>{:lang="en"}
+[^Annapoorne]: <http://sahityam.net/wiki/Annapoorne_Vishalakshi>{:lang="zxx-Latn"}
+[^Nilacalanatham]: <http://sahityam.net/wiki/Neelachala_Natham>{:lang="zxx-Latn"}
+[^Srisulinim]: <http://sahityam.net/wiki/SrI_Sulinim>{:lang="zxx-Latn"}
 [^Manollasa]: 𑌭𑍋𑌭𑌗𑍋𑌅𑌘𑍋𑌅𑌪𑍂𑌰𑍍𑌵𑌸𑍍𑌯 𑌯𑍋𑌶𑌿 𑌲𑍋𑌪𑌃 𑌶𑌾𑌕𑌲𑍍𑌯𑌸𑍍𑌯 𑌇𑌤𑌿 𑌸𑍂𑌤𑍍𑌰𑌾𑌭𑍍𑌯𑌾𑌂 𑌵𑌿𑌸𑌰𑍍𑌗𑌲𑍋𑌪𑌃 𑌸𑌿𑌧𑍍𑌯𑌤𑌿 । 𑌤𑍍𑌰𑌿𑌪𑌦𑍍𑌯𑌾𑌂 𑌪𑍍𑌰𑌵𑌿𑌷𑍍𑌟𑌾𑌯𑌾𑌂 𑌸𑌤𑍍𑌯𑌾𑌂 𑌪𑍂𑌰𑍍𑌵𑌸𑍍𑌯 𑌅𑌸𑌿𑌦𑍍𑌧𑌤𑍍𑌵𑌾𑌤𑍍 𑌗𑍁𑌣𑌸𑌨𑍍𑌧𑌿𑌃 𑌨𑌿𑌷𑌿𑌦𑍍𑌧𑌃 ।
 [^Kataksi]: 𑌕𑌟𑌾𑌕𑍍𑌷𑌃 𑌅𑌸𑍍𑌯 𑌅𑌸𑍍𑌤𑍀𑌤𑌿 𑌇𑌨𑍍𑌨𑌨𑍍𑌤𑌂 𑌕𑌟𑌾𑌕𑍍𑌷𑍀 । 𑌸𑌮𑍍𑌬𑍁𑌦𑍍𑌧𑍌 𑌨 𑌙𑌿𑌸𑌮𑍍𑌬𑍁𑌦𑍍𑌧𑍌 𑌇𑌤𑍍𑌯𑌨𑍇𑌨 𑌕𑌟𑌾𑌕𑍍𑌷𑌿𑌨𑍍 । 𑌦𑍇𑌵𑍍𑌯𑌾𑌃 𑌸𑍍𑌤𑍍𑌰𑍀𑌤𑍍𑌵𑌾𑌤𑍍 𑌋𑌨𑍍𑌨𑍇𑌭𑍍𑌯𑍋 𑌙𑍀𑌪𑍍 𑌇𑌤𑍍𑌯𑌤𑌃 𑌣𑌤𑍍𑌵𑌾𑌚𑍍𑌚 𑌕𑌟𑌾𑌕𑍍𑌷𑌿𑌣𑍀 𑌸𑌮𑍍𑌬𑍁𑌦𑍍𑌧𑍌 𑌏𑌙𑍍𑌹𑍍𑌰𑌸𑍍𑌵𑌾𑌤𑍍𑌸𑌮𑍍𑌬𑍁𑌦𑍍𑌧𑍇𑌃 𑌇𑌤𑌿 𑌹𑍍𑌰𑌸𑍍𑌵𑍇𑌕𑌾𑌰𑍋 𑌵𑌿𑌹𑌿𑌤𑌃 𑌤𑌤𑌃 𑌕𑌟𑌾𑌕𑍍𑌷𑌿𑌣𑌿 𑌇𑌤𑌿 𑌵𑌾𑌚𑍍𑌯𑌮𑍍 । 𑌤𑌥𑍈𑌵 𑌸𑌾𑌕𑍍𑌷𑌿𑌣𑌿 ।
