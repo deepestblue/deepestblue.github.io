@@ -12,24 +12,24 @@
     Preferred scripts for Tamil text:
     <form style="display: inline;">
       <select id="select-ta">
-        <option value="knda">ಕನ್ನಡ</option>
-        <option value="latn">Latin</option>
-        <option value="mlym">മലയാളം</option>
-        <option value="taml" id="option-taml" selected>தமிழ்</option>
-        <option value="telu">తెలుగు</option>
+        <option value="knda" lang="ta-Knda">ಕನ್ನಡ</option>
+        <option value="latn" lang="ta-Latn">Latin</option>
+        <option value="mlym" lang="ta-Mlym">മലയാളം</option>
+        <option value="taml" lang="ta-Taml" id="option-taml" selected>தமிழ்</option>
+        <option value="telu" lang="ta-Telu">తెలుగు</option>
       </select>
     </form>
     and Sanskrit text:
     <form style="display: inline;">
       <select id="select-sa">
-        <option value="deva">देवनागरी</option>
-        <option value="gran" id="option-gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
-        <option value="latn">Latin</option>
+        <option value="deva" lang="sa-Deva">देवनागरी</option>
+        <option value="gran" lang="sa-Gran" id="option-gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
+        <option value="latn" lang="sa-Latn">Latin</option>
       </select>
     </form>
   </div>
 
-  <script type="module">
+  <script type="module" lang="zxx">
       // Ensuring the form‐select’s change event‐handler has access to
       // both the old and new values.
       function onSelectValueChange(selector, eventHandler) {
