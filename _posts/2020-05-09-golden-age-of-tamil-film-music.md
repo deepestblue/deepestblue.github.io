@@ -3,7 +3,7 @@ layout: post
 title: தமிழ்த் திரைப்படப் பாடல்களின் பொற்காலம்
 date: '2020-05-09T15:30:00.000-07:00'
 author: ambarish
-lang: ta
+lang: ta-Taml
 description: There was a golden period of Tamil film music; it is over.
 ---
 

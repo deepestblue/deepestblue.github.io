@@ -3,7 +3,7 @@ layout: post
 title: அத்துச்சாரியை பெயரிற்கு முன்னும் வரும்
 date: '2018-07-26T07:40:00.000-07:00'
 author: ambarish
-lang: ta
+lang: ta-Taml
 tags: ["dravidian languages"]
 description: Many Tamil words ending in ‐am are often misspelt in context, and this article attempts to redress the mistake.
 ---

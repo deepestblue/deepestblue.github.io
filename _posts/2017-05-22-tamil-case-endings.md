@@ -3,7 +3,7 @@ layout: post
 title: வேற்றுமையுருபுகள் அவத்தம்
 date: '2017-05-22T21:22:00.001-07:00'
 author: ambarish
-lang: ta
+lang: ta-Taml
 tags: [sanskrit, "dravidian languages"]
 description: Why case‐endings are irrelevant in Tamil.
 ---
