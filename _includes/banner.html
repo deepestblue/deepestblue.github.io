@@ -8,23 +8,23 @@
       {%- endif -%}
     {%- endfor -%}
   </div>
-  <div style="line-height: 52px; padding: 0px 5px; text-transform: uppercase;">
+  <div style="line-height: 52px; padding: 0px 5px; text-transform: uppercase;" lang="zxx">
     Preferred scripts for Tamil text:
     <form style="display: inline;">
       <select id="select-ta">
-        <option value="knda" lang="ta-Knda">ಕನ್ನಡ</option>
-        <option value="latn" lang="ta-Latn">Latin</option>
-        <option value="mlym" lang="ta-Mlym">മലയാളം</option>
-        <option value="taml" lang="ta-Taml" id="option-taml" selected>தமிழ்</option>
-        <option value="telu" lang="ta-Telu">తెలుగు</option>
+        <option value="Knda">ಕನ್ನಡ</option>
+        <option value="Latn">Latin</option>
+        <option value="Mlym">മലയാളം</option>
+        <option value="Taml" id="option-taml" selected>தமிழ்</option>
+        <option value="Telu">తెలుగు</option>
       </select>
     </form>
     and Sanskrit text:
     <form style="display: inline;">
       <select id="select-sa">
-        <option value="deva" lang="sa-Deva">देवनागरी</option>
-        <option value="gran" lang="sa-Gran" id="option-gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
-        <option value="latn" lang="sa-Latn">Latin</option>
+        <option value="Deva">देवनागरी</option>
+        <option value="Gran" id="option-gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌲𑌿𑌪𑌿𑌃</option>
+        <option value="Latn">Latin</option>
       </select>
     </form>
   </div>
@@ -45,23 +45,17 @@
       };
 
       import { transliterate as transliterator }
-        from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.2.1/src/saulabhya.min.js";
+        from "https://cdn.jsdelivr.net/gh/deepestblue/SaulabhyaJS@0.3.0/src/saulabhya.min.js";
       import { transform } from "/assets/js/transform.js";
 
       // Adding handlers for the form‐selectsʼ change events.
       onSelectValueChange(
         "#select-ta",
-        (prev, curr) => {
-          transform("ta",
-            transliterator.bind(undefined, prev, curr))
-            (document.documentElement)
-      });
+        transform.bind(undefined, document.documentElement, transliterator, "ta")
+      );
       onSelectValueChange(
         "#select-sa",
-        (prev, curr) => {
-          transform("sa",
-            transliterator.bind(undefined, prev, curr))
-            (document.documentElement)
-      });
+        transform.bind(undefined, document.documentElement, transliterator, "sa")
+      );
   </script>
 </div>
