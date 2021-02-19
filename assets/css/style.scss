@@ -8,8 +8,20 @@
     src: local("Sampradaya"), url("/assets/fonts/Sampradaya.ttf") format("truetype");
 }
 
-body *:lang(en) { font-family: 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif }
-header h1:lang(en) { font-family: 'Copse', "Helvetica Neue", Helvetica, Arial, sans-serif; }
+body {
+    *:lang(en-Latn), *:lang(ta-Latn), *:lang(sa-Latn) {
+        font-family: 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+}
+header {
+    h1:lang(en-Latn), h1:lang(ta-Latn), h1:lang(sa-Latn) {
+        font-family: 'Copse', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+}
 
-:lang(ta-Taml), #select-ta, #option-taml { font-family: Vijaya, "Tamil MN"; }
-:lang(sa-Gran), #select-sa, #option-gran { font-family: Sampradaya; }
+:lang(ta-Taml), #select-ta.option-Taml {
+    font-family: Vijaya, "Tamil MN";
+}
+:lang(sa-Gran), #select-sa.option-Gran {
+    font-family: Sampradaya;
+}
