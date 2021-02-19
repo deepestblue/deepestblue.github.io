@@ -10,18 +10,22 @@
 
 body {
     *:lang(en-Latn), *:lang(ta-Latn), *:lang(sa-Latn) {
-        font-family: 'Quattrocento Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: 'Quattrocento Sans', "Helvetica Neue", sans-serif;
     }
 }
 header {
     h1:lang(en-Latn), h1:lang(ta-Latn), h1:lang(sa-Latn) {
-        font-family: 'Copse', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: 'Copse', "Helvetica Neue", sans-serif;
     }
 }
 
-:lang(ta-Taml), #select-ta.option-Taml {
+:lang(ta-Taml) {
     font-family: Vijaya, "Tamil MN";
 }
-:lang(sa-Gran), #select-sa.option-Gran {
+:lang(sa-Gran) {
     font-family: Sampradaya;
+}
+
+#select-ta, #select-sa {
+    font-family: 'Quattrocento Sans', "Helvetica Neue", Vijaya, "Tamil MN", Sampradaya, sans-serif;
 }
