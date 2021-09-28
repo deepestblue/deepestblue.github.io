@@ -8,9 +8,14 @@
     src: local("Sampradaya"), url("/assets/fonts/Sampradaya.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Source Sans Pro";
+    src: local("Source Sans Pro"), url("/assets/fonts/SourceSansPro-Regular.ttf") format("truetype");
+}
+
 body {
     *:lang(en-Latn), *:lang(ta-Latn), *:lang(sa-Latn) {
-        font-family: 'Quattrocento Sans', "Helvetica Neue", sans-serif;
+        font-family: 'Source Sans Pro', "Helvetica Neue", sans-serif;
     }
 }
 header {
