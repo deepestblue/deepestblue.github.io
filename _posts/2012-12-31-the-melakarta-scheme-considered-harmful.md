@@ -26,20 +26,20 @@ Twelve *svarasthāna*s are enumerated, from the base *ṣadja* to the *ṣadja* 
 * Ma<sub>1</sub>
 * Ma<sub>2</sub>
 * Pa
-* Da<sub>1</sub>
-* Da<sub>2</sub> or Ni<sub>1</sub>
-* Da<sub>3</sub> or Ni<sub>2</sub>
+* Dha<sub>1</sub>
+* Dha<sub>2</sub> or Ni<sub>1</sub>
+* Dha<sub>3</sub> or Ni<sub>2</sub>
 * Ni<sub>3</sub>
 
-The *mēḷakartā*s, then, are all the possible *rāga*s that include the Sa & the Pa, and have one each Ri, Ga, Ma, Da & Ni, with the natural restriction that the Ri chosen should be lower than the Ga, and likewise the Da and the Ni. There are 6 possible Ri‐Ga combinations (Ri<sub>1</sub>‐Ga<sub>1</sub>, Ri<sub>1</sub>‐Ga<sub>2</sub>, Ri<sub>1</sub>‐Ga<sub>3</sub>, Ri<sub>2</sub>‐Ga<sub>2</sub>, Ri<sub>2</sub>‐Ga<sub>3</sub> & Ri<sub>3</sub>‐Ga<sub>3</sub>), likewise 6 combinations of Da‐Ni, and 2 options for Ma. There are thus 72 *mēḷakartā*s, also termed *sampūrnarāga*s as each such *rāga* has all 7 notes.
+The *mēḷakartā*s, then, are all the possible *rāga*s that include the Sa & the Pa, and have one each Ri, Ga, Ma,  Dha & Ni, with the natural restriction that the Ri chosen should be lower than the Ga, and likewise the Dha and the Ni. There are 6 possible Ri‐Ga combinations (Ri<sub>1</sub>‐Ga<sub>1</sub>, Ri<sub>1</sub>‐Ga<sub>2</sub>, Ri<sub>1</sub>‐Ga<sub>3</sub>, Ri<sub>2</sub>‐Ga<sub>2</sub>, Ri<sub>2</sub>‐Ga<sub>3</sub> & Ri<sub>3</sub>‐Ga<sub>3</sub>), likewise 6 combinations of Dha‐Ni, and 2 options for Ma. There are thus 72 *mēḷakartā*s, also termed *sampūrnarāga*s as each such *rāga* has all 7 notes.
 
 Every other *rāga*, which does not adhere to the above *lakṣaṇa*, is then notated as a pair of scales of the above 12 notes – an *ārōhaṇa* and an *avarōhaṇa* – that define them. The *ārōhaṇa* is a scale that starts at a lower Sa and ends at the next Sa and is meant to be the set of all possible ascending sequences of notes valid in the *rāga*. Likewise, the *avarōhaṇa*, starting at a higher Sa and ending at the previous Sa is meant to include all possible valid descending note sequences. The *janyarāga* is then classified as a derivative the *mēḷakartā* rāga.
 
 For instance,
 
-* *Arabhi* is considered to be the scale Sa‐Ri<sub>2</sub>‐Ma<sub>1</sub>‐Pa‐Da<sub>2</sub>‐Sa; Sa‐Ni<sub>3</sub>‐Da<sub>2</sub>‐Pa‐Ma<sub>1</sub>‐Ga<sub>3</sub>‐Ri<sub>2</sub>‐Sa, and is thus classified under *mēḷakartā* Sa‐Ri<sub>2</sub>‐Ga<sub>3</sub>‐Ma<sub>1</sub>‐Pa‐Da<sub>2</sub>‐Ni<sub>3</sub>‐Sa; Sa‐Ni<sub>3</sub>‐Da<sub>2</sub>‐Pa‐Ma<sub>1</sub>‐Ga<sub>3</sub>‐Ri<sub>2</sub>‐Sa, which happens to be *Sankarabharanam*.
-* *Purvikalyani*, which is assigned the scale Sa‐Ri<sub>1</sub>‐Ga<sub>3</sub>‐Ma<sub>2</sub>‐Pa‐Da<sub>2</sub>‐Pa‐Sa; Sa‐Ni<sub>3</sub>‐Da<sub>2</sub>‐Pa‐Ma<sub>2</sub>‐Ga<sub>3</sub>‐Ri<sub>1</sub>‐Sa, is considered a derivative of *mēḷakartā* Sa‐Ri<sub>1</sub>‐Ga<sub>3</sub>‐Ma<sub>2</sub>Pa‐Da<sub>2</sub>‐Ni<sub>3</sub>‐Sa; Sa‐Ni<sub>3</sub>‐Da<sub>2</sub>‐Pa‐Ma<sub>2</sub>‐Ga<sub>3</sub>‐Ri<sub>1</sub>‐Sa or *Gamanasramam*.
-* *Bhairavi*, nominally the scale Sa‐Ga<sub>2</sub>‐Ri<sub>2</sub>‐Ga<sub>2</sub>‐Ma<sub>1</sub>‐Pa‐Da<sub>2</sub>‐Ni<sub>3</sub>‐Sa; Sa‐Ni<sub>3</sub>‐Da<sub>1</sub>‐Pa‐Ma<sub>1</sub>‐Ga<sub>2</sub>‐Ri<sub>2</sub>‐Sa (note the 2 different Gas), is classified under Sa‐Ri<sub>2</sub>‐Ga<sub>2</sub>‐Ma<sub>1</sub>‐Pa‐Da<sub>1</sub>‐Ni<sub>3</sub>‐Sa; Sa‐Ni<sub>3</sub>‐Da<sub>1</sub>‐Pa‐Ma<sub>1</sub>‐Ga<sub>2</sub>‐Ri<sub>2</sub>‐Sa, *Natabhairavi*, with the Da<sub>2</sub> considered an *anyasvara*.
+* *Arabhi* is considered to be the scale Sa‐Ri<sub>2</sub>‐Ma<sub>1</sub>‐Pa‐Dha<sub>2</sub>‐Sa; Sa‐Ni<sub>3</sub>‐Dha<sub>2</sub>‐Pa‐Ma<sub>1</sub>‐Ga<sub>3</sub>‐Ri<sub>2</sub>‐Sa, and is thus classified under *mēḷakartā* Sa‐Ri<sub>2</sub>‐Ga<sub>3</sub>‐Ma<sub>1</sub>‐Pa‐Dha<sub>2</sub>‐Ni<sub>3</sub>‐Sa; Sa‐Ni<sub>3</sub>‐Dha<sub>2</sub>‐Pa‐Ma<sub>1</sub>‐Ga<sub>3</sub>‐Ri<sub>2</sub>‐Sa, which happens to be *Sankarabharanam*.
+* *Purvikalyani*, which is assigned the scale Sa‐Ri<sub>1</sub>‐Ga<sub>3</sub>‐Ma<sub>2</sub>‐Pa‐Dha<sub>2</sub>‐Pa‐Sa; Sa‐Ni<sub>3</sub>‐Dha<sub>2</sub>‐Pa‐Ma<sub>2</sub>‐Ga<sub>3</sub>‐Ri<sub>1</sub>‐Sa, is considered a derivative of *mēḷakartā* Sa‐Ri<sub>1</sub>‐Ga<sub>3</sub>‐Ma<sub>2</sub>Pa‐Dha<sub>2</sub>‐Ni<sub>3</sub>‐Sa; Sa‐Ni<sub>3</sub>‐Dha<sub>2</sub>‐Pa‐Ma<sub>2</sub>‐Ga<sub>3</sub>‐Ri<sub>1</sub>‐Sa or *Gamanasramam*.
+* *Bhairavi*, nominally the scale Sa‐Ga<sub>2</sub>‐Ri<sub>2</sub>‐Ga<sub>2</sub>‐Ma<sub>1</sub>‐Pa‐Dha<sub>2</sub>‐Ni<sub>3</sub>‐Sa; Sa‐Ni<sub>3</sub>‐Dha<sub>1</sub>‐Pa‐Ma<sub>1</sub>‐Ga<sub>2</sub>‐Ri<sub>2</sub>‐Sa (note the 2 different Ga‐s), is classified under Sa‐Ri<sub>2</sub>‐Ga<sub>2</sub>‐Ma<sub>1</sub>‐Pa‐Dha<sub>1</sub>‐Ni<sub>3</sub>‐Sa; Sa‐Ni<sub>3</sub>‐Dha<sub>1</sub>‐Pa‐Ma<sub>1</sub>‐Ga<sub>2</sub>‐Ri<sub>2</sub>‐Sa, *Natabhairavi*, with the Dha<sub>2</sub> considered an *anyasvara*.
 
 ### Usage
 
@@ -56,13 +56,13 @@ Unfortunately, this entire exercise is pointless.
 
 ### Disconnect between definition and notation
 
-Inherently, what defines a *rāga* is not the set of notes but the phrases. The notes used to describe the phrases, let alone the *ārōhaṇa*/*avarōhaṇa*, are but notational conveniences. Notice for instance, that *Atana* is notated with a Ga, but the Ga sung in *Atana* is an oscillation between Ri<sub>2</sub> and Ma<sub>1</sub>. Likewise in *Darbar*, where the Ga a different oscillation, also between Ri<sub>2</sub> and Ma<sub>1</sub>. A Pa‐Da<sub>2</sub>‐Sa phrase from *Suddhasaveri* and one from *Yadukulakambhoji* are identical to a Pa‐Ni<sub>2</sub>‐Sa phrase from *Madhyamavati* and one from *Dhanyasi*. And a classic phrase from *Anandabhairavi* can be annotated as both Pa‐Da<sub>2</sub>‐Pa‐Sa or Pa‐Ni<sub>2</sub>‐Pa‐Sa!
+Inherently, what defines a *rāga* is not the set of notes but the phrases. The notes used to describe the phrases, let alone the *ārōhaṇa*/*avarōhaṇa*, are but notational conveniences. Notice for instance, that *Atana* is notated with a Ga, but the Ga sung in *Atana* is an oscillation between Ri<sub>2</sub> and Ma<sub>1</sub>. Likewise in *Darbar*, where the Ga a different oscillation, also between Ri<sub>2</sub> and Ma<sub>1</sub>. A Pa‐Dha<sub>2</sub>‐Sa phrase from *Suddhasaveri* and one from *Yadukulakambhoji* are identical to a Pa‐Ni<sub>2</sub>‐Sa phrase from *Madhyamavati* and one from *Dhanyasi*. And a classic phrase from *Anandabhairavi* can be annotated as both Pa‐Dha<sub>2</sub>‐Pa‐Sa or Pa‐Ni<sub>2</sub>‐Pa‐Sa!
 
 The result is a disconnect between *rāgalakṣaṇa* and their notation, leading to a huge disconnect between many classic *janyarāga*s and their nominal parents. None of *Sahana*, *Khamas*, *Kambhoji*, *Natakurinji*, *Suratti* and *Mohanam* have anything to do with any other, but for the fact that they are classified under *Harikambhoji*. Likewise, *Reetigaula*, *Bhairavi*, *Darbarikanada*, *Hindolam*, *Suddhadhanyasi* are all classified under *Natabhairavi*, albeit none of them sound like any other. So what use is such a system that emphasises the names of the notes?
 
 To quote musicologist Dr. N Ramanathan,
 
-> People exclaim (the song) *Gajavadana*, set in *Todi*, has so many different kinds of Gas; thatʼs not the case. How remarkable that various different phrases are all termed Ga! We use a single symbol Ga to identify many of the phrases. That, I feel, is a very sophisticated scheme which in the 1800s or 1700s we (Carnatic music practitioners) have developed. The word *svara* itself has been redefined. *Svara* is no longer associated with a pitch – *svara* is a phrase. We say that *Sankarabharanam* has 4 kinds of Mas; *Begada* has 3 kinds of Mas. No, we term all those phrases Ma.
+> People exclaim (the song) *Gajavadana*, set in *Todi*, has so many different kinds of Ga‐s; thatʼs not the case. How remarkable that various different phrases are all termed Ga! We use a single symbol Ga to identify many of the phrases. That, I feel, is a very sophisticated scheme which in the 1800s or 1700s we (Carnatic music practitioners) have developed. The word *svara* itself has been redefined. *Svara* is no longer associated with a pitch – *svara* is a phrase. We say that *Sankarabharanam* has 4 kinds of Ma‐s; *Begada* has 3 kinds of Ma‐s. No, we term all those phrases Ma.
 
 Any system that emphasises notational conveniences at the expense of the *lakṣaṇa* of the *rāga* is missing the point.
 
