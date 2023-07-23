@@ -17,6 +17,6 @@ description: The names of various jasmine variants.
 | குண்டுமல்லி, இருவாய்ச்சி | <span lang="sa-Gran">𑌨𑌵𑌮𑌲𑍍𑌲𑌿𑌕𑌾</span> | <span lang="en-Latn">Arabian jasmine</span> | *Jasminum sambac*{:lang="en-Latn"} |
 | முல்லய், உச்சிமல்லி | <span lang="sa-Gran">𑌯𑍂𑌥𑌿𑌕𑌾</span> | ? | *Jasminum auriculatum*{:lang="en-Latn"} |
 | கத்தூரிமல்லி | <span lang="sa-Gran">𑌕𑍁𑌨𑍍𑌦𑌃</span> | <span lang="en-Latn">Indian jasmine</span> | *Indian jasmine*{:lang="en-Latn"} |
-| காட்டுமல்லி | <span lang="sa-Gran">𑌵𑌨𑌮𑌲𑍍𑌲𑌿𑌕𑌾</span> | <span lang="en-Latn">Wild jasmine </span>| *Jasminum angustiflorum*{:lang="en-Latn"} |
+| காட்டுமல்லி | <span lang="sa-Gran">𑌵𑌨𑌮𑌲𑍍𑌲𑌿𑌕𑌾</span> | <span lang="en-Latn">Wild jasmine</span>| *Jasminum angustiflorum*{:lang="en-Latn"} |
 
 பட்டியலில் குற்றம் குறய்கள் அறிந்தோர் தொடர்பு கொள்ளுமாறு வேண்டுகிறேன்.
