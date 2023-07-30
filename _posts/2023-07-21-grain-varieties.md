@@ -23,5 +23,6 @@ description: The names of various grains.
 | தினய் | <span lang="sa-Gran">𑌕𑌙𑍍𑌗𑍁𑌃 𑌉𑌤 𑌪𑍍𑌰𑌿𑌯𑌙𑍍𑌗𑍁𑌃</span> | <span lang="en-Latn">Foxtail millet</span> | *Setaria italica*{:lang="en-Latn"} |
 | குதிரய்வாலி | <span lang="sa-Gran">𑌶𑍍𑌯𑌾𑌮𑌕𑌮𑍍</span> | <span lang="en-Latn">Barnyard millet</span> | *Echinochloa frumentacea*{:lang="en-Latn"} |
 | வாற்கோதுமய் | <span lang="sa-Gran">𑌯𑌵𑌃</span> | <span lang="en-Latn">Barley</span> | *Hordeum vulgare*{:lang="en-Latn"} |
+| காடைக்கண்ணி | <span lang="sa-Gran">𑌯𑌵𑌿𑌯𑌮𑍍</span> | <span lang="en-Latn">Oat</span> | *Avena sativa*{:lang="en-Latn"} |
 
 பட்டியலில் குற்றம் குறய்கள் அறிந்தோர் தொடர்பு கொள்ளுமாறு வேண்டுகிறேன்.
