@@ -4,14 +4,15 @@ title: கீரய் வகய்
 date: '2023-09-03T15:53:00.000-07:00'
 author: ambarish
 lang: ta-Taml
+tags: [food]
 description: The names of various greens.
 ---
 
 கீரய்வகய்கள் தமிழர் அகத்திலும் அகங்களிலும் ஏராளம். கீரய்களின் பெயர் தமிழில் மற்றுமே அறிந்து பிற மொழியில் ஆராய மேல்வரும் பட்டியல் கிடய்த்தது.
 
 | தமிழ்ப்பெயர் | ஆங்கிலப்பெயர் | இருசொற்பெயர் |
-|---|---|---|---|
-| சிறுகீரய் | <span lang="en-Latn">?</span> | *Amaranthus campestris*{:lang="en-Latn"} |
+|---|---|---|
+| சிறுகீரய் | <span lang="en-Latn">Tropical amaranth</span> | *Amaranthus campestris*{:lang="en-Latn"} |
 | முளய்க் கீரய் | <span lang="en-Latn">Edible amaranth</span> | *Amaranthus tricolor*{:lang="en-Latn"} |
 | அறய்க் கீரய் | <span lang="en-Latn">Red spinach</span> | *Amaranthus dubius*{:lang="en-Latn"} |
 | முள்ளுக் கீரய் | <span lang="en-Latn">Spiny amaranth or spiny pigweed</span> | *Amaranthus spinosus*{:lang="en-Latn"} |
