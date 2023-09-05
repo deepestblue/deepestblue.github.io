@@ -28,10 +28,10 @@ description: The names of various greens.
 | வல்லாரய் | <span lang="en-Latn">Indian pennywort</span>| *Centella asiatica*{:lang="en-Latn"} |
 | முடக்கத்தான் கீரய் | <span lang="en-Latn">Balloon vine</span> | *Cardiospermum halicacabum*{:lang="en-Latn"} |
 | கடுகுக் கீரய் | <span lang="en-Latn">Black mustard</span> | *Rhamphospermum nigrum*{:lang="en-Latn"} |
-| முருங்கய்க் கீரய் | <span lang="en-Latn">Drumstick</span> | *Moringa oleifer*{:lang="en-Latn"} |
+| முருங்கய்க் கீரய் | <span lang="en-Latn">Drumstick</span> | *Moringa oleifera*{:lang="en-Latn"} |
 | திருநீற்றுப்பச்சய் | <span lang="en-Latn">Basil</span> | *Ocimum basilicum*{:lang="en-Latn"} |
 | துழாய் | <span lang="en-Latn">Holy basil</span> | *Ocimum sanctum*{:lang="en-Latn"} |
-| கருப்பூரவள்ளி | <span lang="en-Latn">Thick‐leaved lavender</span> | *Anisochilus Carnosus*{:lang="en-Latn"} |
+| கருப்பூரவள்ளி | <span lang="en-Latn">Country borage</span> | *Coleus amboinicus*{:lang="en-Latn"} |
 | புளிச்சக்கீரய் | <span lang="en-Latn">Roselle</span> | *Hibiscus sabdariffa*{:lang="en-Latn"} |
 | வெந்தயக்கீரய் | <span lang="en-Latn">Fenugreek</span> | *Trigonella foenum‐graecum*{:lang="en-Latn"} |
 | கொத்துமல்லி | <span lang="en-Latn">Coriander</span> | *Coriandrum sativum*{:lang="en-Latn"} |

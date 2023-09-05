@@ -18,7 +18,9 @@ description: The names of various pulses.
 | பயற்றம்பருப்பு | <span lang="sa-Gran">𑌮𑍁𑌦𑍍𑌗𑌃</span> | <span lang="en-Latn">Green gram</span> | *Vigna radiata*{:lang="en-Latn"} |
 | காராமணி | <span lang="sa-Gran">𑌮𑌾𑌧𑍍𑌵𑍀𑌕𑌾</span> | <span lang="en-Latn">Cowpea, black‐eyed pea</span> | *Vigna unguiculata*{:lang="en-Latn"} |
 | கொள் | <span lang="sa-Gran">𑌕𑍁𑌲𑌤𑍍𑌥𑌃</span> | <span lang="en-Latn">Horse gram</span> | *Macrotyloma uniflorum*{:lang="en-Latn"} |
-| மொச்சய்ப்பருப்பு | <span lang="sa-Gran">𑌵𑌰𑍍𑌤𑍁𑌲𑌕𑌮𑍍</span> | <span lang="en-Latn">Broad bean</span> | *Vicia faba*{:lang="en-Latn"} |
+| மொச்சய்ப்பருப்பு | <span lang="sa-Gran">𑌨𑌿𑌷𑍍𑌪𑌾𑌵𑌃</span> | <span lang="en-Latn">Hyacinth bean</span> | *Lablab purpureus*{:lang="en-Latn"} |
+| தட்டய்மொச்சய்ப்பருப்பு | <span lang="sa-Gran">𑌵𑌰𑍍𑌤𑍁𑌲𑌕𑌮𑍍</span> | <span lang="en-Latn">Broad bean</span> | *Vicia faba*{:lang="en-Latn"} |
 | மசூரப்பருப்பு | <span lang="sa-Gran">𑌮𑌸𑍂𑌰𑌃</span> | <span lang="en-Latn">Lentil</span> | *Vicia lens*{:lang="en-Latn"} |
+| வேர்க்கடலய், நிலக்கடலய் | <span lang="sa-Gran">𑌕𑌲𑌾𑌯𑌃</span> | <span lang="en-Latn">Peanut, groundnut</span> | *Arachis hypogaea*{:lang="en-Latn"} |
 
 பட்டியலில் குற்றம் குறய்கள் அறிந்தோர் தொடர்பு கொள்ளுமாறு வேண்டுகிறேன்.
