@@ -16,7 +16,7 @@ description: The names of various greens.
 | முளய்க் கீரய் | <span lang="en-Latn">Edible amaranth</span> | *Amaranthus tricolor*{:lang="en-Latn"} |
 | அறய்க் கீரய் | <span lang="en-Latn">Red spinach</span> | *Amaranthus dubius*{:lang="en-Latn"} |
 | முள்ளுக் கீரய் | <span lang="en-Latn">Spiny amaranth or spiny pigweed</span> | *Amaranthus spinosus*{:lang="en-Latn"} |
-| பருப்புக் கீரய் | <span lang="en-Latn">White goosefoot</span> | *Chenopodium album*{:lang="en-Latn"} |
+| பருப்புக் கீரய் | <span lang="en-Latn">Purslane</span> | *Portulaca oleracea*{:lang="en-Latn"} |
 | அகத்திக் கீரய் | <span lang="en-Latn">Vegetable hummingbird or West Indian pea</span> | *Sesbania grandiflora*{:lang="en-Latn"} |
 | பசளிக் கீரய் | <span lang="en-Latn">Spinach</span> | *Spinacia oleracea*{:lang="en-Latn"} |
 | சிற்றகத்திக் கீரய் | <span lang="en-Latn">Egyptian riverhemp</span> | *Sesbania sesban*{:lang="en-Latn"} |
