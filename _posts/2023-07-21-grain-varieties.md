@@ -21,8 +21,10 @@ description: The names of various grains.
 | கருவரகு | <span lang="sa-Gran">𑌕𑍋𑌦𑍍𑌰𑌵𑌃</span> | <span lang="en-Latn">Ditch millet</span> | *Paspalum scrobiculatum*{:lang="en-Latn"} |
 | சாமய் | <span lang="sa-Gran">𑌨𑌨𑍍𑌦𑌿𑌮𑍁𑌖𑌃</span> | <span lang="en-Latn">Little millet</span>| *Panicum sumatrense*{:lang="en-Latn"} |
 | சோளம் | <span lang="sa-Gran">𑌯𑌵𑌾𑌕𑌾𑌰𑌮𑍍</span> | <span lang="en-Latn">Sorghum</span> | *Sorghum bicolor*{:lang="en-Latn"} |
+| சொன்னல் | <span lang="sa-Gran"></span> | <span lang="en-Latn">Browntop millet</span> | *Brachiaria ramosa*{:lang="en-Latn"} |
 | தினய் | <span lang="sa-Gran">𑌕𑌙𑍍𑌗𑍁𑌃 𑌉𑌤 𑌪𑍍𑌰𑌿𑌯𑌙𑍍𑌗𑍁𑌃</span> | <span lang="en-Latn">Foxtail millet</span> | *Setaria italica*{:lang="en-Latn"} |
 | குதிரய்வாலி | <span lang="sa-Gran">𑌶𑍍𑌯𑌾𑌮𑌕𑌮𑍍</span> | <span lang="en-Latn">Barnyard millet</span> | *Echinochloa frumentacea*{:lang="en-Latn"} |
+| ஒட்டுப்புல், அமரிப்புல் | <span lang="sa-Gran"></span> | <span lang="en-Latn">Hooked bristlegrass</span> | *Setaria verticillata*{:lang="en-Latn"} |
 | வாற்கோதுமய் | <span lang="sa-Gran">𑌯𑌵𑌃</span> | <span lang="en-Latn">Barley</span> | *Hordeum vulgare*{:lang="en-Latn"} |
 | காடைக்கண்ணி | <span lang="sa-Gran">𑌯𑌵𑌿𑌯𑌮𑍍</span> | <span lang="en-Latn">Oat</span> | *Avena sativa*{:lang="en-Latn"} |
 
