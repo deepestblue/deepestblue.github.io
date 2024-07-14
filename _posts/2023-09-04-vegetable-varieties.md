@@ -20,6 +20,7 @@ description: The names of various vegetables.
 | மரவள்ளிக்கிழங்கு, மரச்சினிக்கிழங்கு | <span lang="sa-Gran"></span> | <span lang="en-Latn">Cassava</span> | *Manihot esculenta*{:lang="en-Latn"} |
 | அவரய்க்காய் | <span lang="sa-Gran">𑌨𑌿𑌷𑍍𑌪𑌾𑌵𑌃</span> | <span lang="en-Latn">Hyacinth bean</span> | *Lablab purpureus*{:lang="en-Latn"} |
 | கொத்தவரய்க்காய் | <span lang="sa-Gran">𑌗𑍋𑌰𑌾𑌣𑍀</span> | <span lang="en-Latn">Cluster bean</span> | *Cyamopsis tetragonoloba*{:lang="en-Latn"} |
+| மொச்சய்கொட்டய் | <span lang="sa-Gran">𑌵𑌰𑍍𑌤𑍁𑌲𑌕𑌮𑍍</span> | <span lang="en-Latn">Broad bean</span> | *Vicia faba*{:lang="en-Latn"} |
 | கத்தரிக்காய், வழுதுணய் | <span lang="sa-Gran">𑌵𑍃𑌨𑍍𑌤𑌾𑌕𑌃</span> | <span lang="en-Latn">Brinjal, eggplant, aubergine</span> | *Solanum melongena*{:lang="en-Latn"} |
 | காராமணி | <span lang="sa-Gran">𑌮𑌾𑌧𑍍𑌵𑍀𑌕𑌾</span> | <span lang="en-Latn">Cowpea, black‐eyed pea</span> | *Vigna unguiculata*{:lang="en-Latn"} |
 | தம்பட்டங்காய் | <span lang="sa-Gran">𑌖𑌡𑍍𑌗𑌶𑌿𑌮𑍍𑌬𑍀</span> | <span lang="en-Latn">Sword bean</span> | *Canavalia gladiata*{:lang="en-Latn"} |
