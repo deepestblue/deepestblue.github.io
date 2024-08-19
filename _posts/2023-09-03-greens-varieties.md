@@ -13,8 +13,9 @@ description: The names of various greens.
 | தமிழ்ப்பெயர் | ஆங்கிலப்பெயர் | இருசொற்பெயர் |
 |---|---|---|
 | சிறுகீரய் | <span lang="en-Latn">Tropical amaranth</span> | *Amaranthus campestris*{:lang="en-Latn"} |
-| முளய்க் கீரய் | <span lang="en-Latn">Edible amaranth</span> | *Amaranthus tricolor*{:lang="en-Latn"} |
-| அறய்க் கீரய் | <span lang="en-Latn">Red spinach</span> | *Amaranthus dubius*{:lang="en-Latn"} |
+| முளய்க் கீரய் | <span lang="en-Latn">Green amaranth</span> | *Amaranthus viridis*{:lang="en-Latn"} |
+| அறய்க் கீரய் | <span lang="en-Latn">Big amaranth</span> | *Amaranthus aritis*{:lang="en-Latn"} |
+| தண்டுக் கீரய் | <span lang="en-Latn">Edible amaranth</span> | *Amaranthus tricolor*{:lang="en-Latn"} |
 | முள்ளுக் கீரய் | <span lang="en-Latn">Spiny amaranth or spiny pigweed</span> | *Amaranthus spinosus*{:lang="en-Latn"} |
 | பருப்புக் கீரய் | <span lang="en-Latn">Purslane</span> | *Portulaca oleracea*{:lang="en-Latn"} |
 | அகத்திக் கீரய் | <span lang="en-Latn">Vegetable hummingbird or West Indian pea</span> | *Sesbania grandiflora*{:lang="en-Latn"} |
@@ -23,7 +24,7 @@ description: The names of various greens.
 | முன்னய்க் கீரய் | <span lang="en-Latn">Dusky firebrand</span> | *Premna mollissima*{:lang="en-Latn"} |
 | மணற்றக்காளிக் கீரய் | <span lang="en-Latn">Black nightshade</span> | *Solanum nigrum*{:lang="en-Latn"} |
 | தூதுவளய் | <span lang="en-Latn">Purple‐fruited pea eggplant</span>| *Solanum trilobatum*{:lang="en-Latn"} |
-| பொன்னாங்கண்ணிக் கீரய் | <span lang="en-Latn">Sessile joyweed</span> | *Alternanthera sessilis*{:lang="en-Latn"} |
+| பொன்னாங்கண்ணிக் கீரய் | <span lang="en-Latn">Sessile joyweed or dwarf copperleaf</span> | *Alternanthera sessilis*{:lang="en-Latn"} |
 | கரிசலாங்கண்ணி கீரய் | <span lang="en-Latn">False daisy</span> | *Eclipta prostrata*{:lang="en-Latn"} |
 | வல்லாரய் | <span lang="en-Latn">Indian pennywort</span>| *Centella asiatica*{:lang="en-Latn"} |
 | முடக்கத்தான் கீரய் | <span lang="en-Latn">Balloon vine</span> | *Cardiospermum halicacabum*{:lang="en-Latn"} |

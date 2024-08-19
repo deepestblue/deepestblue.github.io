@@ -13,9 +13,9 @@ description: The names of various pulses.
 | தமிழ்ப்பெயர் | வடமொழிப்பெயர் | ஆங்கிலப்பெயர் | இருசொற்பெயர் |
 |---|---|---|---|
 | துவரம்பருப்பு | <span lang="sa-Gran">𑌆𑌢𑌕𑍀</span> | <span lang="en-Latn">Pigeon pea, red gram</span> | *Cajanus cajan*{:lang="en-Latn"} |
-| கடலய்ப்பருப்பு | <span lang="sa-Gran">𑌚𑌣𑌕𑌃</span> | <span lang="en-Latn">Chickpea, Bengal gram, garbanzo bean</span> | *Cicer arietinum*{:lang="en-Latn"} |
+| கடலய்ப்பருப்பு, கொண்டய்க்கடலய் | <span lang="sa-Gran">𑌚𑌣𑌕𑌃</span> | <span lang="en-Latn">Chickpea, Bengal gram, garbanzo bean</span> | *Cicer arietinum*{:lang="en-Latn"} |
 | உழுத்தம்பருப்பு | <span lang="sa-Gran">𑌮𑌾𑌷𑌃</span> | <span lang="en-Latn">Black gram</span> | *Vigna mungo*{:lang="en-Latn"} |
-| பயற்றம்பருப்பு | <span lang="sa-Gran">𑌮𑍁𑌦𑍍𑌗𑌃</span> | <span lang="en-Latn">Green gram</span> | *Vigna radiata*{:lang="en-Latn"} |
+| பயற்றம்பருப்பு, பாசிப்பயறு | <span lang="sa-Gran">𑌮𑍁𑌦𑍍𑌗𑌃</span> | <span lang="en-Latn">Green gram</span> | *Vigna radiata*{:lang="en-Latn"} |
 | காராமணி | <span lang="sa-Gran">𑌮𑌾𑌧𑍍𑌵𑍀𑌕𑌾</span> | <span lang="en-Latn">Cowpea, black‐eyed pea</span> | *Vigna unguiculata*{:lang="en-Latn"} |
 | கொள் | <span lang="sa-Gran">𑌕𑍁𑌲𑌤𑍍𑌥𑌃</span> | <span lang="en-Latn">Horse gram</span> | *Macrotyloma uniflorum*{:lang="en-Latn"} |
 | மொச்சய்ப்பருப்பு | <span lang="sa-Gran">𑌨𑌿𑌷𑍍𑌪𑌾𑌵𑌃</span> | <span lang="en-Latn">Hyacinth bean</span> | *Lablab purpureus*{:lang="en-Latn"} |
