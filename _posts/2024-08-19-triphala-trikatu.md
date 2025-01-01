@@ -19,7 +19,7 @@ description: What do Triphala and Trikatu mean?
 |---|---|---|---|
 | 𑌹𑌰𑍀𑌤𑌕𑍀 | <span lang="ta-Taml">கடுக்காய்</span> | <span lang="en-Latn">Black myrobalan, Ink nut</span> | *Terminalia chebula*{:lang="en-Latn"} |
 | 𑌆𑌮𑌲𑌕𑌮𑍍 | <span lang="ta-Taml">நெல்லிக்காய்</span> | <span lang="en-Latn">Emblic myrobalan, Indian gooseberry</span> | *Phyllanthus emblica*{:lang="en-Latn"} |
-| 𑌬𑌿𑌭𑍀𑌤𑌕𑍇 | <span lang="ta-Taml">தான்றிக்காய்</span> | <span lang="en-Latn">Bastard myrobalan</span> | *Terminalia bellirica*{:lang="en-Latn"} |
+| 𑌬𑌿𑌭𑍀𑌤𑌕𑌮𑍍 | <span lang="ta-Taml">தான்றிக்காய்</span> | <span lang="en-Latn">Bastard myrobalan</span> | *Terminalia bellirica*{:lang="en-Latn"} |
 
 ## 𑌤𑍍𑌰𑌿𑌕𑌟𑍍𑌵𑌙𑍍𑌗𑌾𑌨𑌿
 
