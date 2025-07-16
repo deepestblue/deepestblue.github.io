@@ -3,7 +3,7 @@ layout: post
 title: 𑌸𑌂𑌸𑍍𑌕𑍃𑌤𑌾𑌤𑍍 𑌇𑌤𑌰𑌾𑌃 𑌭𑌾𑌷𑌾𑌃 𑌅𑌨𑍀𑌚𑌾𑌃
 date: '2010-02-13T18:53:00.000-08:00'
 author: ambarish
-lang: sa-Gran
+lang: cls-Gran
 tags: [sanskrit, "dravidian languages"]
 description: How not to describe Indian languages in Sanskrit.
 ---

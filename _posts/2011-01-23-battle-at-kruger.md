@@ -3,7 +3,7 @@ layout: post
 title: 𑌕𑌾𑌕𑌃 𑌗𑌰𑍁𑌡𑌾𑌯𑌤𑍇
 date: '2011-01-23T20:41:00.000-08:00'
 author: ambarish
-lang: sa-Gran
+lang: cls-Gran
 description: Why you should go watch the Battle at Kruger on Youtube.
 ---
 

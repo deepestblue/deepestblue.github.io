@@ -1,4 +1,4 @@
-<div id="banner" lang="en-Latn">
+<div id="banner" lang="eng-Latn">
   {%- assign page_paths = site.pages | map: "path" -%}
   <div class="downloads">
     {%- for path in page_paths -%}
@@ -9,9 +9,9 @@
     {%- endfor -%}
   </div>
   <div style="line-height: 52px; padding: 0px 5px; text-transform: uppercase;" lang="zxx">
-    Preferred scripts for <label for="select-ta">Tamil text:</label>
+    Preferred scripts for <label for="select-tam">Tamil text:</label>
     <form style="display: inline;">
-      <select id="select-ta">
+      <select id="select-tam">
         <option value="Knda">ಕನ್ನಡ</option>
         <option value="Latn">Latin</option>
         <option value="Mlym">മലയാളം</option>
@@ -19,9 +19,9 @@
         <option value="Telu">తెలుగు</option>
       </select>
     </form>
-    and <label for="select-sa">Sanskrit text:</label>
+    and <label for="select-cls">Sanskrit text:</label>
     <form style="display: inline;">
-      <select id="select-sa">
+      <select id="select-cls">
         <option value="Deva">देवनागरी</option>
         <option value="Gran" id="option-Gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌃</option>
         <option value="Latn">Latin</option>
@@ -50,12 +50,12 @@
 
       // Adding handlers for the form‐selectsʼ change events.
       onSelectValueChange(
-        "#select-ta",
-        transform.bind(undefined, document.documentElement, transliterator, "ta")
+        "#select-tam",
+        transform.bind(undefined, document.documentElement, transliterator, "tam")
       );
       onSelectValueChange(
-        "#select-sa",
-        transform.bind(undefined, document.documentElement, transliterator, "sa")
+        "#select-cls",
+        transform.bind(undefined, document.documentElement, transliterator, "cls")
       );
   </script>
 </div>

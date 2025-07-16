@@ -1,7 +1,7 @@
 ---
 layout: default
 list_title: Posts
-lang: en-Latn
+lang: eng-Latn
 ---
 Welcome to my blog! Feel free to browse through posts below, go through [articles by category](/tags) or read [a short bio of me](/about).
 

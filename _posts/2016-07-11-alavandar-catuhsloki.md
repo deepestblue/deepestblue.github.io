@@ -3,7 +3,7 @@ layout: post
 title: 𑌚𑌤𑍁𑌃𑌶𑍍𑌲𑍋𑌕𑍀
 date: '2016-07-11T15:07:00.000-07:00'
 author: ambarish
-lang: sa-Gran
+lang: cls-Gran
 tags: [religion]
 description: A commentary on Sri. Alavandarʼs catussloki
 ---

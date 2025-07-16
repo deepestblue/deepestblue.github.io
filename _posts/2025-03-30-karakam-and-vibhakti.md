@@ -3,7 +3,7 @@ layout: post
 title: 𑌕𑌾𑌰𑌕𑌾𑌣𑌾𑌂 𑌵𑌿𑌭𑌕𑍍𑌤𑌯𑌃
 date: '2025-03-30T05:35:00.001-07:00'
 author: ambarish
-lang: sa-Gran
+lang: cls-Gran
 tags: [sanskrit]
 description: What kārakas map to what vibhaktis?
 ---
