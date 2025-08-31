@@ -25,7 +25,7 @@ description: The names of various greens.
 | மணற்றக்காளிக் கீரய் | <span lang="eng-Latn">Black nightshade</span> | *Solanum nigrum*{:lang="eng-Latn"} |
 | தூதுவளய் | <span lang="eng-Latn">Purple‐fruited pea eggplant</span>| *Solanum trilobatum*{:lang="eng-Latn"} |
 | பொன்னாங்கண்ணிக் கீரய் | <span lang="eng-Latn">Sessile joyweed or dwarf copperleaf</span> | *Alternanthera sessilis*{:lang="eng-Latn"} |
-| கரிசலாங்கண்ணி கீரய் | <span lang="eng-Latn">False daisy</span> | *Eclipta prostrata*{:lang="eng-Latn"} |
+| கரிசலாங்கண்ணிக் கீரய் | <span lang="eng-Latn">False daisy</span> | *Eclipta prostrata*{:lang="eng-Latn"} |
 | வல்லாரய் | <span lang="eng-Latn">Indian pennywort</span>| *Centella asiatica*{:lang="eng-Latn"} |
 | முடக்கத்தான் கீரய் | <span lang="eng-Latn">Balloon vine</span> | *Cardiospermum halicacabum*{:lang="eng-Latn"} |
 | கடுகுக் கீரய் | <span lang="eng-Latn">Black mustard</span> | *Rhamphospermum nigrum*{:lang="eng-Latn"} |
@@ -33,10 +33,11 @@ description: The names of various greens.
 | திருநீற்றுப்பச்சய் | <span lang="eng-Latn">Basil</span> | *Ocimum basilicum*{:lang="eng-Latn"} |
 | துழாய் | <span lang="eng-Latn">Holy basil</span> | *Ocimum sanctum*{:lang="eng-Latn"} |
 | கருப்பூரவள்ளி | <span lang="eng-Latn">Country borage</span> | *Coleus amboinicus*{:lang="eng-Latn"} |
-| புளிச்சக்கீரய் | <span lang="eng-Latn">Roselle</span> | *Hibiscus sabdariffa*{:lang="eng-Latn"} |
-| வெந்தயக்கீரய் | <span lang="eng-Latn">Fenugreek</span> | *Trigonella foenum‐graecum*{:lang="eng-Latn"} |
+| புளிச்சக் கீரய் | <span lang="eng-Latn">Roselle</span> | *Hibiscus sabdariffa*{:lang="eng-Latn"} |
+| வெந்தயக் கீரய் | <span lang="eng-Latn">Fenugreek</span> | *Trigonella foenum‐graecum*{:lang="eng-Latn"} |
 | கொத்துமல்லி | <span lang="eng-Latn">Coriander</span> | *Coriandrum sativum*{:lang="eng-Latn"} |
-| ஈயெச்சிற்கீரய், புதினாக்கீரய் | <span lang="eng-Latn">Mint</span> | *Mentha*{:lang="eng-Latn"} |
+| ஈயெச்சிற் கீரய், புதினாக் கீரய் | <span lang="eng-Latn">Mint</span> | *Mentha*{:lang="eng-Latn"} |
+| சோயிக் கீரய், சதகுப்பி | <span lang="eng-Latn">Dill</span> | *Anethum graveolens*{:lang="eng-Latn"} |
 | கறிவேம்பு | <span lang="eng-Latn">Curry leaf</span> | *Murraya koenigii*{:lang="eng-Latn"} |
 | வெற்றிலய் | <span lang="eng-Latn">Betel</span> | *Piper betle*{:lang="eng-Latn"} |
 
