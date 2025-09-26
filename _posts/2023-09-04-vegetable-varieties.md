@@ -17,7 +17,7 @@ description: The names of various vegetables.
 | கருணய்க்கிழங்கு, பிடிகருணய் | <span lang="cls-Gran">𑌆𑌲𑍁𑌃</span> | <span lang="eng-Latn">Lesser yam</span> | *Dioscorea esculenta*{:lang="eng-Latn"} |
 | சிறுகிழங்கு | <span lang="cls-Gran"></span> | <span lang="eng-Latn">Native potato, country potato</span> | *Coleus rotundifolius*{:lang="eng-Latn"} |
 | சருக்கரய்வள்ளிக்கிழங்கு, வற்றாளய்க்கிழங்கு | <span lang="cls-Gran">𑌕𑌿𑌟𑌿𑌃</span> | <span lang="eng-Latn">Sweet potato</span> | *Ipomoea batatas*{:lang="eng-Latn"} |
-| மரவள்ளிக்கிழங்கு, மரச்சினிக்கிழங்கு | <span lang="cls-Gran"></span> | <span lang="eng-Latn">Cassava</span> | *Manihot esculenta*{:lang="eng-Latn"} |
+| மரவள்ளிக்கிழங்கு, மரச்சினிக்கிழங்கு, குச்சிக்கிழங்கு | <span lang="cls-Gran"></span> | <span lang="eng-Latn">Cassava</span> | *Manihot esculenta*{:lang="eng-Latn"} |
 | அவரய்க்காய் | <span lang="cls-Gran">𑌨𑌿𑌷𑍍𑌪𑌾𑌵𑌃</span> | <span lang="eng-Latn">Hyacinth bean</span> | *Lablab purpureus*{:lang="eng-Latn"} |
 | கொத்தவரய்க்காய் | <span lang="cls-Gran">𑌗𑍋𑌰𑌾𑌣𑍀</span> | <span lang="eng-Latn">Cluster bean</span> | *Cyamopsis tetragonoloba*{:lang="eng-Latn"} |
 | மொச்சய்கொட்டய் | <span lang="cls-Gran">𑌵𑌰𑍍𑌤𑍁𑌲𑌕𑌮𑍍</span> | <span lang="eng-Latn">Broad bean</span> | *Vicia faba*{:lang="eng-Latn"} |
