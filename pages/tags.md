@@ -2,7 +2,7 @@
 layout: page
 title: Categories
 permalink: /tags/
-lang: en-Latn
+lang: eng-Latn
 ---
 
 {% assign sorted_tags = site.tags | sort %}

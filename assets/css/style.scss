@@ -14,20 +14,20 @@
 }
 
 body {
-    *:lang(en-Latn), *:lang(ta-Latn), *:lang(sa-Latn) {
+    *:lang(eng-Latn), *:lang(tam-Latn), *:lang(cls-Latn) {
         font-family: 'Source Sans Pro', "Helvetica Neue", sans-serif;
     }
 }
 header {
-    h1:lang(en-Latn), h1:lang(ta-Latn), h1:lang(sa-Latn) {
+    h1:lang(eng-Latn), h1:lang(tam-Latn), h1:lang(cls-Latn) {
         font-family: 'Copse', "Helvetica Neue", sans-serif;
     }
 }
 
-:lang(ta-Taml) {
+:lang(tam-Taml) {
     font-family: Vijaya, "Tamil MN";
 }
-:lang(sa-Gran) {
+:lang(cls-Gran) {
     font-family: Sampradaya;
 }
 

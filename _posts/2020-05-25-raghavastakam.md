@@ -3,7 +3,7 @@ layout: post
 title: 𑌰𑌾𑌘𑌵𑌾𑌷𑍍𑌟𑌕𑌮𑍍
 date: '2020-05-25T21:10:00.000-07:00'
 author: ambarish
-lang: sa-Gran
+lang: cls-Gran
 tags: [religion]
 description: A commentary on the Raghavastakam.
 ---
