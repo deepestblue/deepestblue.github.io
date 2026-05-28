@@ -15,19 +15,21 @@ description: The names of various vegetables.
 | சேப்பங்கிழங்கு | <span lang="cls-Gran">𑌕𑌚𑍁𑌃</span> | <span lang="eng-Latn">Taro</span> | *Colocasia esculenta*{:lang="eng-Latn"} |
 | சேனய்க்கிழங்கு, கருணய்க்கிழங்கு | <span lang="cls-Gran">𑌸𑍂𑌰𑌣𑌮𑍍</span> | <span lang="eng-Latn">Elephant‐foot yam</span> | *Amorphophallus paeoniifolius*{:lang="eng-Latn"} |
 | கருணய்க்கிழங்கு, பிடிகருணய் | <span lang="cls-Gran">𑌆𑌲𑍁𑌃</span> | <span lang="eng-Latn">Lesser yam</span> | *Dioscorea esculenta*{:lang="eng-Latn"} |
-| சிறுகிழங்கு | <span lang="cls-Gran"></span> | <span lang="eng-Latn">Native potato, country potato</span> | *Coleus rotundifolius*{:lang="eng-Latn"} |
+| சிறுகிழங்கு, கூர்க்கன்கிழங்கு | <span lang="cls-Gran"></span> | <span lang="eng-Latn">Native potato, country potato</span> | *Coleus rotundifolius*{:lang="eng-Latn"} |
 | சருக்கரய்வள்ளிக்கிழங்கு, வற்றாளய்க்கிழங்கு | <span lang="cls-Gran">𑌕𑌿𑌟𑌿𑌃</span> | <span lang="eng-Latn">Sweet potato</span> | *Ipomoea batatas*{:lang="eng-Latn"} |
 | மரவள்ளிக்கிழங்கு, மரச்சினிக்கிழங்கு, குச்சிக்கிழங்கு | <span lang="cls-Gran"></span> | <span lang="eng-Latn">Cassava</span> | *Manihot esculenta*{:lang="eng-Latn"} |
+| வெற்றிலய்வள்ளிக்கிழங்கு, மலயன்கிழங்கு | <span lang="cls-Gran"></span> | <span lang="eng-Latn"></span> | *Dioscorea oppositifolia*{:lang="eng-Latn"} |
+| கொடிவள்ளிக்கிழங்கு, பண்ணுக்கிழங்கு | <span lang="cls-Gran">𑌵𑌾𑌰𑌾𑌹𑍀</span> | <span lang="eng-Latn">Air potato</span> | *Dioscorea bulbifera*{:lang="eng-Latn"} |
 | அவரய்க்காய் | <span lang="cls-Gran">𑌨𑌿𑌷𑍍𑌪𑌾𑌵𑌃</span> | <span lang="eng-Latn">Hyacinth bean</span> | *Lablab purpureus*{:lang="eng-Latn"} |
 | கொத்தவரய்க்காய் | <span lang="cls-Gran">𑌗𑍋𑌰𑌾𑌣𑍀</span> | <span lang="eng-Latn">Cluster bean</span> | *Cyamopsis tetragonoloba*{:lang="eng-Latn"} |
-| மொச்சய்கொட்டய் | <span lang="cls-Gran">𑌵𑌰𑍍𑌤𑍁𑌲𑌕𑌮𑍍</span> | <span lang="eng-Latn">Broad bean</span> | *Vicia faba*{:lang="eng-Latn"} |
+| மொச்சய்க்கொட்டய் | <span lang="cls-Gran">𑌵𑌰𑍍𑌤𑍁𑌲𑌕𑌮𑍍</span> | <span lang="eng-Latn">Broad bean</span> | *Vicia faba*{:lang="eng-Latn"} |
 | கத்தரிக்காய், வழுதுணய் | <span lang="cls-Gran">𑌵𑍃𑌨𑍍𑌤𑌾𑌕𑌃</span> | <span lang="eng-Latn">Brinjal, eggplant, aubergine</span> | *Solanum melongena*{:lang="eng-Latn"} |
 | காராமணி | <span lang="cls-Gran">𑌮𑌾𑌧𑍍𑌵𑍀𑌕𑌾</span> | <span lang="eng-Latn">Cowpea, black‐eyed pea</span> | *Vigna unguiculata*{:lang="eng-Latn"} |
 | தம்பட்டங்காய் | <span lang="cls-Gran">𑌖𑌡𑍍𑌗𑌶𑌿𑌮𑍍𑌬𑍀</span> | <span lang="eng-Latn">Sword bean</span> | *Canavalia gladiata*{:lang="eng-Latn"} |
 | வெண்டய்க்காய் | <span lang="cls-Gran">𑌭𑌿𑌣𑍍𑌡𑌃</span> | <span lang="eng-Latn">Lady's finger, okra</span> | *Abelmoschus esculentus,*{:lang="eng-Latn"} |
 | முள்ளங்கி | <span lang="cls-Gran">𑌮𑍁𑌲𑌕𑌮𑍍</span> | <span lang="eng-Latn">Radish</span> | *Raphanus raphanistrum  sativus*{:lang="eng-Latn"} |
 | பலாக்கொட்டய் | <span lang="cls-Gran">𑌪𑌨𑌸𑌃</span> | <span lang="eng-Latn">Jackfruit</span> | *Artocarpus heterophyllus*{:lang="eng-Latn"} |
-| பூசணிக்காய் | <span lang="cls-Gran">𑌕𑍂𑌷𑍍𑌮𑌾𑌣𑍍𑌡𑌃</span> | <span lang="eng-Latn">Ash gourd, winter melon</span> | *Benincasa hispida*{:lang="eng-Latn"} |
+| பூசணிக்காய், தடியன்காய் | <span lang="cls-Gran">𑌕𑍂𑌷𑍍𑌮𑌾𑌣𑍍𑌡𑌃</span> | <span lang="eng-Latn">Ash gourd, winter melon</span> | *Benincasa hispida*{:lang="eng-Latn"} |
 | சுரய்க்காய் | <span lang="cls-Gran">𑌅𑌲𑌾𑌬𑍁𑌃</span> | <span lang="eng-Latn">Bottle gourd, calabash</span> | *Lagenaria siceraria*{:lang="eng-Latn"} |
 | வெள்ளரிக்காய் | <span lang="cls-Gran">𑌤𑍍𑌰𑌪𑍁𑌷𑍀</span> | <span lang="eng-Latn">Cucumber</span> | *Cucumis sativus*{:lang="eng-Latn"} |
 | நாட்டு வெள்ளரிக்காய் | <span lang="cls-Gran">𑌕𑌰𑍍𑌕𑌟𑍀</span> | <span lang="eng-Latn">Snake cucumber</span> | *Cucumis melo var. flexuosus*{:lang="eng-Latn"} |
