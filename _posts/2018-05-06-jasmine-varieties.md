@@ -16,7 +16,7 @@ description: The names of various jasmine variants.
 | நித்தியமல்லி, பெருமல்லி | ? | <span lang="eng-Latn">Brazilian jasmine</span> | *Jasminum fluminense*{:lang="eng-Latn"} |
 | குண்டுமல்லி, இருவாய்ச்சி | <span lang="cls-Gran">𑌨𑌵𑌮𑌲𑍍𑌲𑌿𑌕𑌾</span> | <span lang="eng-Latn">Arabian jasmine</span> | *Jasminum sambac*{:lang="eng-Latn"} |
 | முல்லய், உச்சிமல்லி | <span lang="cls-Gran">𑌯𑍂𑌥𑌿𑌕𑌾</span> | ? | *Jasminum auriculatum*{:lang="eng-Latn"} |
-| கத்தூரிமல்லி | <span lang="cls-Gran">𑌕𑍁𑌨𑍍𑌦𑌃</span> | <span lang="eng-Latn">Indian jasmine</span> | *Indian jasmine*{:lang="eng-Latn"} |
-| காட்டுமல்லி | <span lang="cls-Gran">𑌵𑌨𑌮𑌲𑍍𑌲𑌿𑌕𑌾</span> | <span lang="eng-Latn">Wild jasmine</span>| *Jasminum angustiflorum*{:lang="eng-Latn"} |
+| கத்தூரிமல்லி | <span lang="cls-Gran">𑌕𑍁𑌨𑍍𑌦𑌃</span> | <span lang="eng-Latn">Star jasmine</span> | *Jasminum multiflorum*{:lang="eng-Latn"} |
+| காட்டுமல்லி | <span lang="cls-Gran">𑌵𑌨𑌮𑌲𑍍𑌲𑌿𑌕𑌾</span> | <span lang="eng-Latn">Wild jasmine</span> | *Jasminum angustiflorum*{:lang="eng-Latn"} |
 
 பட்டியலில் குற்றம் குறய்கள் அறிந்தோர் தொடர்பு கொள்ளுமாறு வேண்டுகிறேன்.
