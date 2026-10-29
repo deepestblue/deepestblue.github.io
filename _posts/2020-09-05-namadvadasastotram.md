@@ -26,6 +26,7 @@ description: The namadvadasastotram in a table.
 | 𑌦𑌾𑌮𑍋𑌦𑌰𑌃 | 𑌪𑌾𑌶𑌹𑌸𑍍𑌤𑌃 <span lang="eng-Latn">(Noose)</span> | 𑌇𑌨𑍍𑌦𑍍𑌰𑌕𑍋𑌪𑌕𑌸𑌙𑍍𑌕𑌾𑌶𑌃 | 𑌬𑌾𑌹𑍍𑌯𑌾𑌭𑍍𑌯𑌨𑍍𑌤𑌰𑌂 𑌦𑍇𑌹𑌂 𑌵𑍍𑌯𑌾𑌪𑍍𑌯 <span lang="eng-Latn">(Inside and outside the body)</span> |
 
 𑌏𑌕𑌾𑌦𑌶 𑌆𑌯𑍁𑌧𑌾𑌨𑌿 𑌉𑌪𑌵𑌰𑍍𑌣𑌿𑌤𑌾𑌨𑌿 𑌸𑌨𑍍𑌤𑌿 । 𑌸𑍍𑌵𑌾𑌮𑌿𑌦𑍇𑌶𑌿𑌕𑌸𑍍𑌤𑍁 𑌶𑍍𑌰𑍀𑌸𑍁𑌦𑌰𑍍𑌶𑌨𑌚𑌕𑍍𑌰𑍋𑌪𑌰𑌿 𑌷𑍋𑌡𑌶𑌾𑌯𑍁𑌧𑌸𑍍𑌤𑍋𑌤𑍍𑌰𑍇 𑌅𑌨𑍍𑌯𑌾𑌦𑍃𑌶𑍀𑌮𑍍 𑌆𑌵𑌲𑌿𑌮𑍇𑌵 𑌉𑌪𑌵𑌰𑍍𑌣𑌯𑌾𑌮𑌾𑌸 । 𑌸𑌾 𑌯𑌥𑌾
+
 * 𑌚𑌕𑍍𑌰𑌮𑍍
 * 𑌪𑌰𑌶𑍁𑌃
 * 𑌕𑍁𑌨𑍍𑌤𑌃
@@ -44,6 +45,7 @@ description: The namadvadasastotram in a table.
 * 𑌤𑍍𑌰𑌿𑌶𑍂𑌲𑌮𑍍
 
 𑌆𑌵𑌲𑍀𑌯𑌂 𑌮𑍁𑌦𑍍𑌗𑌰𑌾𑌯𑍁𑌧𑌰𑌹𑌿𑌤𑌾 । 𑌕𑌿𑌞𑍍𑌚 𑌷𑌟𑍍 𑌆𑌯𑍁𑌧𑌾𑌨𑍍𑌤𑌰𑌾𑌣𑌿 𑌅𑌸𑍍𑌯𑌾𑌃 𑌪𑌠𑍍𑌯𑌨𑍍𑌤𑍇 𑌯𑌥𑌾
+
 * 𑌪𑌰𑌶𑍁𑌃 <span lang="eng-Latn">(Axe)</span>
 * 𑌦𑌣𑍍𑌡𑌃 <span lang="eng-Latn">(Stick)</span>
 * 𑌅𑌙𑍍𑌕𑍁𑌶𑌃 <span lang="eng-Latn">(Goad)</span>

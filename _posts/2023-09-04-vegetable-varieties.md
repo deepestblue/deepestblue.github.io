@@ -11,7 +11,7 @@ description: The names of various vegetables.
 சிறு வயதில் பற்பல கறிகாய்கள் தினசரி உண்டு வந்தேன். அசலூரில் வசிக்க தன்னூர்க்காய்கறிகள் மறப்பேனோவென அஞ்சி இப்பட்டியல் எழுதிகிறேன்.
 
 | தமிழ்ப்பெயர் | வடமொழிப்பெயர் | ஆங்கிலப்பெயர் | இருசொற்பெயர் |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | சேப்பங்கிழங்கு | <span lang="cls-Gran">𑌕𑌚𑍁𑌃</span> | <span lang="eng-Latn">Taro</span> | *Colocasia esculenta*{:lang="eng-Latn"} |
 | சேனய்க்கிழங்கு, கருணய்க்கிழங்கு | <span lang="cls-Gran">𑌸𑍂𑌰𑌣𑌮𑍍</span> | <span lang="eng-Latn">Elephant‐foot yam</span> | *Amorphophallus paeoniifolius*{:lang="eng-Latn"} |
 | கருணய்க்கிழங்கு, பிடிகருணய் | <span lang="cls-Gran">𑌆𑌲𑍁𑌃</span> | <span lang="eng-Latn">Lesser yam</span> | *Dioscorea esculenta*{:lang="eng-Latn"} |
@@ -62,7 +62,7 @@ description: The names of various vegetables.
 சீமயினும் சிற்சில கறிகாய்கள் உண்டு வந்தேன். அவய் மேல்வருமாறு.
 
 | தமிழ்ப்பெயர் | வடமொழிப்பெயர் | ஆங்கிலப்பெயர் | இருசொற்பெயர் |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | உருளய்க்கிழங்கு | <span lang="cls-Gran"></span> | <span lang="eng-Latn">Potato</span> | *Solanum tuberosum*{:lang="eng-Latn"} |
 | தக்காளி | <span lang="cls-Gran"></span> | <span lang="eng-Latn">Tomato</span> | *Solanum lycopersicum*{:lang="eng-Latn"} |
 | மிளகாய் | <span lang="cls-Gran">𑌮𑌰𑍀𑌚𑌿𑌕𑌾</span> | <span lang="eng-Latn">Green chilli</span> | *Capsicum annuum var. longum*{:lang="eng-Latn"} |

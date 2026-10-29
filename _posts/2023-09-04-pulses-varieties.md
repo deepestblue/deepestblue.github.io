@@ -11,7 +11,7 @@ description: The names of various pulses.
 பருப்பில்லாத கல்லியாணமா என பருப்பது சிறப்பு. பருப்புவகயின் பெயர் தமிழில் மற்றுமே அறிந்து பிற மொழியில் ஆராய மேல்வரும் பட்டியல் கிடய்த்தது.
 
 | தமிழ்ப்பெயர் | வடமொழிப்பெயர் | ஆங்கிலப்பெயர் | இருசொற்பெயர் |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | துவரம்பருப்பு | <span lang="cls-Gran">𑌆𑌢𑌕𑍀</span> | <span lang="eng-Latn">Pigeon pea, red gram</span> | *Cajanus cajan*{:lang="eng-Latn"} |
 | கடலய்ப்பருப்பு, கொண்டய்க்கடலய் | <span lang="cls-Gran">𑌚𑌣𑌕𑌃</span> | <span lang="eng-Latn">Chickpea, Bengal gram, garbanzo bean</span> | *Cicer arietinum*{:lang="eng-Latn"} |
 | உழுத்தம்பருப்பு | <span lang="cls-Gran">𑌮𑌾𑌷𑌃</span> | <span lang="eng-Latn">Black gram</span> | *Vigna mungo*{:lang="eng-Latn"} |

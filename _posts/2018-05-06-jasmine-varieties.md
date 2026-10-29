@@ -11,7 +11,7 @@ description: The names of various jasmine variants.
 அப்பூவின் வகய்கள் தமிழில் மட்டுமே அறிந்தேன். வடமொழியிலும் ஆங்கிலத்திலும் உயிரியல் இருசொற்பெயரீட்டிலும் பெயர்கள் அறியாது ஆராய்ந்தேன். அகராதி மற்றும் இணயத்தின் கிடய்த்த சில பெயர்கள் மேல் உள்ளன.
 
 | தமிழ்ப்பெயர் | வடமொழிப்பெயர் | ஆங்கிலப்பெயர் | இருசொற்பெயர் |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | பிச்சி, சாதிமல்லி | <span lang="cls-Gran">𑌜𑌾𑌤𑌿𑌃 𑌉𑌤 𑌮𑌾𑌲𑌤𑍀</span> | <span lang="eng-Latn">Royal jasmine</span> | *Jasminum grandiflorum*{:lang="eng-Latn"} |
 | நித்தியமல்லி, பெருமல்லி | ? | <span lang="eng-Latn">Brazilian jasmine</span> | *Jasminum fluminense*{:lang="eng-Latn"} |
 | குண்டுமல்லி, இருவாய்ச்சி | <span lang="cls-Gran">𑌨𑌵𑌮𑌲𑍍𑌲𑌿𑌕𑌾</span> | <span lang="eng-Latn">Arabian jasmine</span> | *Jasminum sambac*{:lang="eng-Latn"} |
