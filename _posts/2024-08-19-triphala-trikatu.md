@@ -16,7 +16,7 @@ description: What do Triphala and Trikatu mean?
 ## 𑌤𑍍𑌰𑌿𑌫𑌲𑌾𑌙𑍍𑌗𑌾𑌨𑌿
 
 | 𑌸𑌂𑌸𑍍𑌕𑍃𑌤𑌨𑌾𑌮 | 𑌦𑍍𑌰𑌾𑌮𑌿𑌡𑌨𑌾𑌮 | 𑌆𑌙𑍍𑌗𑍍𑌲𑌨𑌾𑌮 | 𑌦𑍍𑌵𑌿𑌪𑌦𑌂 𑌨𑌾𑌮 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 𑌹𑌰𑍀𑌤𑌕𑍀 | <span lang="tam-Taml">கடுக்காய்</span> | <span lang="eng-Latn">Black myrobalan, Ink nut</span> | *Terminalia chebula*{:lang="eng-Latn"} |
 | 𑌆𑌮𑌲𑌕𑌮𑍍 | <span lang="tam-Taml">நெல்லிக்காய்</span> | <span lang="eng-Latn">Emblic myrobalan, Indian gooseberry</span> | *Phyllanthus emblica*{:lang="eng-Latn"} |
 | 𑌬𑌿𑌭𑍀𑌤𑌕𑌮𑍍 | <span lang="tam-Taml">தான்றிக்காய்</span> | <span lang="eng-Latn">Bastard myrobalan</span> | *Terminalia bellirica*{:lang="eng-Latn"} |
@@ -24,7 +24,7 @@ description: What do Triphala and Trikatu mean?
 ## 𑌤𑍍𑌰𑌿𑌕𑌟𑍍𑌵𑌙𑍍𑌗𑌾𑌨𑌿
 
 | 𑌸𑌂𑌸𑍍𑌕𑍃𑌤𑌨𑌾𑌮 | 𑌦𑍍𑌰𑌾𑌮𑌿𑌡𑌨𑌾𑌮 | 𑌆𑌙𑍍𑌗𑍍𑌲𑌨𑌾𑌮 | 𑌦𑍍𑌵𑌿𑌪𑌦𑌂 𑌨𑌾𑌮 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 𑌶𑍁𑌣𑍍𑌠𑍀 | <span lang="tam-Taml">சுக்கு</span> | <span lang="eng-Latn">Dry ginger</span> | <span lang="eng-Latn">*Zingiber officinale* (dry)</span> |
 | 𑌪𑌿𑌪𑍍𑌪𑌲𑍀 | <span lang="tam-Taml">திப்பிலி</span> | <span lang="eng-Latn">Long pepper</span> | *Piper longum*{:lang="eng-Latn"} |
 | 𑌮𑌰𑍀𑌚𑌃 | <span lang="tam-Taml">மிளகு</span> | <span lang="eng-Latn">Black pepper</span> | *Piper nigrum*{:lang="eng-Latn"} |

@@ -11,7 +11,7 @@ description: The names of various banana variants.
 அப்பழத்து வகய்கள் சில மேலே.
 
 | வகய் |
-|---|
+| --- |
 | பூவன் பழம் |
 | இரத்தாளிப்பழம் |
 | மலைப்பழம் |

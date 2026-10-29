@@ -24,7 +24,7 @@ Vowels and Dependents
 {:centre}
 
 |Sanskrit (Devanagari)|ISO‐15919|Tamil|Key‐map|
-|--- |---|---|---|
+|---------------------|---------|-----|-------|
 |अ|a|அ||
 |आ|ā|ஆ||
 |इ|i|இ||
@@ -53,7 +53,7 @@ Consonants
 {:centre}
 
 |Sanskrit (Devanagari)|ISO‐15919 [^1]|Tamil|Key‐map|
-|--- |--- |--- |--- |
+|---|---|---|---|
 |क्|k|க்||
 |ख्|kh|||
 |ग्|g|||
@@ -102,7 +102,7 @@ The next step was filling in the key‐combinations that were “natural” and 
 1. Representing retroflexion for stop consonants by upper‐casing the corresponding dental stop is standard practice. By modularity, we can do the same for liquids and sibilants too.
 
 |Sanskrit (Devanagari)|ISO‐15919|Tamil|Key‐map|
-|--- |--- |--- |--- |
+|---|---|---|---|
 |अ|a|அ|a|
 |आ|ā|ஆ|A|
 |इ|i|இ|i|
@@ -177,7 +177,7 @@ Consonants
 {:centre}
 
 |Sanskrit (Devanagari)|ISO‐15919|Tamil|Key‐map|
-|--- |--- |--- |--- |
+|---|---|---|---|
 |क्|k|க்|k|
 |ख्|kh||kh|
 |ग्|g||g|
@@ -226,7 +226,7 @@ Vowels and Dependents
 {:centre}
 
 |Sanskrit (Devanagari)|ISO‐15919|Tamil|Key‐map|
-|--- |--- |--- |--- |
+|---|---|---|---|
 |अ|a|அ|a|
 |आ|ā|ஆ|A|
 |इ|i|இ|i|
@@ -253,6 +253,6 @@ Vowels and Dependents
 
 You can download the Tamil and Sanskrit keymap for use in Googleʼs IME from [https://github.com/deepestblue/GoogleIME_keymap](https://github.com/deepestblue/GoogleIME_keymap).
 
-#### Footnotes
+## Footnotes
 
 {:centre: style="text-align: center"}

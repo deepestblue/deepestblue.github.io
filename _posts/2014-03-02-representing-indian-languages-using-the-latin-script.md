@@ -23,16 +23,16 @@ ISO‐15919, an international scholastic standard, and a few other schemes – I
 
 For example, hereʼre the same Sanskrit characters in a few sample schemes:
 
-| Devanagari  | ISO‐15919 | Hunterian | ISO‐15919‐lcs | Harvard‐Kyoto | ITRANS  |
-|-------------|-----------|-----------|---------------|---------------|---------|
-| आ           | ā         | ā         | aa            | A             | aa/A    |
-| ऋ           | r̥         | ri        | ,r            | R             | RRi/R^i |
-| ए           | ē         | e         | ee            | e             | e       |
-| ं (anusvāra)  | ṁ         | m         | ;m            | M             | M       |
-| ख्           | kh        | kh        | kh            | kh            | kh      |
-| ञ्           | ñ         | n         | ~n            | J             | ~n/JN   |
-| ड्           | ḍ         | d         | .d            | D             | D       |
-| श्           | ś         | sh        | ;s            | z             | sh      |
+|  Devanagari  | ISO‐15919 | Hunterian | ISO‐15919‐lcs | Harvard‐Kyoto | ITRANS  |
+| ------------ | --------- | --------- | ------------- | ------------- | ------- |
+| आ            | ā         | ā         | aa            | A             | aa/A    |
+| ऋ            | r̥         | ri        | ,r            | R             | RRi/R^i |
+| ए            | ē         | e         | ee            | e             | e       |
+|  ं (anusvāra) | ṁ         | m         | ;m            | M             | M       |
+| ख्            | kh        | kh        | kh            | kh            | kh      |
+| ञ्            | ñ         | n         | ~n            | J             | ~n/JN   |
+| ड्            | ḍ         | d         | .d            | D             | D       |
+| श्            | ś         | sh        | ;s            | z             | sh      |
 
 What a mess!
 
