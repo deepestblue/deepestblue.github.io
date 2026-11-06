@@ -9,7 +9,7 @@ export const transform = (docRoot, transliterate, langCode, srcScript, tgtScript
                     return;
                 }
                 node.textContent = transliterate(srcScript, tgtScript, node.textContent,);
-                break;
+                return;
             case Node.ELEMENT_NODE:
                 if (node.lang) {
                     langMatched = node.lang === `${langCode}-${srcScript}`;
@@ -18,7 +18,6 @@ export const transform = (docRoot, transliterate, langCode, srcScript, tgtScript
                     }
                 }
                 node.childNodes.forEach(walk.bind(undefined, langMatched,),);
-                break;
         }
     })(false, docRoot,);
 };
