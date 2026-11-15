@@ -16,10 +16,28 @@ const onSelectValueChange = (selector, eventHandler,) => {
     },);
 };
 
+// So that the document title follows the page headingʼs text. The title can't be changed through transform as it can't have HTML lang tags (it's always plain text).
+const withTitleSync = (eventHandler,) => (previous, current,) => {
+    const heading = document.querySelector("[data-id='page-title']",);
+    const before = heading.textContent;
+    eventHandler(previous, current,);
+    document.title = document.title.replace(before, heading.textContent,);
+};
+
 // Adding handlers for the form‐selectsʼ change events.
 onSelectValueChange(
   "#select-tam",
-  transform.bind(undefined, document.documentElement, transliterate, "tam",),);
+  withTitleSync(transform.bind(undefined, document.documentElement, transliterate, "tam",),),);
 onSelectValueChange(
   "#select-cls",
-  transform.bind(undefined, document.documentElement, transliterate, "cls",),);
+  withTitleSync(transform.bind(undefined, document.documentElement, transliterate, "cls",),),);
+
+// Setting the drop‐down starting value based on the pageʼs own language & script.
+(lang => {
+    const [pageLangCode, pageScript] = lang.split("-",);
+    const pageLangSelect = document.querySelector(`#select-${pageLangCode}`,);
+    if (! pageLangSelect) {
+        return;
+    }
+    pageLangSelect.value = pageScript;
+})(document.documentElement.lang);
