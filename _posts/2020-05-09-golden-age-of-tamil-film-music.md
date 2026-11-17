@@ -3,7 +3,8 @@ layout: post
 title: தமிழ்த் திரய்ப்படப் பாடல்களது பொற்காலம்
 date: '2020-05-09T15:30:00.000-07:00'
 author: ambarish
-lang: tam-Taml
+lang: ta-Taml
+locale: ta_IN
 description: There was a golden period of Tamil film music; it is over.
 ---
 
@@ -15,10 +16,9 @@ description: There was a golden period of Tamil film music; it is over.
 
 இதுவே வடமொழிச்செய்யுள் ஒன்றில்
 
-<span lang="cls-Gran">
-```𑌆𑌦𑍌 𑌰𑌾𑌜𑌤𑌿 𑌰𑌾𑌜𑍈𑌕𑍋 𑌵𑌿𑌶𑍍𑌵𑌨𑌾𑌥𑍋𑌨𑍁𑌧𑌾𑌵𑌤𑌿 ।
-𑌰𑌹𑍍𑌮𑌾𑌨𑍍𑌨𑌾𑌮𑌮𑌹𑌾𑌦𑍇𑌵𑍌 𑌤𑍃𑌤𑍀𑌯𑍌 𑌨𑌾𑌸𑍍𑌤𑌿 𑌤𑌤𑍍𑌪𑌰𑌃 ॥```
-</span>
+𑌆𑌦𑍌 𑌰𑌾𑌜𑌤𑌿 𑌰𑌾𑌜𑍈𑌕𑍋 𑌵𑌿𑌶𑍍𑌵𑌨𑌾𑌥𑍋𑌨𑍁𑌧𑌾𑌵𑌤𑌿 ।
+𑌰𑌹𑍍𑌮𑌾𑌨𑍍𑌨𑌾𑌮𑌮𑌹𑌾𑌦𑍇𑌵𑍌 𑌤𑍃𑌤𑍀𑌯𑍌 𑌨𑌾𑌸𑍍𑌤𑌿 𑌤𑌤𑍍𑌪𑌰𑌃 ॥
+{: .verse lang="cls-Gran"}
 
 அதாவது முதில் இராசா தனியாக விளய்கிறார்; பின்றொடர்கிறார் விசுவநாதன்; மூன்றாமிடத்தில் இரகுமான் எனப்படுபவரும் மகாதேவனும்; அவர்கள் பின்னோ யாருமே இல்லய்.
 

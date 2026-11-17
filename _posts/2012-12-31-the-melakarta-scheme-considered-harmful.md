@@ -3,10 +3,14 @@ layout: post
 title: The mēḷakartā scheme considered harmful
 date: '2012-12-31T01:19:00.000-08:00'
 author: ambarish
-lang: eng-Latn
+lang: en-Latn
+locale: en_IN
 tags: [music]
 description: The mēḷakartā scheme considered harmful.
 ---
+
+* TOC
+{:toc}
 
 ## The *mēḷakartā* scheme
 
@@ -45,10 +49,10 @@ For instance,
 
 In pedagogy and in musicology, a *rāga* is introduced as a child of a *mēḷakartā* and then in terms of its *ārōhaṇa* and *avarōhaṇa*. An excerpt from a songʼs [lyric page](http://www.karnatik.com/c2577.shtml) follows:
 
-    raagam: bEgaDa
-    29 dheera shankaraabharaNam janya
-    Aa: S G3 R2 G3 M1 P D2 N2 D2 P S
-    Av: S N3 D2 P M1 G3 R2 S
+> raagam: bEgaDa\\
+> 29 dheera shankaraabharaNam janya\\
+> Aa: S G3 R2 G3 M1 P D2 N2 D2 P S\\
+> Av: S N3 D2 P M1 G3 R2 S
 
 *Rasika*s in the know seek to learn which *mēḷakartā* a *rāga* belongs to, and attempt to understand the *rāga* based on this scheme.
 

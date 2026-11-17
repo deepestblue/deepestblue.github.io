@@ -14,17 +14,17 @@
 }
 
 body {
-    *:lang(eng-Latn), *:lang(tam-Latn), *:lang(cls-Latn) {
+    *:lang(en-Latn):not(mjx-container *), *:lang(ta-Latn):not(mjx-container *), *:lang(cls-Latn):not(mjx-container *) {
         font-family: 'Source Sans Pro', "Helvetica Neue", sans-serif;
     }
 }
 header {
-    h1:lang(eng-Latn), h1:lang(tam-Latn), h1:lang(cls-Latn) {
+    h1:lang(en-Latn), h1:lang(ta-Latn), h1:lang(cls-Latn) {
         font-family: 'Copse', "Helvetica Neue", sans-serif;
     }
 }
 
-:lang(tam-Taml) {
+:lang(ta-Taml) {
     font-family: Vijaya, "Tamil MN";
 }
 :lang(cls-Gran) {
@@ -33,4 +33,92 @@ header {
 
 select {
     font-family: 'Quattrocento Sans', "Helvetica Neue", Vijaya, "Tamil MN", Sampradaya, sans-serif;
+}
+
+.verse {
+    white-space: pre-line;
+    padding: 8px 15px;
+    background: #333;
+    border: 1px solid #c7c7c7;
+    border-radius: 3px;
+    color: #efefef;
+    font-size: 13px;
+    text-shadow: 0 1px 0 #000;
+
+    // Consecutive stanzas share one box, with a blank line between them.
+    &:has(+ .verse) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    + .verse {
+        padding-top: 1lh;
+        border-top: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+}
+
+#banner .downloads span {
+    padding: 0 5px;
+}
+
+#script-pickers {
+    border: 0;
+    margin: 0;
+    padding: 0 5px;
+    line-height: 52px;
+    text-transform: uppercase;
+    // A floated legend is laid out as ordinary text instead of being drawn on the fieldsetʼs border.
+    legend {
+        float: left;
+        padding: 0;
+        margin-right: 0.25em;
+    }
+}
+
+html {
+    scroll-padding-top: 167px;
+}
+
+section :is(h1, h2, h3, h4, h5, h6) {
+    scroll-margin-top: 23px;
+}
+
+// So that a short page fills the window, each min-height here is the window height less the sectionʼs vertical margins, padding and border at that width, and the bodyʼs bottom padding.
+section {
+    min-height: calc(100vh - 312px);
+    @media screen and (max-width: 1060px) {
+        min-height: calc(100vh - 272px);
+    }
+}
+
+// On narrow screens the header and banner are part of the page flow, so the banner can wrap, instead of being fixed bars.
+@media screen and (max-width: 720px) {
+    html {
+        scroll-padding-top: 0;
+    }
+    header {
+        position: relative;
+        width: auto;
+    }
+    section {
+        margin-top: 5px;
+        min-height: auto;
+    }
+    #banner {
+        display: flow-root;
+        position: static;
+        width: auto;
+        height: auto;
+        margin-right: 0;
+    }
+    #banner .downloads {
+        margin-right: 0;
+    }
+    #script-pickers {
+        line-height: 2;
+    }
 }

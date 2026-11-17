@@ -1,10 +1,11 @@
-<script type="text/x-mathjax-config" lang="zxx">
-    MathJax.Hub.Config({
-        asciimath2jax: {
-            delimiters: [['$','$']]
-        }
-    });
+<script>
+    MathJax = {
+        loader: {
+            load: ["input/asciimath", "output/chtml", "ui/menu",],
+        },
+        asciimath: {
+            delimiters: [["$", "$",],],
+        },
+    };
 </script>
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=AM_HTMLorMML">
-</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/startup.js"></script>

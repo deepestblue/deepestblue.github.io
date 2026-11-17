@@ -3,7 +3,8 @@ layout: post
 title: திராவிடமொழியில் பெயர்ப்பு
 date: '2011-01-01T16:01:00.000-08:00'
 author: ambarish
-lang: tam-Taml
+lang: ta-Taml
+locale: ta_IN
 tags: [music, "dravidian languages"]
 description: If you speak a Dravidian language, learn the meanings of Carnatic songs through that language and not through English.
 ---

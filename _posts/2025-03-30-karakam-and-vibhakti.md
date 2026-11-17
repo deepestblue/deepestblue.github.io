@@ -4,6 +4,7 @@ title: 𑌕𑌾𑌰𑌕𑌾𑌣𑌾𑌂 𑌵𑌿𑌭𑌕𑍍𑌤𑌯𑌃
 date: '2025-03-30T05:35:00.001-07:00'
 author: ambarish
 lang: cls-Gran
+locale: sa_IN
 tags: [sanskrit]
 description: What kārakas map to what vibhaktis?
 ---

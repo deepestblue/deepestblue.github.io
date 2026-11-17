@@ -1,33 +1,27 @@
-<div id="banner" lang="eng-Latn">
-  {%- assign page_paths = site.pages | map: "path" -%}
+<div id="banner" lang="en-Latn">
   <div class="downloads">
-    {%- for path in page_paths -%}
-      {%- assign my_page = site.pages | where: "path", path | first -%}
+    {%- for my_page in site.pages -%}
       {%- if my_page.title -%}
-        <span style="padding: 0px 5px;"><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></span>
+        <span><a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></span>
       {%- endif -%}
     {%- endfor -%}
   </div>
-  <div style="line-height: 52px; padding: 0px 5px; text-transform: uppercase;" lang="zxx">
-    Preferred scripts for <label for="select-tam">Tamil text:</label>
-    <form style="display: inline;">
-      <select id="select-tam" autocomplete="off">
-        <option value="Knda">ಕನ್ನಡ</option>
-        <option value="Latn">Latin</option>
-        <option value="Mlym">മലയാളം</option>
-        <option value="Taml" id="option-Taml" selected>தமிழ்</option>
-        <option value="Telu">తెలుగు</option>
-      </select>
-    </form>
+  <fieldset id="script-pickers" hidden>
+    <legend>Preferred scripts for</legend> <label for="select-ta">Tamil text:</label>
+    <select id="select-ta" autocomplete="off" lang="mul" data-no-transliterate>
+      <option value="Knda" lang="kn-Knda">ಕನ್ನಡ</option>
+      <option value="Latn" lang="en-Latn">Latin</option>
+      <option value="Mlym" lang="ml-Mlym">മലയാളം</option>
+      <option value="Taml" lang="ta-Taml" selected>தமிழ்</option>
+      <option value="Telu" lang="te-Telu">తెలుగు</option>
+    </select>
     and <label for="select-cls">Sanskrit text:</label>
-    <form style="display: inline;">
-      <select id="select-cls" autocomplete="off">
-        <option value="Deva">देवनागरी</option>
-        <option value="Gran" id="option-Gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌃</option>
-        <option value="Latn">Latin</option>
-      </select>
-    </form>
-  </div>
+    <select id="select-cls" autocomplete="off" lang="mul" data-no-transliterate>
+      <option value="Deva" lang="cls-Deva">देवनागरी</option>
+      <option value="Gran" lang="cls-Gran" selected>𑌗𑍍𑌰𑌨𑍍𑌥𑌃</option>
+      <option value="Latn" lang="en-Latn">Latin</option>
+    </select>
+  </fieldset>
 
-  <script src="{{ '/assets/js/banner.js' | relative_url }}" type="module" lang="zxx"></script>
+  <script src="{{ '/assets/js/banner.js' | relative_url }}" type="module"></script>
 </div>

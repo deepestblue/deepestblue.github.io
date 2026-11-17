@@ -3,7 +3,8 @@ layout: post
 title: A custom keymap for Indian languages
 date: '2014-03-27T23:46:00.000-07:00'
 author: ambarish
-lang: eng-Latn
+lang: en-Latn
+locale: en_IN
 tags: [sanskrit, "dravidian languages"]
 description: The final part of a three-part series on Indic computing. The focus of this part is a custom keymap for inputting Sanskrit and Tamil.
 ---
@@ -93,7 +94,7 @@ Consonants
 |स्|s|||
 |ह्|h|||
 
-[^1]: Unfortunately, ISO‐15919 does not distinguish between alveolar and dental liquids; Tamil has only the former, while Sanskrit only the latter. As such, Iʼve had to make a few minor modifications to ISO‐15919, where `ற` and `ல` are concerned. Thanks to Greg for pointing this out through a blog comment.
+[^1]: Unfortunately, ISO‐15919 does not distinguish between alveolar and dental liquids; Tamil has only the former, while Sanskrit only the latter. As such, Iʼve had to make a few minor modifications to ISO‐15919, where <span lang="ta-Taml" data-no-transliterate>ற</span> and <span lang="ta-Taml" data-no-transliterate>ல</span> are concerned. Thanks to Greg for pointing this out through a blog comment.
 
 The next step was filling in the key‐combinations that were “natural” and “obvious”.
 
@@ -167,9 +168,9 @@ The next step was filling in the key‐combinations that were “natural” and 
 
 Six categories of phonemes remain: Dravidian alveolar consonants, the Dravidian approximant, Sanskrit nasals, Sanskrit sibilants, Sanskrit syllabic vowels, and miscellaneous rarely‐used dependents.
 
-* Dravidian alveolar consonants: from the point of view of tongue‐position, alveolar stops are intermediate between dental stops and retroflex stops. From this, a natural choice of key‐combination for an alveolar stop is a juxtaposition of the keys for the corresponding dental and retroflex stops. Likewise for the alveolar liquid `ல்`.
-* Dravidian approximant: based on usage, I picked `z` as the key for the approximant `ழ்`. The fact that non‐native speakers mispronounce the approximant as a voiced sibilant adds credibility to this choice :-)
-* Sanskrit nasals and sibilants: there are 2 remaining nasals: `ङ्`, `ञ्` and one remaining sibilant: `श्`. The palatal nasal is both a palatal stop and a nasal; a natural representation combines the nasality of `n` with the palatalness of `j` or `c`; we thus get `nj` and `nc` as possible key‐combinations. By correspondence, the palatal sibilant `श्` is `sc` or `sj`, and the velar nasal `ङ्` `nk` or `ng`.
+* Dravidian alveolar consonants: from the point of view of tongue‐position, alveolar stops are intermediate between dental stops and retroflex stops. From this, a natural choice of key‐combination for an alveolar stop is a juxtaposition of the keys for the corresponding dental and retroflex stops. Likewise for the alveolar liquid <span lang="ta-Taml" data-no-transliterate>ல்</span>.
+* Dravidian approximant: based on usage, I picked <kbd>z</kbd> as the key for the approximant <span lang="ta-Taml" data-no-transliterate>ழ்</span>. The fact that non‐native speakers mispronounce the approximant as a voiced sibilant adds credibility to this choice :-)
+* Sanskrit nasals and sibilants: there are 2 remaining nasals: <span lang="cls-Deva" data-no-transliterate>ङ्</span>, <span lang="cls-Deva" data-no-transliterate>ञ्</span> and one remaining sibilant: <span lang="cls-Deva" data-no-transliterate>श्</span>. The palatal nasal is both a palatal stop and a nasal; a natural representation combines the nasality of <kbd>n</kbd> with the palatalness of <kbd>j</kbd> or <kbd>c</kbd>; we thus get <kbd>nj</kbd> and <kbd>nc</kbd> as possible key‐combinations. By correspondence, the palatal sibilant <span lang="cls-Deva" data-no-transliterate>श्</span> is <kbd>sc</kbd> or <kbd>sj</kbd>, and the velar nasal <span lang="cls-Deva" data-no-transliterate>ङ्</span> <kbd>nk</kbd> or <kbd>ng</kbd>.
 
 Looks like the consonants are done! Here they are:
 
@@ -217,8 +218,8 @@ Consonants
 |स्|s||s|
 |ह्|h||h|
 
-* Sanskrit syllabic vowels: The Sanskrit syllabic vowels (`ऋ`, `ॠ`, `ऌ`, `ॡ` – the last one not actually used) present a problem. The mid‐central vowel inherent in these is absent in European languages and thus lacks a symbol; it can however be described as mid‐way between `y` and `w`. `y` is already used up in our scheme, but `w` is free! Using `w` also ensures people donʼt mispronounce it as a front‐vowel. We thus get `rw`, `Rw`, `lw` and `Lw` respectively.
-* Misc. dependent letters: There are a few different dependent letters that can only exist if attached to a vowel — the *anusvāra*, the *anunāsika*, the *visarga* and its two other forms the *jihvāmulīya* and the *upadhmānīya*, and the *āythayeṛuttu*. The anusvāra is traditionally represented by an `M`, and the anunāsika by `MM`; we can stick with those. The visarga, likewise is an `H`. The *upadhmānīya* is closest to the Latin `f`, and we can use that. The *jihvāmūlīya* and the *āythayeṛuttu* are both velar/glottal and as such `K` is the most suitable.
+* Sanskrit syllabic vowels: The Sanskrit syllabic vowels (<span lang="cls-Deva" data-no-transliterate>ऋ</span>, <span lang="cls-Deva" data-no-transliterate>ॠ</span>, <span lang="cls-Deva" data-no-transliterate>ऌ</span>, <span lang="cls-Deva" data-no-transliterate>ॡ</span> – the last one not actually used) present a problem. The mid‐central vowel inherent in these is absent in European languages and thus lacks a symbol; it can however be described as mid‐way between *y* and *w*. <kbd>y</kbd> is already used up in our scheme, but <kbd>w</kbd> is free! Using <kbd>w</kbd> also ensures people donʼt mispronounce it as a front‐vowel. We thus get <kbd>rw</kbd>, <kbd>Rw</kbd>, <kbd>lw</kbd> and <kbd>Lw</kbd> respectively.
+* Misc. dependent letters: There are a few different dependent letters that can only exist if attached to a vowel — the *anusvāra*, the *anunāsika*, the *visarga* and its two other forms the *jihvāmulīya* and the *upadhmānīya*, and the *āythayeṛuttu*. The anusvāra is traditionally represented by an <kbd>M</kbd>, and the anunāsika by <kbd>MM</kbd>; we can stick with those. The visarga, likewise is an <kbd>H</kbd>. The *upadhmānīya* is closest to the Latin <kbd>f</kbd>, and we can use that. The *jihvāmūlīya* and the *āythayeṛuttu* are both velar/glottal and as such <kbd>K</kbd> is the most suitable.
 
 We finally have a complete key‐map for vowels and dependents! Here it is:
 
