@@ -11,7 +11,7 @@ Welcome to my blog! Feel free to browse through posts below, go through [article
 ## {{ page.list_title }}
 
   {% for post in site.posts %}
-    {%- assign date_format = "%b %-d, %Y" -%}
+    {%- assign date_format = "%b %-d, %Y %Z" -%}
 
 * {{ post.date | date: date_format }}
 {%- if post.lang == nil %}

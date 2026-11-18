@@ -17,10 +17,11 @@ export const transform = (docRoot, transliterate, langCode, tgtScript,) => {
                 if (["script", "style",].includes(node.localName,) || node.hasAttribute("data-no-transliterate",)) {
                     return;
                 }
+                const ownLang = node.getAttribute("lang",);
                 // Only a missing lang inherits: per HTML, an empty one means the language is unknown.
-                const elementLang = node.hasAttribute("lang",) ? node.lang : inheritedLang;
-                if (node.lang.startsWith(`${langCode}-`,)) {
-                    node.lang = `${langCode}-${tgtScript}`;
+                const elementLang = ownLang ?? inheritedLang;
+                if (ownLang?.startsWith(`${langCode}-`,)) {
+                    node.setAttribute("lang", `${langCode}-${tgtScript}`,);
                 }
                 node.childNodes.forEach(walk.bind(undefined, elementLang,),);
             }

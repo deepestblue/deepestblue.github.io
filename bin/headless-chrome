@@ -1,2 +1,5 @@
 #!/bin/bash
-exec "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new "$@"
+set -euo pipefail
+profile=$(mktemp -d)
+trap 'rm -rf "$profile"' EXIT
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --user-data-dir="$profile" "$@"

@@ -77,6 +77,11 @@ select {
         padding: 0;
         margin-right: 0.25em;
     }
+    // While hidden, the pickers still take up their space, so nothing below them moves when theyʼre shown.
+    &[hidden] {
+        display: block;
+        visibility: hidden;
+    }
 }
 
 html {
