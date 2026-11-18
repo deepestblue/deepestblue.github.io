@@ -5,7 +5,7 @@ date: '2021-02-15T21:22:12.000-08:00'
 author: ambarish
 lang: cls-Gran
 locale: sa_IN
-description: A couple of Aesop's fables in Sanskrit.
+description: A couple of Aesopʼs fables in Sanskrit.
 ---
 
 𑌅𑌨𑍁𑌵𑌾𑌦𑌾𑌭𑍍𑌯𑌾𑌸𑍇 𑌕𑌸𑍍𑌮𑌿𑌂𑌶𑍍𑌚𑌿𑌦𑍍𑌭𑌾𑌗𑌮𑌵𑌹𑌮𑍍 । 𑌖𑍍𑌯𑌾𑌤𑌸𑍍𑌯 𑌯𑌵𑌨𑌕𑌥𑌾𑌚𑌾𑌰𑍍𑌯𑌸𑍍𑌯 𑌐𑌸𑍋𑌪𑌸𑍍𑌯 𑌕𑌥𑍇 𑌅𑌨𑍂𑌦𑌿𑌤𑍇 𑌮𑌯𑌾 ।

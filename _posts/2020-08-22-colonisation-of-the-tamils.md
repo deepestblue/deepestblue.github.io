@@ -8,7 +8,7 @@ locale: en_IN
 description: Colonisation of the Tamils, and its deniers and apologists.
 ---
 
-I'm a Tamil, tracing my ancestry to the ancient *[tamiṛakam](https://en.wikipedia.org/wiki/Tamilakam)*. My people, the Tamils, have travelled widely over millennia for trade and profit. They have also waged war against neighbouring lands and colonised other realms. But this is about my people being colonised by other peoples.
+Iʼm a Tamil, tracing my ancestry to the ancient *[tamiṛakam](https://en.wikipedia.org/wiki/Tamilakam)*. My people, the Tamils, have travelled widely over millennia for trade and profit. They have also waged war against neighbouring lands and colonised other realms. But this is about my people being colonised by other peoples.
 
 Today, there are groups that make a stand against the different waves of colonisation. Yet, these same groups often gloss over other waves of colonisation: they deny their existence, they deny their effects, and they claim the good effects outweigh the bad. Below is a summary:
 
