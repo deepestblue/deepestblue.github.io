@@ -27,6 +27,6 @@ description: The names of various grains.
 | குதிரய்வாலி | <span lang="cls-Gran">𑌶𑍍𑌯𑌾𑌮𑌕𑌮𑍍</span> | <span lang="en-Latn">Barnyard millet</span> | *Echinochloa frumentacea*{:lang="en-Latn"} |
 | ஒட்டுப்புல், அமரிப்புல் | <span lang="cls-Gran"></span> | <span lang="en-Latn">Hooked bristlegrass</span> | *Setaria verticillata*{:lang="en-Latn"} |
 | வாற்கோதுமய் | <span lang="cls-Gran">𑌯𑌵𑌃</span> | <span lang="en-Latn">Barley</span> | *Hordeum vulgare*{:lang="en-Latn"} |
-| காடைக்கண்ணி | <span lang="cls-Gran">𑌯𑌵𑌿𑌯𑌮𑍍</span> | <span lang="en-Latn">Oat</span> | *Avena sativa*{:lang="en-Latn"} |
+| காடய்க்கண்ணி | <span lang="cls-Gran">𑌯𑌵𑌿𑌯𑌮𑍍</span> | <span lang="en-Latn">Oat</span> | *Avena sativa*{:lang="en-Latn"} |
 
 பட்டியலில் குற்றம் குறய்கள் அறிந்தோர் தொடர்பு கொள்ளுமாறு வேண்டுகிறேன்.
