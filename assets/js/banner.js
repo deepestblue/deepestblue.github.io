@@ -1,7 +1,6 @@
 import { respell, transform, } from "./transform.js";
 import { toModnSpelling, toTradSpelling, } from "./spelling.js";
-import { transliterate } from "saulabhya";
-
+import { transliterate, } from "saulabhya";
 
 // setUpSelect wires up one picker. Itʼs called with the selectʼs CSS selector and the function that converts the text on the page to a given choice.
 const setUpSelect = (selector, eventHandler,) => {
