@@ -35,7 +35,7 @@ description: The names of various greens.
 | துழாய் | <span lang="en-Latn">Holy basil</span> | *Ocimum sanctum*{:lang="en-Latn"} |
 | கருப்பூரவள்ளி | <span lang="en-Latn">Country borage</span> | *Coleus amboinicus*{:lang="en-Latn"} |
 | புளிச்சக் கீரய் | <span lang="en-Latn">Roselle</span> | *Hibiscus sabdariffa*{:lang="en-Latn"} |
-| வெந்தயக் கீரய் | <span lang="en-Latn">Fenugreek</span> | *Trigonella foenum‐graecum*{:lang="en-Latn"} |
+| <span data-no-respell>வெந்தயக்</span> கீரய் | <span lang="en-Latn">Fenugreek</span> | *Trigonella foenum‐graecum*{:lang="en-Latn"} |
 | கொத்துமல்லி | <span lang="en-Latn">Coriander</span> | *Coriandrum sativum*{:lang="en-Latn"} |
 | ஈயெச்சிற் கீரய், புதினாக் கீரய் | <span lang="en-Latn">Mint</span> | *Mentha*{:lang="en-Latn"} |
 | சோயிக் கீரய், சதகுப்பி | <span lang="en-Latn">Dill</span> | *Anethum graveolens*{:lang="en-Latn"} |

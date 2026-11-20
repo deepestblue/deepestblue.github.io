@@ -71,6 +71,9 @@ select {
     padding: 0 5px;
     line-height: 52px;
     text-transform: uppercase;
+    select + label {
+        margin-left: 1em;
+    }
     // A floated legend is laid out as ordinary text instead of being drawn on the fieldsetʼs border.
     legend {
         float: left;
@@ -92,6 +95,32 @@ section :is(h1, h2, h3, h4, h5, h6) {
     scroll-margin-top: 23px;
 }
 
+// The wrapper is as wide as the section plus its side padding.
+.wrapper {
+    width: 1060px;
+}
+
+section {
+    width: 1000px;
+    font-size: 18px;
+    line-height: 1.55;
+    @media screen and (max-width: 1060px) {
+        width: auto;
+        max-width: 1000px;
+        padding-inline: 20px;
+    }
+}
+
+// The banner ends just past the sectionʼs right edge.
+#banner {
+    margin-right: -542px;
+}
+
+// Post titles wrap rather than being cut off, however narrow the window.
+section h1 {
+    white-space: normal;
+}
+
 // So that a short page fills the window, each min-height here is the window height less the sectionʼs vertical margins, padding and border at that width, and the bodyʼs bottom padding.
 section {
     min-height: calc(100vh - 312px);
@@ -101,7 +130,7 @@ section {
 }
 
 // On narrow screens the header and banner are part of the page flow, so the banner can wrap, instead of being fixed bars.
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
     html {
         scroll-padding-top: 0;
     }
@@ -123,7 +152,7 @@ section {
     #banner .downloads {
         margin-right: 0;
     }
-    #script-pickers {
+    #banner .downloads span, #script-pickers {
         line-height: 2;
     }
 }
