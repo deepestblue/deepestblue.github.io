@@ -71,6 +71,9 @@ select {
     padding: 0 5px;
     line-height: 52px;
     text-transform: uppercase;
+    select + label {
+        margin-left: 1em;
+    }
     // A floated legend is laid out as ordinary text instead of being drawn on the fieldsetʼs border.
     legend {
         float: left;
@@ -101,7 +104,7 @@ section {
 }
 
 // On narrow screens the header and banner are part of the page flow, so the banner can wrap, instead of being fixed bars.
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 840px) {
     html {
         scroll-padding-top: 0;
     }
@@ -123,7 +126,7 @@ section {
     #banner .downloads {
         margin-right: 0;
     }
-    #script-pickers {
+    #banner .downloads span, #script-pickers {
         line-height: 2;
     }
 }

@@ -7,7 +7,14 @@
     {%- endfor -%}
   </div>
   <fieldset id="script-pickers" hidden>
-    <legend>Preferred scripts for</legend> <label for="select-ta">Tamil text:</label>
+    <label for="select-cls">Script for Sanskrit:</label>
+    <select id="select-cls" autocomplete="off" lang="mul" data-no-transliterate>
+      <option value="" lang="zxx" selected>—</option>
+      <option value="Deva" lang="cls-Deva">देवनागरी</option>
+      <option value="Gran" lang="cls-Gran">𑌗𑍍𑌰𑌨𑍍𑌥𑌃</option>
+      <option value="Latn" lang="en-Latn">Latin</option>
+    </select>
+    <label for="select-ta">Script for Tamil:</label>
     <select id="select-ta" autocomplete="off" lang="mul" data-no-transliterate>
       <option value="" lang="zxx" selected>—</option>
       <option value="Knda" lang="kn-Knda">ಕನ್ನಡ</option>
@@ -16,12 +23,10 @@
       <option value="Taml" lang="ta-Taml">தமிழ்</option>
       <option value="Telu" lang="te-Telu">తెలుగు</option>
     </select>
-    and <label for="select-cls">Sanskrit text:</label>
-    <select id="select-cls" autocomplete="off" lang="mul" data-no-transliterate>
-      <option value="" lang="zxx" selected>—</option>
-      <option value="Deva" lang="cls-Deva">देवनागरी</option>
-      <option value="Gran" lang="cls-Gran">𑌗𑍍𑌰𑌨𑍍𑌥𑌃</option>
-      <option value="Latn" lang="en-Latn">Latin</option>
+    <label for="select-spelling">Tamil spelling:</label>
+    <select id="select-spelling" autocomplete="off" data-no-transliterate>
+      <option value="trad">traditional</option>
+      <option value="modn" selected>modern</option>
     </select>
   </fieldset>
 
