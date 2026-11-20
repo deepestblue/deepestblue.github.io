@@ -95,6 +95,32 @@ section :is(h1, h2, h3, h4, h5, h6) {
     scroll-margin-top: 23px;
 }
 
+// The wrapper is as wide as the section plus its side padding.
+.wrapper {
+    width: 1060px;
+}
+
+section {
+    width: 1000px;
+    font-size: 18px;
+    line-height: 1.55;
+    @media screen and (max-width: 1060px) {
+        width: auto;
+        max-width: 1000px;
+        padding-inline: 20px;
+    }
+}
+
+// The banner ends just past the sectionʼs right edge.
+#banner {
+    margin-right: -542px;
+}
+
+// Post titles wrap rather than being cut off, however narrow the window.
+section h1 {
+    white-space: normal;
+}
+
 // So that a short page fills the window, each min-height here is the window height less the sectionʼs vertical margins, padding and border at that width, and the bodyʼs bottom padding.
 section {
     min-height: calc(100vh - 312px);
