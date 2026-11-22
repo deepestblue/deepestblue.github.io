@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ௪௰௫𑌤𑌮𑌸𑍍𑌯 𑌅𑌹𑍋𑌬𑌿𑌲𑌮𑌠𑌾𑌧𑍀𑌶𑌸𑍍𑌯 𑌧𑍍𑌯𑌾𑌨𑌶𑍍𑌲𑍋𑌕𑌃
-date: '2013-11-16T10:19:00.000-08:00'
+date: "2013-11-16T10:19:00.000-08:00"
 author: ambarish
 lang: cls-Gran
 locale: sa_IN

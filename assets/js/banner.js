@@ -1,14 +1,13 @@
 import { respell, transform, } from "./transform.js";
 import { toModnSpelling, toTradSpelling, } from "./spelling.js";
-import { transliterate } from "saulabhya";
-
+import { transliterate, } from "saulabhya";
 
 // setUpSelect wires up one picker. Itʼs called with the selectʼs CSS selector and the function that converts the text on the page to a given choice.
 const setUpSelect = (selector, eventHandler,) => {
     const select = document.querySelector(selector,);
     // So that the document title follows the page headingʼs text. The title canʼt be changed through transform as it canʼt have HTML lang tags (itʼs always plain text).
     const convertWithTitle = choice => {
-        const heading = document.querySelector("[data-id='page-title']",);
+        const heading = document.querySelector("[data-id=page-title]",);
         const before = heading.textContent;
         eventHandler(choice,);
         document.title = document.title.replace(before, heading.textContent,);
@@ -34,6 +33,7 @@ const setUpSelect = (selector, eventHandler,) => {
     },);
 
     // A choice is the value of one of the selectʼs options, where "" means the text stays as written.
+
     // Reading the selectʼs value here, rather than at the time when the currentChoice() runs when the value might differ.
     const initialChoice = select.value;
     const currentChoice = () => {

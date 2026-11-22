@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 𑌸𑌂𑌸𑍍𑌕𑍃𑌤𑍋𑌚𑍍𑌚𑌾𑌰𑌣𑌮𑍍
-date: '2010-10-21T09:00:00.000-07:00'
+date: "2010-10-21T09:00:00.000-07:00"
 author: ambarish
 lang: cls-Gran
 locale: sa_IN

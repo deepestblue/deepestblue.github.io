@@ -1,7 +1,7 @@
 ---
 layout: post
 title: கீரய் வகய்
-date: '2023-09-03T15:53:00.000-07:00'
+date: "2023-09-03T15:53:00.000-07:00"
 author: ambarish
 lang: ta-Taml
 locale: ta_IN

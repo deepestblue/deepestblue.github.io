@@ -1,7 +1,7 @@
 ---
 layout: post_with_mathml
 title: What are the dimensions of a mod b?
-date: '2018-05-20T16:37:00.002-07:00'
+date: "2018-05-20T16:37:00.002-07:00"
 author: ambarish
 lang: en-Latn
 locale: en_IN

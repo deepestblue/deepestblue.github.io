@@ -1,7 +1,7 @@
 ---
 layout: post
 title: பருப்பு வகய்
-date: '2023-09-04T07:11:00.000-07:00'
+date: "2023-09-04T07:11:00.000-07:00"
 author: ambarish
 lang: ta-Taml
 locale: ta_IN

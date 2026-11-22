@@ -1,7 +1,7 @@
 ---
 layout: post
 title: கறிகாய் வகய்
-date: '2023-09-04T11:08:00.000-07:00'
+date: "2023-09-04T11:08:00.000-07:00"
 author: ambarish
 lang: ta-Taml
 locale: ta_IN
@@ -27,7 +27,7 @@ description: The names of various vegetables.
 | கத்தரிக்காய், வழுதுணய் | <span lang="cls-Gran">𑌵𑍃𑌨𑍍𑌤𑌾𑌕𑌃</span> | <span lang="en-Latn">Brinjal, eggplant, aubergine</span> | *Solanum melongena*{:lang="en-Latn"} |
 | காராமணி | <span lang="cls-Gran">𑌮𑌾𑌧𑍍𑌵𑍀𑌕𑌾</span> | <span lang="en-Latn">Cowpea, black‐eyed pea</span> | *Vigna unguiculata*{:lang="en-Latn"} |
 | தம்பட்டங்காய் | <span lang="cls-Gran">𑌖𑌡𑍍𑌗𑌶𑌿𑌮𑍍𑌬𑍀</span> | <span lang="en-Latn">Sword bean</span> | *Canavalia gladiata*{:lang="en-Latn"} |
-| வெண்டய்க்காய் | <span lang="cls-Gran">𑌭𑌿𑌣𑍍𑌡𑌃</span> | <span lang="en-Latn">Lady's finger, okra</span> | *Abelmoschus esculentus,*{:lang="en-Latn"} |
+| வெண்டய்க்காய் | <span lang="cls-Gran">𑌭𑌿𑌣𑍍𑌡𑌃</span> | <span lang="en-Latn">Ladyʼs finger, okra</span> | *Abelmoschus esculentus,*{:lang="en-Latn"} |
 | முள்ளங்கி | <span lang="cls-Gran">𑌮𑍁𑌲𑌕𑌮𑍍</span> | <span lang="en-Latn">Radish</span> | *Raphanus raphanistrum  sativus*{:lang="en-Latn"} |
 | பலாக்கொட்டய் | <span lang="cls-Gran">𑌪𑌨𑌸𑌃</span> | <span lang="en-Latn">Jackfruit</span> | *Artocarpus heterophyllus*{:lang="en-Latn"} |
 | பூசணிக்காய், தடியன்காய் | <span lang="cls-Gran">𑌕𑍂𑌷𑍍𑌮𑌾𑌣𑍍𑌡𑌃</span> | <span lang="en-Latn">Ash gourd, winter melon</span> | *Benincasa hispida*{:lang="en-Latn"} |

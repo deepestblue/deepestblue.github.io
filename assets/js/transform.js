@@ -1,5 +1,3 @@
-/* global Node:false */
-
 // Calls visitElement on every element from node down and visitText on every text node, with the lang it inherits, leaving out script and style, which hold code rather than text, and elements that carry any of skipAttributes. An elementʼs children are walked with the lang it had before visitElement was called on it, so visitElement may relabel it.
 const walk = (inheritedLang, node, skipAttributes, visitElement, visitText,) => {
     switch (node.nodeType) {

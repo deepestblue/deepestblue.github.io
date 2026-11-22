@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 𑌗𑍁𑌰𑍁𑌵𑌾𑌤𑌪𑍁𑌰𑍀𑌶𑌪𑌞𑍍𑌚𑌰𑌤𑍍𑌨𑌮𑍍
-date: '2025-06-01T09:12:00.000-07:00'
+date: "2025-06-01T09:12:00.000-07:00"
 author: ambarish
 lang: cls-Gran
 locale: sa_IN

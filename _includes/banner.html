@@ -30,5 +30,6 @@
     </select>
   </fieldset>
 
-  <script src="{{ '/assets/js/banner.js' | relative_url }}" type="module"></script>
+  {% assign banner_js = "/assets/js/banner.js" | relative_url -%}
+  <script src="{{ banner_js }}" type="module"></script>
 </div>

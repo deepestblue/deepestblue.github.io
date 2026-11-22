@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A custom keymap for Indian languages
-date: '2014-03-27T23:46:00.000-07:00'
+date: "2014-03-27T23:46:00.000-07:00"
 author: ambarish
 lang: en-Latn
 locale: en_IN
@@ -48,7 +48,7 @@ Vowels and Dependents
 |ᳶ|ḫ|||
 |ᳵ|ẖ|||
 ||ḵ|ஃ||
-|ऽ|'|||
+|ऽ|&#39;|||
 
 Consonants
 {:centre}
@@ -126,7 +126,7 @@ The next step was filling in the key‐combinations that were “natural” and 
 |ᳶ|ḫ|||
 |ᳵ|ẖ|||
 ||ḵ|ஃ||
-|ऽ|'|||
+|ऽ|&#39;|||
 |क्|k|க்|k|
 |ख्|kh||kh|
 |ग्|g||g|
@@ -250,7 +250,7 @@ Vowels and Dependents
 |ᳶ|ḫ||f|
 |ᳵ|ẖ||K|
 ||ḵ|ஃ|K|
-|ऽ|'||'|
+|ऽ|&#39;||&#39;|
 
 You can download the Tamil and Sanskrit keymap for use in Googleʼs IME from [https://github.com/deepestblue/GoogleIME_keymap](https://github.com/deepestblue/GoogleIME_keymap).
 

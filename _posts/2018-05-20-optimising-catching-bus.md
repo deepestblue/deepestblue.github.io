@@ -1,7 +1,7 @@
 ---
 layout: post_with_mathml
 title: Optimising catching the bus
-date: '2018-05-20T19:47:00.000-07:00'
+date: "2018-05-20T19:47:00.000-07:00"
 author: ambarish
 lang: en-Latn
 locale: en_IN

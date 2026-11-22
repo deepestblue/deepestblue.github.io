@@ -1,7 +1,7 @@
 ---
 layout: post
 title: தானியத்து வகய்
-date: '2023-07-21T18:21:00.000-07:00'
+date: "2023-07-21T18:21:00.000-07:00"
 author: ambarish
 lang: ta-Taml
 locale: ta_IN

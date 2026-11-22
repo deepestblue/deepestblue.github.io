@@ -1,21 +1,21 @@
 const புள்ளி = "்";
 const அLetter = "அ";
-const ஐLetter = "ஐ";
-const ஐMarker = "ை";
+const aiLetter = "\u{0B90}";
+const aiMarker = "\u{0BC8}";
 const ய = "ய";
 const anyமெய்Withஅ = "[கஙசஞடணறனதநபமயவரலளழ]";
 const letterOrMark = "[\\p{Script=Taml}&&[\\p{Letter}\\p{Mark}]]";
 
 const அய்காரத்துப்புதுவிதிகள் = [
-    [RegExp(`(${anyமெய்Withஅ})${ய}${புள்ளி}`, "gv",), `$1${ஐMarker}`,],
-    [RegExp(`(${letterOrMark}${anyமெய்Withஅ})${ய}`, "gv",), `$1${ஐMarker}${ய}`,],
-    [RegExp(`${அLetter}${ய}${புள்ளி}`, "gv",), ஐLetter,],
+    [RegExp(`(${anyமெய்Withஅ})${ய}${புள்ளி}`, "gv",), `$1${aiMarker}`,],
+    [RegExp(`(${letterOrMark}${anyமெய்Withஅ})${ய}`, "gv",), `$1${aiMarker}${ய}`,],
+    [RegExp(`${அLetter}${ய}${புள்ளி}`, "gv",), aiLetter,],
 ];
 
 const அய்காரத்துப்பழயவிதிகள் = [
-    [RegExp(`(${letterOrMark}${letterOrMark})${ஐMarker}${ய}`, "gv",), `$1${ய}`,],
-    [RegExp(`${ஐMarker}`, "gv",), `${ய}${புள்ளி}`,],
-    [RegExp(`${ஐLetter}`, "gv",), `${அLetter}${ய}${புள்ளி}`,],
+    [RegExp(`(${letterOrMark}${letterOrMark})${aiMarker}${ய}`, "gv",), `$1${ய}`,],
+    [RegExp(`${aiMarker}`, "gv",), `${ய}${புள்ளி}`,],
+    [RegExp(`${aiLetter}`, "gv",), `${அLetter}${ய}${புள்ளி}`,],
 ];
 
 const applyRules = rules => text => rules.reduce(

@@ -7,7 +7,7 @@ layout: default
   •<span itemprop="author name" itemscope itemtype="http://schema.org/Person" style="padding: 0px 3px;">{{ page.author }}</span>
 {%- endif -%}
 {%- if page.tags.size > 0 -%}
-  •<span style="padding: 0px 3px;">{{page.tags | join: ', '}}</span>
+  •<span style="padding: 0px 3px;">{{page.tags | join: ", "}}</span>
 {%- endif -%}
 </span>
 <br />

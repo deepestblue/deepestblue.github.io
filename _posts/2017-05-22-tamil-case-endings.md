@@ -1,7 +1,7 @@
 ---
 layout: post
 title: வேற்றுமயுருபுகள் அவத்தம்
-date: '2017-05-22T21:22:00.001-07:00'
+date: "2017-05-22T21:22:00.001-07:00"
 author: ambarish
 lang: ta-Taml
 locale: ta_IN

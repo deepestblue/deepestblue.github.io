@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Keying in Indian languages
-date: '2014-01-04T14:24:00.003-08:00'
+date: "2014-01-04T14:24:00.003-08:00"
 author: ambarish
 lang: en-Latn
 locale: en_IN
