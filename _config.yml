@@ -5,7 +5,7 @@ description: >-
   Personal blog of Ambarish Sridharanarayanan.
 baseurl: ""
 url: "https://www.ambari.sh"
-github_username:  deepestblue
+github_username: deepestblue
 
 # Build settings
 timezone: Etc/UTC

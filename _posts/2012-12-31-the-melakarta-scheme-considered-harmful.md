@@ -35,7 +35,7 @@ Twelve *svarasthāna*s are enumerated, from the base *ṣadja* to the *ṣadja*
 * Dha₃ or Ni₂
 * Ni₃
 
-The *mēḷakartā*s, then, are all the possible *rāga*s that include the Sa & the Pa, and have one each Ri, Ga, Ma,  Dha & Ni, with the natural restriction that the Ri chosen should be lower than the Ga, and likewise the Dha and the Ni. There are 6 possible Ri‐Ga combinations (Ri₁‐Ga₁, Ri₁‐Ga₂, Ri₁‐Ga₃, Ri₂‐Ga₂, Ri₂‐Ga₃ & Ri₃‐Ga₃), likewise 6 combinations of Dha‐Ni, and 2 options for Ma. There are thus 72 *mēḷakartā*s, also termed *sampūrnarāga*s as each such *rāga* has all 7 notes.
+The *mēḷakartā*s, then, are all the possible *rāga*s that include the Sa & the Pa, and have one each Ri, Ga, Ma, Dha & Ni, with the natural restriction that the Ri chosen should be lower than the Ga, and likewise the Dha and the Ni. There are 6 possible Ri‐Ga combinations (Ri₁‐Ga₁, Ri₁‐Ga₂, Ri₁‐Ga₃, Ri₂‐Ga₂, Ri₂‐Ga₃ & Ri₃‐Ga₃), likewise 6 combinations of Dha‐Ni, and 2 options for Ma. There are thus 72 *mēḷakartā*s, also termed *sampūrnarāga*s as each such *rāga* has all 7 notes.
 
 Every other *rāga*, which does not adhere to the above *lakṣaṇa*, is then notated as a pair of scales of the above 12 notes – an *ārōhaṇa* and an *avarōhaṇa* – that define them. The *ārōhaṇa* is a scale that starts at a lower Sa and ends at the next Sa and is meant to be the set of all possible ascending sequences of notes valid in the *rāga*. Likewise, the *avarōhaṇa*, starting at a higher Sa and ending at the previous Sa is meant to include all possible valid descending note sequences. The *janyarāga* is then classified as a derivative the *mēḷakartā* rāga.
 
