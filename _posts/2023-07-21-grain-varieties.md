@@ -17,7 +17,7 @@ description: The names of various grains.
 | கோதுமய் | <span lang="cls-Gran">𑌗𑍋𑌧𑍂𑌮𑌃</span> | <span lang="en-Latn">Wheat</span> | *Triticum aestivum*{:lang="en-Latn"} |
 | மக்காச்சோளம் | <span lang="cls-Gran">𑌮𑌰𑍍𑌕𑌕𑌃</span> | <span lang="en-Latn">Maize or corn</span> | *Zea mays*{:lang="en-Latn"} |
 | கம்பு | <span lang="cls-Gran">𑌬𑌰𑍍𑌜𑌰𑌃 𑌉𑌤 𑌬𑌰𑍍𑌜𑌰𑍀</span> | <span lang="en-Latn">Pearl millet</span> | *Pennisetum glaucum*{:lang="en-Latn"} |
-| வரகு | <span lang="cls-Gran">𑌚𑍀𑌨𑌕𑌮𑍍 𑌉𑌤 𑌅𑌣𑍁𑌃</span> | <span lang="en-Latn">Proso millet or common millet</span> | *Panicum miliaceum*{:lang="en-Latn"} |
+| வரகு | <span lang="cls-Gran">𑌚𑍀𑌨𑌕𑌮𑍁𑌤 𑌅𑌣𑍁𑌃</span> | <span lang="en-Latn">Proso millet or common millet</span> | *Panicum miliaceum*{:lang="en-Latn"} |
 | கேழ்வரகு | <span lang="cls-Gran">𑌰𑌾𑌗𑍀 𑌉𑌤 𑌲𑌞𑍍𑌛𑌨𑌃</span> | <span lang="en-Latn">Finger millet</span> | *Eleusine coracana*{:lang="en-Latn"} |
 | கருவரகு | <span lang="cls-Gran">𑌕𑍋𑌦𑍍𑌰𑌵𑌃</span> | <span lang="en-Latn">Ditch millet</span> | *Paspalum scrobiculatum*{:lang="en-Latn"} |
 | சாமய் | <span lang="cls-Gran">𑌨𑌨𑍍𑌦𑌿𑌮𑍁𑌖𑌃</span> | <span lang="en-Latn">Little millet</span>| *Panicum sumatrense*{:lang="en-Latn"} |
