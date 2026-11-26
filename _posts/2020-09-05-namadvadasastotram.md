@@ -17,7 +17,7 @@ description: The namadvadasastotram in a table.
 | 𑌨𑌾𑌰𑌾𑌯𑌣𑌃 | 𑌶𑌙𑍍𑌖𑍀 <span lang="en-Latn">(Conch)</span> | 𑌨𑍀𑌲𑌜𑍀𑌮𑍂𑌤𑌸𑌨𑍍𑌨𑌿𑌭𑌃 | 𑌪𑌶𑍍𑌚𑌾𑌤𑍍 <span lang="en-Latn">(West)</span> |
 | 𑌮𑌾𑌧𑌵𑌃 | 𑌗𑌦𑌾𑌧𑌰𑌃 <span lang="en-Latn">(Mace)</span> | 𑌇𑌨𑍍𑌦𑍀𑌵𑌰𑌦𑌲𑌶𑍍𑌯𑌾𑌮𑌃 | 𑌊𑌰𑍍𑌧𑍍𑌵𑌮𑍍 <span lang="en-Latn">(Up)</span> |
 | 𑌗𑍋𑌵𑌿𑌨𑍍𑌦𑌃 | 𑌧𑌨𑍍𑌵𑍀 <span lang="en-Latn">(Bow)</span> | 𑌚𑌨𑍍𑌦𑍍𑌰𑌪𑍍𑌰𑌭𑌃 | 𑌦𑌕𑍍𑌷𑌿𑌣𑍇 <span lang="en-Latn">(South)</span> |
-| 𑌵𑌿𑌷𑍍𑌣𑍁𑌃 | 𑌹𑌲𑌭𑍃𑌤𑍍 <span lang="en-Latn">(Plough)</span> | 𑌪𑌦𑍍𑌮𑌕𑌿𑌞𑍍𑌜𑌲𑍍𑌕𑌸𑌨𑍍𑌨𑌿𑌭𑌃 | 𑌉𑌤𑍍𑌤𑌰𑍇 <span lang="en-Latn">(North)</span> |
+| 𑌵𑌿𑌷𑍍𑌣𑍁𑌰𑍍| 𑌹𑌲𑌭𑍃𑌤𑍍 <span lang="en-Latn">(Plough)</span> | 𑌪𑌦𑍍𑌮𑌕𑌿𑌞𑍍𑌜𑌲𑍍𑌕𑌸𑌨𑍍𑌨𑌿𑌭𑌃 | 𑌉𑌤𑍍𑌤𑌰𑍇 <span lang="en-Latn">(North)</span> |
 | 𑌮𑌧𑍁𑌸𑍂𑌦𑌨𑌃 | 𑌮𑍁𑌸𑌲𑍀 <span lang="en-Latn">(Pestle)</span> | 𑌅𑌰𑌵𑌿𑌨𑍍𑌦𑌾𑌭𑌃 | 𑌆𑌗𑍍𑌨𑍇𑌯𑍍𑌯𑌾𑌮𑍍 <span lang="en-Latn">(Southeast)</span> |
 | 𑌤𑍍𑌰𑌿𑌵𑌿𑌕𑍍𑌰𑌮𑌃 | 𑌖𑌡𑍍𑌗𑌪𑌾𑌣𑌿𑌃 <span lang="en-Latn">(Sword)</span> | 𑌜𑍍𑌵𑌲𑌨𑌪𑍍𑌰𑌭𑌃 | 𑌨𑌿𑌰𑍃𑌤𑍍𑌯𑌾𑌮𑍍 <span lang="en-Latn">(Southwest)</span> |
 | 𑌵𑌾𑌮𑌨𑌃 | 𑌵𑌜𑍍𑌰𑍀 <span lang="en-Latn">(Thunderbolt)</span> | 𑌤𑌰𑍁𑌣𑌾𑌦𑌿𑌤𑍍𑌯𑌦𑍀𑌪𑍍𑌤𑌿𑌮𑌾𑌨𑍍 | 𑌵𑌾𑌯𑌵𑍍𑌯𑌾𑌮𑍍 <span lang="en-Latn">(Northwest)</span> |

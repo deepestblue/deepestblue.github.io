@@ -13,7 +13,7 @@ description: The names of various jasmine variants.
 
 | தமிழ்ப்பெயர் | வடமொழிப்பெயர் | ஆங்கிலப்பெயர் | இருசொற்பெயர் |
 | --- | --- | --- | --- |
-| பிச்சி, சாதிமல்லி | <span lang="cls-Gran">𑌜𑌾𑌤𑌿𑌃 𑌉𑌤 𑌮𑌾𑌲𑌤𑍀</span> | <span lang="en-Latn">Royal jasmine</span> | *Jasminum grandiflorum*{:lang="en-Latn"} |
+| பிச்சி, சாதிமல்லி | <span lang="cls-Gran">𑌜𑌾𑌤𑌿𑌰𑍁𑌤 𑌮𑌾𑌲𑌤𑍀</span> | <span lang="en-Latn">Royal jasmine</span> | *Jasminum grandiflorum*{:lang="en-Latn"} |
 | நித்தியமல்லி, பெருமல்லி | ? | <span lang="en-Latn">Brazilian jasmine</span> | *Jasminum fluminense*{:lang="en-Latn"} |
 | குண்டுமல்லி, இருவாய்ச்சி | <span lang="cls-Gran">𑌨𑌵𑌮𑌲𑍍𑌲𑌿𑌕𑌾</span> | <span lang="en-Latn">Arabian jasmine</span> | *Jasminum sambac*{:lang="en-Latn"} |
 | முல்லய், உச்சிமல்லி | <span lang="cls-Gran">𑌯𑍂𑌥𑌿𑌕𑌾</span> | ? | *Jasminum auriculatum*{:lang="en-Latn"} |
